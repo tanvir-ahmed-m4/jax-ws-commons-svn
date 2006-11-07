@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>How do I host a project on jax-ws-commons?</title>
+  </head>
+  <body>
+    <dl>
+    <dt>Who can host a plugin on jax-ws-commons?</dt>
+    <dd>
+      Anyone writing a <a href="https://jax-ws.dev.java.net">JAX-WS RI extensions</a> is welcome to host a project on <tt>jaxb-ws-commons</tt>. We particularly encourage small plugins/extensions that don't want the overhead of hosting a whole java.net project.
+    </dd>
+    
+    <dt>How do I host a plugin on jax-ws-commons?</dt>
+    <dd>
+      Join the <tt>dev@jax-ws.dev.java.net</tt> mailing list and ask. If you feel you aren't getting any reply, send an angry e-mail to <tt>owner@jax-ws.dev.java.net</tt>.
+    
+    <dt>How does this project work?</dt>
+    <dd>
+      Each plugin has to have a name. We decide on the name when we host a plugin --- let's say it's "abc". When we host your plugin, you get <tt>jax-ws-commons/abc</tt> and <tt>jax-ws-commons/www/abc</tt> directories created in CVS. You can put your plugin related source code, build script, IDE setting, and anything else in the <tt>jax-ws-commons/abc</tt> folder. It would be desirable to put all the source code and build script here, but it's really up to you.<br>
+      
+      <tt>jax-ws-commons/www/abc</tt> is for files that you want to expose through <tt>http://jax-ws-commons.dev.java.net/abc</tt>. So this is where you host HTML files, downloadable jar files, images, etc.
+    
+    <dt>Is there any guideline?</dt>
+    <dd>
+      It would be nice if you can host all the source code and build script in CVS, and some documentation and downlodable plugin jar in <tt>www</tt>. Also, consider subscribing to <tt>dev@jax-ws-commons.dev.java.net</tt> so that all plugin owners can talk to each other.
+    
+    <dt>Do we have official pacakge name for jax-ws-commons?</dt>
+    <dd>
+      No, not really. But you can use <tt>org.jvnet.jax_ws_commons.extname</tt>. Use of <tt>org.jvnet.projectname</tt> is the official java.net recommendation (don't ask me why it's not <tt>net.java.dev.projectname</tt>!)
+    </dl>
+  </body>
+</html>

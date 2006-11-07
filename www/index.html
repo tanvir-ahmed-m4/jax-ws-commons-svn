@@ -1,45 +1,82 @@
 <html>
 <head>
-<title>Project Home Page</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <style>
+    .app H3 {
+      clear: none;
+    }
+    .axial {
+      display: none;
+    }
+    #apphead {
+      display: none;
+    }
+  </style>
+  <title>JAXB 2.0 Commons</title>
 </head>
+<body>
+<script>
+// kill "description" h3 bar
+ld = document.getElementById("longdescription");
+for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
+  if(n.nodeType==1 && n.innerHTML=="Description" ) {
+    n.parentNode.removeChild(n);
+    break;
+  }
+}
+</script>
+<table border="0" width="100%">
+  <tr>
+    <td><img src="https://jaxb.dev.java.net/javaxml-duke.gif" align="middle"></td>
+    <td>
+      <h1>JAX-WS Commons</h1>
+    </td>
+    <td width="*">
+      <div align=right>
+      <a href="/servlets/ProjectNewsRSS"><img src="https://jax-ws.dev.java.net/images/rss1.gif" border="0"></a><br>
+      <small>
+        (<a href="http://wiki.java.net/bin/view/Javawsxml/RssCorner">new to RSS?</a>)
+      </small>
+      </div>
+    </td>
+  </tr>
+</table>
 
-<body bgcolor="#FFFFFF" text="#000000">
-<h1>Default project home page </h1>
-<p>Congratulations on your new java.net project! </p>
-<p>This page is the home page for your new project. This content is appearing 
-  because you have selected the option <b>Use project index.html</b>. To edit 
-  the information displayed on this page, just use CVS to check out your project's 
-  CVS repository and edit index.html in directory www. You can get more information 
-  on how to set-up your local CVS client, click on <b>Version Control</b> on the 
-  left nav bar. </p>
-<p>If you don't want to use CVS to manage your home page, click on the <b>Edit 
-  project</b> link on this page and unclick the option <b>Use project index.html</b>. 
-  Your project home page contents will be generated from the <b>Edit project</b> 
-  field <b>Description</b>. Edit the text on that field to change your home page 
-  contents. Click on <b>Submit changes</b> to save your edits. </p>
-<p>If you are looking for <a href="https://java-net.dev.java.net/ProjectPages.html#templates">sample 
-  home page templates</a>, check out the <a href="https://java-net.dev.java.net/ProjectPages.html">java.net 
-  Project Starter Kit</a>. Copy either of the templates into your project's html 
-  to get started on your project's home page. </p>
-<p>You can find lots of helpful information in the Starter Kit to get your project 
-  started. Some of the things you will find in there include:</p>
+
+
+<div class=app>
+
+
+<h3>Project Description</h3>
+<p>Welcome to the JAX-WS 2.0 commons project. This is a project in the 
+<a href="http://jwsdp.dev.java.net/index.html">JWSDP</a> subcommunity of the Java 
+community on <a href="http://community.java.net/java-ws-xml">Web Services and XML</a>
+at java.net.</p>
+
+<p>This project aims to:</p>
 <ul>
-  <li>Hints on how to <a href="https://java-net.dev.java.net/ProjectPages.html#pages">set-up 
-    your project's</a> home page</li>
-  <li>Ideas on how to <a href="https://java-net.dev.java.net/ProjectPages.html#publicity">publicize 
-    your project</a> including RSS feeds</li>
-  <li>Hints on <a href="https://java-net.dev.java.net/pagedesign.html">project 
-    page HTML</a></li>
-  <li>Setting up project <a href="https://java-net.dev.java.net/ProjectPages.html#wiki">wiki 
-    pages</a></li>
-  <li>And places to go if <a href="https://java-net.dev.java.net/ProjectPages.html#feedback">you 
-    have questions</a>.</li>
+ <li>collect convenient utility code around JAX-WS 2.0
+ <li>collect useful plugins and extensions around the JAX-WS RI 2.0 (until they grow out of this project)
 </ul>
-<p>Remember that you will attract more new members and your project team will 
-  work more effectively if you, as the project owner, supply sufficient information 
-  about your project for visitors to your project space. Good luck with your new 
-  project! </p>
+
+
+<h3>Projects</h3>
+<ol>
+  <li><a href="fluent-api/">Fluent API plugin</a>
+<!--
+  <li><a href="xyz/">xyz</a>
+-->
+</ol>
+
+
+<h3>Join us!</h3>
+<p>
+  If you are interested in hosting your utility/plug-in/tool etc, please write to
+  <a href="mailto:dev@jax-ws.dev.java.net">dev@jax-ws.dev.java.net</a> so that we
+  can arrange things. See <a href="contribute.html">this document</a> for more about
+  how to host your plugin.
+</p>
+
+
+</div>
 </body>
 </html>
-
