@@ -1,4 +1,16 @@
 * text=auto !eol
 http-session-scope/src/site/apt/index.apt -text
+www/http-session-scope/images/collapsed.gif -text
+www/http-session-scope/images/expanded.gif -text
+www/http-session-scope/images/external.png -text svneol=unset#image/png
+www/http-session-scope/images/icon_error_sml.gif -text
+www/http-session-scope/images/icon_info_sml.gif -text
+www/http-session-scope/images/icon_success_sml.gif -text
+www/http-session-scope/images/icon_warning_sml.gif -text
+www/http-session-scope/images/logos/maven-feather.png -text svneol=unset#image/png
+www/http-session-scope/images/newwindow.png -text svneol=unset#image/png
+www/http-session-scope/index.html -text
+www/http-session-scope/source-repository.html -text
+www/http-session-scope/team-list.html -text
 www/index.html svneol=native#text/html
 www/role-approval.policy -text
