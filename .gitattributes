@@ -1,3 +1,4 @@
 * text=auto !eol
+http-session-scope/src/site/apt/index.apt -text
 www/index.html svneol=native#text/html
 www/role-approval.policy -text
