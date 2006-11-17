@@ -73,7 +73,7 @@
         </li>
               
     <li class="none">
-              <a href="download.html">Download</a>
+              <a href="servlets/ProjectDocumentList?folderID=6358">Download</a>
         </li>
           </ul>
           <h5>Project Documentation</h5>
@@ -136,8 +136,7 @@ public class Hello {
         return counter;
 
     }
-}
-</pre></div><p>Instead of writing this much code, with this extension, you can do this:</p><div class="source"><pre>import org.jvnet.jax_ws_commons.http_session_scope.HttpSessionScope;
+}</pre></div><p>Instead of writing this much code, with this extension, you can do this:</p><div class="source"><pre>import org.jvnet.jax_ws_commons.http_session_scope.HttpSessionScope;
 
 @HttpSessionScope @WebService
 public class Hello {
@@ -145,8 +144,7 @@ public class Hello {
     public int getCounter() {
         return counter++;
     }
-}
-</pre></div><p>The <tt>@HttpSessionScope</tt> annotation tells the JAX-WS RI to create one instance of <tt>Hello</tt> per each HTTP session. No need to mess with <tt>WebServiceContext</tt>, nor with <tt>HttpSession</tt> manually. It's all nicely typed and concise.</p></div><div class="section"><h2>How it's implemented?</h2><p>This extension is based on a publicly available extension point in the JAX-WS RI 2.1 called <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/rt/src/com/sun/xml/ws/api/server/InstanceResolver.java">InstanceResolver</a>. This provides a pluggability point where 3rd party could control how the JAX-WS RI dispatches incoming requests to service instances, and I only needed to write <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/server/servlet/HttpSessionInstanceResolver.java?r=1.1.2.1">a little more code</a> to implement this logic.</p><p>Then I define <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/developer/servlet/HttpSessionScope.java?r=1.1.2.1"><tt>HttpSessionScope</tt> annotation</a> with JAX-WS RI's meta annotation <tt>InstanceResolverAnnotation</tt>, to connect all those things together.</p><p>This extension requires the JAX-WS RI 2.1 EA2 or later.</p></div>
+}</pre></div><p>The <tt>@HttpSessionScope</tt> annotation tells the JAX-WS RI to create one instance of <tt>Hello</tt> per each HTTP session. No need to mess with <tt>WebServiceContext</tt>, nor with <tt>HttpSession</tt> manually. It's all nicely typed and concise.</p></div><div class="section"><h2>How it's implemented?</h2><p>This extension is based on a publicly available extension point in the JAX-WS RI 2.1 called <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/rt/src/com/sun/xml/ws/api/server/InstanceResolver.java">InstanceResolver</a>. This provides a pluggability point where 3rd party could control how the JAX-WS RI dispatches incoming requests to service instances, and I only needed to write <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/server/servlet/HttpSessionInstanceResolver.java?r=1.1.2.1">a little more code</a> to implement this logic.</p><p>Then I define <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/developer/servlet/HttpSessionScope.java?r=1.1.2.1"><tt>HttpSessionScope</tt> annotation</a> with JAX-WS RI's meta annotation <tt>InstanceResolverAnnotation</tt>, to connect all those things together.</p><p>This extension requires the JAX-WS RI 2.1 EA2 or later.</p></div>
       </div>
     </div>
     <div class="clear">
