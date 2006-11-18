@@ -2,3 +2,9 @@ http-session-scope/*.iml
 http-session-scope/*.ipr
 http-session-scope/*.iws
 http-session-scope/target
+spring/*.iml
+spring/*.ipr
+spring/*.iws
+spring/memo.txt
+spring/ref
+spring/target
