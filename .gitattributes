@@ -16,3 +16,16 @@ www/http-session-scope/source-repository.html -text
 www/http-session-scope/team-list.html -text
 www/index.html svneol=native#text/html
 www/role-approval.policy -text
+www/spring/dependencies.html -text
+www/spring/images/collapsed.gif -text
+www/spring/images/expanded.gif -text
+www/spring/images/external.png -text svneol=unset#image/png
+www/spring/images/icon_error_sml.gif -text
+www/spring/images/icon_info_sml.gif -text
+www/spring/images/icon_success_sml.gif -text
+www/spring/images/icon_warning_sml.gif -text
+www/spring/images/logos/maven-feather.png -text svneol=unset#image/png
+www/spring/images/newwindow.png -text svneol=unset#image/png
+www/spring/index.html -text
+www/spring/source-repository.html -text
+www/spring/team-list.html -text
