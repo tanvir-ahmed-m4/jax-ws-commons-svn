@@ -8,3 +8,4 @@ spring/*.iws
 spring/memo.txt
 spring/ref
 spring/target
+spring/test-app/target
