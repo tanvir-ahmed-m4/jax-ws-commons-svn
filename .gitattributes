@@ -19,6 +19,7 @@ www/http-session-scope/team-list.html -text
 www/index.html svneol=native#text/html
 www/role-approval.policy -text
 www/spring/dependencies.html -text
+www/spring/handler.html -text
 www/spring/images/collapsed.gif -text
 www/spring/images/expanded.gif -text
 www/spring/images/external.png -text svneol=unset#image/png

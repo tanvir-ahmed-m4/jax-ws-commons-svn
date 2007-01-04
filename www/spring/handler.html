@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>JAX-WS commons - Team list</title>
+    <title>JAX-WS commons - Configuring Handlers</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -77,7 +77,7 @@
         <ul>
               
     <li class="none">
-              <a href="handler.html">Handler</a>
+              <strong>Handler</strong>
         </li>
           </ul>
           <h5>Project Documentation</h5>
@@ -97,47 +97,13 @@
             
       
             
-            
+      
             
       
               
-            <li class="expanded">
+        <li class="collapsed">
               <a href="project-info.html">Project Information</a>
-                <ul>
-                  
-    <li class="none">
-              <a href="integration.html">Continuous Integration</a>
-        </li>
-                  
-    <li class="none">
-              <a href="dependencies.html">Dependencies</a>
-        </li>
-                  
-    <li class="none">
-              <a href="issue-tracking.html">Issue Tracking</a>
-        </li>
-                  
-    <li class="none">
-              <a href="mail-lists.html">Mailing Lists</a>
-        </li>
-                  
-    <li class="none">
-              <a href="license.html">Project License</a>
-        </li>
-                  
-    <li class="none">
-              <a href="project-summary.html">Project Summary</a>
-        </li>
-                  
-    <li class="none">
-              <strong>Project Team</strong>
-        </li>
-                  
-    <li class="none">
-              <a href="source-repository.html">Source Repository</a>
-        </li>
-              </ul>
-        </li>
+              </li>
           </ul>
                                        <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
             <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
@@ -153,22 +119,17 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>The Team</h2><p>A successful project requires many people to play many roles. Some members write code or documentation, while others are valuable as testers, submitting patches and suggestions.</p><p>The team is comprised of Members and Contributors. Members have direct access to the source of a project and actively evolve the code-base. Contributors improve the project through submission of patches and suggestions to the Members. The number of Contributors to the project is unbounded. Get involved today. All contributions to the project are greatly appreciated.</p><div class="section"><h3>Members</h3><p>There are no developers working on this project.</p></div><div class="section"><h3>Contributors</h3><p>There are no contributors listed for this project. Please check back again later.</p></div></div><script type="text/javascript">
-function offsetDate(id, offset) {
-    var now = new Date();
-    var nowTime = now.getTime();
-    var localOffset = now.getTimezoneOffset();
-    var developerTime = nowTime + ( offset * 60 * 60 * 1000 ) + ( localOffset * 60 * 1000 );
-    var developerDate = new Date(developerTime);
+        <p><a href="https://jax-ws.dev.java.net/jax-ws-21-ea3/docs/handlers.html">Handler</a>s for the service can be instanciated as beans and injected into service like this:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot;&gt;
+  &lt;ws:handlers&gt;
+    &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
+    &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
+    &lt;ref bean=&quot;aHandler&quot; /&gt;
+  &lt;/ws:handlers&gt;
+&lt;/ws:service&gt;
 
-    document.getElementById(id).innerHTML = developerDate;
-}
+&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div><p>If there's only one handler and that handler is defined as a named bean, you can use the simpler attribute syntax:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot; handlers=&quot;#aHandler&quot; /&gt;
 
-function init(){
-}
-
-window.onLoad = init();
-</script>
+&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div>
       </div>
     </div>
     <div class="clear">
