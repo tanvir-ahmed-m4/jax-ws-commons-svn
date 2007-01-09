@@ -40,7 +40,7 @@
   
   
             <div class="xleft">
-        Last Published: 01/03/2007
+        Last Published: 01/08/2007
                       </div>
             <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
           |
@@ -145,11 +145,14 @@
       &lt;wss:binding url=&quot;/add&quot; service=&quot;#addService&quot; /&gt;
       &lt;wss:binding url=&quot;/sub&quot;&gt;
         &lt;wss:service&gt;&lt;!-- nested bean is of course fine --&gt;
-          &lt;ws:service impl=&quot;foo.MySubtractService&quot; /&gt;
+          &lt;ws:service bean=&quot;#myService&quot; /&gt;
         &lt;/wss:service&gt;
       &lt;/wss:binding&gt;
     &lt;/wss:bindings&gt;
   &lt;/wss:bindings&gt;
+
+  &lt;!-- this bean implements web service methods --&gt;
+  &lt;bean id=&quot;myService&quot; class=&quot;foo.MyService&quot; /&gt;
 
   &lt;!-- simplest definition only needs the class name --&gt;
   &lt;ws:service id=&quot;addService&quot; impl=&quot;foo.MyAddService&quot; handlers=&quot;#myHandler&quot;/&gt;
