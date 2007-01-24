@@ -21,67 +21,39 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <div id="banner">
-                  <a href="https://jax-ws.dev.java.net/" id="bannerLeft">
-    
-                                    <img src="https://jaxb.dev.java.net/javaxml-duke.gif" alt="" />
-    
-            </a>
-                    <div class="clear">
-        <hr/>
-      </div>
-    </div>
-    <div id="breadcrumbs">
-          
-  
-
-  
-    
-  
-  
-            <div class="xleft">
-        Last Published: 01/08/2007
-                      </div>
-            <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+    <!-- TODO: move this into JavaScript to patch the skin
+      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
           |
           <a href="http://glassfishi.dev.java.net/">Glassfish</a>
-          
-  
-
-  
-    
-  
-  
-  </div>
-      <div class="clear">
-        <hr/>
       </div>
-    </div>
+    -->
     <div id="leftColumn">
       <div id="navcolumn">
-           
-  
-
-  
-    
-  
-  
-                   <h5>JAX-WS Spring extension</h5>
-        <ul>
+             <dl class=navgroup>
+        <dt>JAX-WS Spring extension</dt>
+        <dd><ul>
               
     <li class="none">
               <a href="index.html">Introduction</a>
         </li>
-          </ul>
-          <h5>How-to configure...</h5>
-        <ul>
+              
+    <li class="none">
+              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/spring-core/">Download</a>
+        </li>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>How-to configure...</dt>
+        <dd><ul>
               
     <li class="none">
               <a href="handler.html">Handler</a>
         </li>
-          </ul>
-          <h5>Project Documentation</h5>
-        <ul>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>Project Documentation</dt>
+        <dd><ul>
               
                 
               
@@ -138,18 +110,33 @@
         </li>
               </ul>
         </li>
-          </ul>
-                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
-            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
-          </a>
-                       
-  
-
-  
-    
-  
-  
+          </ul></dd>
+    </dl>
         </div>
+      <script>
+        // replace the java.net project tools with the navigation bar from Maven.
+        // also get rid of "Get Involved" thingie too, while we are at it
+        var pt = document.getElementById("projecttools");
+        var nv = document.getElementById("navcolumn");
+        
+        while(pt.previousSibling!=null)
+          pt.parentNode.removeChild(pt.previousSibling);
+        
+        pt.parentNode.insertBefore(nv,pt);
+        pt.parentNode.removeChild(pt);
+      </script>
+      <script>
+        // kill "description" h3 bar
+        var ld = document.getElementById("longdescription");
+        if(ld!=null) {
+          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
+            if(n.nodeType==1 && n.innerHTML=="Description" ) {
+              n.parentNode.removeChild(n);
+              break;
+            }
+          }
+        }
+      </script>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
@@ -167,10 +154,10 @@
   
 
   
-    
   
-  
-  </div>
+  &nbsp;| Last Published: 01/23/2007
+  &nbsp;| Version: 1.0-SNAPSHOT
+</div>
       <div class="clear">
         <hr/>
       </div>
