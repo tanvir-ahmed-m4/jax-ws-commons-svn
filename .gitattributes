@@ -30,5 +30,6 @@ www/spring/images/icon_warning_sml.gif -text
 www/spring/images/logos/maven-feather.png -text svneol=unset#image/png
 www/spring/images/newwindow.png -text svneol=unset#image/png
 www/spring/index.html -text
+www/spring/references/spring-jax-ws-core.xsd.html -text
 www/spring/source-repository.html -text
 www/spring/team-list.html -text
