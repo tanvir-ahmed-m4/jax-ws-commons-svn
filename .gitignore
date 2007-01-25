@@ -7,8 +7,8 @@ spring/*.ipr
 spring/*.iws
 spring/memo.txt
 spring/ref
-spring/spring/*.iml
-spring/spring/target
+spring/spring-core/*.iml
+spring/spring-core/target
 spring/target
 spring/test-app/*.iml
 spring/test-app/target
