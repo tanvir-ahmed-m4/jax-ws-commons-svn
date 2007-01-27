@@ -1,0 +1,2 @@
+setClassUsage('com.sun.istack.NotNull',
+{"this":{"kind":"package","name":"","children":[{"kind":"package","name":"org","children":[{"kind":"package","name":"jvnet","children":[{"kind":"package","name":"jax_ws_commons","children":[{"kind":"package","name":"spring","classes":[{"name":"SpringService","kind":"class","access":"public","line":40,"children":[{"name":"implType","kind":"field","access":"private","line":42,"leaves":[42]}]}]}]}]}]}]}});

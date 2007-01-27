@@ -1,0 +1,2 @@
+setClassUsage('org.springframework.beans.factory.BeanNameAware',
+{"this":{"kind":"package","name":"","children":[{"kind":"package","name":"com","children":[{"kind":"package","name":"sun","children":[{"kind":"package","name":"xml","children":[{"kind":"package","name":"ws","children":[{"kind":"package","name":"transport","children":[{"kind":"package","name":"http","children":[{"kind":"package","name":"servlet","classes":[{"name":"SpringBinding","kind":"class","access":"public","line":12,"leaves":[12]}]}]}]}]}]}]}]}]}});
