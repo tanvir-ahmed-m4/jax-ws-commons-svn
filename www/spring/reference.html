@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>JAX-WS commons - Syntax Reference</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <!-- TODO: move this into JavaScript to patch the skin
+      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+          |
+          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+      </div>
+    -->
+    <div id="leftColumn">
+      <div id="navcolumn">
+             <dl class=navgroup>
+        <dt>JAX-WS Spring extension</dt>
+        <dd><ul>
+              
+    <li class="none">
+              <a href="index.html">Introduction</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/spring-core/">Download</a>
+        </li>
+              
+          
+              
+      
+            
+      
+              
+            <li class="expanded">
+              <strong>Reference</strong>
+                <ul>
+                  
+    <li class="none">
+              <a href="references/spring-jax-ws-core.xsd.html">Common</a>
+        </li>
+                  
+    <li class="none">
+              <a href="references/spring-jax-ws-servlet.xsd.html">Servlet</a>
+        </li>
+              </ul>
+        </li>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>How-to configure...</dt>
+        <dd><ul>
+              
+    <li class="none">
+              <a href="handler.html">Handler</a>
+        </li>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>Project Documentation</dt>
+        <dd><ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="project-info.html">Project Information</a>
+              </li>
+              
+                
+              
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="project-reports.html">Project Reports</a>
+              </li>
+          </ul></dd>
+    </dl>
+        </div>
+      <script>
+        // replace the java.net project tools with the navigation bar from Maven.
+        // also get rid of "Get Involved" thingie too, while we are at it
+        var pt = document.getElementById("projecttools");
+        var nv = document.getElementById("navcolumn");
+        
+        while(pt.previousSibling!=null)
+          pt.parentNode.removeChild(pt.previousSibling);
+        
+        pt.parentNode.insertBefore(nv,pt);
+        pt.parentNode.removeChild(pt);
+      </script>
+      <script>
+        // kill "description" h3 bar
+        var ld = document.getElementById("longdescription");
+        if(ld!=null) {
+          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
+            if(n.nodeType==1 && n.innerHTML=="Description" ) {
+              n.parentNode.removeChild(n);
+              break;
+            }
+          }
+        }
+      </script>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Plain bean definition syntax</h2><p>JAX-WS spring extension really just consists of a set of beans, so you can configure them in much the same way you configure any beans --- by using <tt>bean</tt>, <tt>property</tt> and other similar tags.</p><p>This notation is fairly verbose, so I don't recommend it, but if you like it better, you are always welcome to use it. Please refer to <a href="http://todo}the source code of the beans">http://todo}the source code of the beans</a> for the reference.</p></div><div class="section"><h2>XBean syntax</h2><p>JAX-WS spring extension supports <a href="http://geronimo.apache.org/xbean/}XBean">http://geronimo.apache.org/xbean/}XBean</a>-based alternative syntax, which is more concise. If you are not familiar with XBean, refer to its website for the general idea. This notation can be mixed with the standard bean definition syntax.</p><p>The elements are split into two namespaces. One is <a href="references/spring-jax-ws-core.xsd.html}for the transport-neutral base part">references/spring-jax-ws-core.xsd.html}for the transport-neutral base part</a>, and the other is <a href="references/spring-jax-ws-servlet.xsd.html}for the servlet transport specific part">references/spring-jax-ws-servlet.xsd.html}for the servlet transport specific part</a>.</p><p>We know the reference doesn't look too pretty - we are working on the format. Sorry!</p></div>
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2007
+    
+          
+  
+
+  
+  
+  &nbsp;| Last Published: 01/26/2007
+  &nbsp;| Version: 1.0-SNAPSHOT
+</div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
