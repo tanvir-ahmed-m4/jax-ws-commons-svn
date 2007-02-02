@@ -19,6 +19,7 @@ www/http-session-scope/source-repository.html -text
 www/http-session-scope/team-list.html -text
 www/index.html svneol=native#text/html
 www/role-approval.policy -text
+www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/package-summary.html -text
 www/spring/dependencies.html -text
 www/spring/handler.html -text
 www/spring/images/collapsed.gif -text
