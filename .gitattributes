@@ -5,9 +5,6 @@ spring/spring-core/src/main/resources/META-INF/spring.schemas -text
 spring/spring-core/src/site/apt/handler.apt -text
 spring/spring-core/src/site/apt/index.apt -text
 spring/spring-core/src/site/apt/reference.apt -text
-thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
-thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
-thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
