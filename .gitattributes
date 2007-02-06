@@ -8,6 +8,9 @@ spring/spring-core/src/site/apt/reference.apt -text
 thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
 thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
 thread-scope/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
+thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
+thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
+thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
