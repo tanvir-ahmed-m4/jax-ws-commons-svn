@@ -40,7 +40,7 @@
   
   
             <div class="xleft">
-        Last Published: 02/07/2007
+        Last Published: 02/08/2007
                       </div>
             <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
           |
@@ -73,7 +73,7 @@
         </li>
               
     <li class="none">
-              <a href="https://jax-ws-commons.dev.java.net/servlets/ProjectDocumentList?folderID=6855">Download</a>
+              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/thread-scope/">Download</a>
         </li>
           </ul>
           <h5>Project Documentation</h5>
@@ -128,7 +128,7 @@ public class DataService {
         Statement stmt = con.createStatement();
         stmt.executeQuery();
     }
-}</pre></div><p>This will have performance issues since some of the requests need to wait until a current request is finished. To avoid synchronization, one could create Connection objects in each invocation and that is even more expensive! So we need exclusive access to Connection object and reuse them exclusively for other invocations. This can be achieved by creating more instances and using an instance exclusively for one invocation. To achive this, jax-ws runtime creates instances and stores and reuses them from ThreadLocal.</p><div class="source"><pre>import org.jvnet.jax_ws_commons.http_session_scope.HttpSessionScope;
+}</pre></div><p>This will have performance issues since some of the requests need to wait until a current request is finished. To avoid synchronization, one could create Connection objects in each invocation and that is even more expensive! So we need exclusive access to Connection object and reuse them exclusively for other invocations. This can be achieved by creating more instances and using an instance exclusively for one invocation. To achive this, jax-ws runtime creates instances and stores and reuses them from ThreadLocal.</p><div class="source"><pre>import org.jvnet.jax_ws_commons.thread_scope.ThreadScope;
 
 @WebService
 @ThreadScope
