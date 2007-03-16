@@ -2,6 +2,12 @@ http-session-scope/*.iml
 http-session-scope/*.ipr
 http-session-scope/*.iws
 http-session-scope/target
+jaxws-maven-plugin/*.iml
+jaxws-maven-plugin/*.ipr
+jaxws-maven-plugin/*.iws
+jaxws-maven-plugin/src/it/wsimport/file/target
+jaxws-maven-plugin/src/it/wsimport/url/target
+jaxws-maven-plugin/target
 spring/*.iml
 spring/*.ipr
 spring/*.iws
