@@ -34,6 +34,8 @@ www/jaxws-maven-plugin/license.html -text
 www/jaxws-maven-plugin/source-repository.html -text
 www/jaxws-maven-plugin/team-list.html -text
 www/jaxws-maven-plugin/usage.html -text
+www/jaxws-maven-plugin/wsgen-mojo.html -text
+www/jaxws-maven-plugin/wsimport-mojo.html -text
 www/role-approval.policy -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/package-summary.html -text
 www/spring/apidocs/files -text
