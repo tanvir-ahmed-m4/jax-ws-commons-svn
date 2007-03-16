@@ -1,5 +1,8 @@
 * text=auto !eol
 http-session-scope/src/site/apt/index.apt -text
+jaxws-maven-plugin/src/site/apt/index.apt -text
+jaxws-maven-plugin/src/site/apt/usage.apt -text
+jaxws-maven-plugin/src/site/fml/faq.fml -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
 spring/spring-core/src/site/apt/handler.apt -text
