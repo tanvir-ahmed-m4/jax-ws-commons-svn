@@ -8,6 +8,7 @@ json/etc/com.sun.xml.ws.api.BindingIDFactory -text
 json/json.ipr -text
 json/lib/jettison-1.0-beta-1-sources.jar -text
 json/lib/jettison-1.0-beta-1.jar -text
+json/pom.xml -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingIDFactory.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONCodec.java -text
