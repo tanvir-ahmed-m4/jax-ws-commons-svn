@@ -3,12 +3,14 @@ http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
-json/build.xml -text
 json/pom.xml -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingIDFactory.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONCodec.java -text
 json/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
+json/src/test/java/foo/MyClient.java -text
+json/src/test/java/foo/MyDeployment.java -text
+json/src/test/java/foo/MyService.java -text
 json/test-app/build.xml -text
 json/test-app/src/foo/MyClient.java -text
 json/test-app/src/foo/MyDeployment.java -text

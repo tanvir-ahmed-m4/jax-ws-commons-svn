@@ -8,6 +8,10 @@ jaxws-maven-plugin/*.iws
 jaxws-maven-plugin/src/it/wsimport/file/target
 jaxws-maven-plugin/src/it/wsimport/url/target
 jaxws-maven-plugin/target
+json/*.iml
+json/*.ipr
+json/*.iws
+json/target
 spring/*.iml
 spring/*.ipr
 spring/*.iws
