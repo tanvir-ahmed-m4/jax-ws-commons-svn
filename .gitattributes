@@ -20,6 +20,7 @@ spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
 spring/spring-core/src/site/apt/handler.apt -text
 spring/spring-core/src/site/apt/index.apt -text
+spring/spring-core/src/site/apt/local-transport.apt -text
 spring/spring-core/src/site/apt/reference.apt -text
 spring/test-app/soapui.xml -text
 thread-scope/pom.xml -text
