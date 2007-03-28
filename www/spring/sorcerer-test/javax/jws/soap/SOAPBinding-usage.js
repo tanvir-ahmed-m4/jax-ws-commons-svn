@@ -1,0 +1,2 @@
+setClassUsage('javax.jws.soap.SOAPBinding',
+{"use()":{"kind":"package","name":"","children":[{"kind":"package","name":"foo","classes":[{"name":"MyService","kind":"class","access":"public","line":13,"leaves":[14]}]}]},"this":{"kind":"package","name":"","children":[{"kind":"package","name":"foo","classes":[{"name":"MyService","kind":"class","access":"public","line":13,"leaves":[14]}]}]},"style()":{"kind":"package","name":"","children":[{"kind":"package","name":"foo","classes":[{"name":"MyService","kind":"class","access":"public","line":13,"leaves":[14]}]}]}});

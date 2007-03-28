@@ -1,0 +1,2 @@
+setClassUsage('junit.framework.TestCase',
+{});
