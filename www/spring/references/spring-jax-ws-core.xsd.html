@@ -78,19 +78,25 @@ Or otherwise a nested &lt;bean&gt; or &lt;ref&gt; tag can be used to
 specify multiple handlers.</td></tr>
   <tr><td>invoker</td><td>&lt;spring:bean/&gt;</td><td>Sets {@link Invoker} for this endpoint.
 Defaults to {@link InstanceResolver#createDefault(Class) the standard invoker}.</td></tr>
-  <tr><td>metadata</td><td>&lt;spring:bean/&gt;</td><td></td></tr>
+  <tr><td>metadata</td><td>&lt;spring:bean/&gt;</td><td>Optional metadata for this endpoint.
+<p>
+The collection can contain {@link String}, {@link URL}, or {@link SDDocumentSource}
+elements.
+<p>
+If element is a <code>String</code>,
+{@link ServletContext} (if available) and {@link ClassLoader}
+are searched for this path, then failing that, it's treated as an
+absolute {@link URL}.</td></tr>
   <tr><td>primaryWsdl</td><td>&lt;spring:bean/&gt;</td><td>Optional WSDL for this endpoint.
-
 <p>
 Defaults to the WSDL discovered in <tt>META-INF/wsdl</tt>,
-
 <p>
-It can be either {@link String},
-{@link URL}, or {@link SDDocumentSource}.
-
-If this is string, {@link ServletContext} (if available) and
-{@link ClassLoader} are searched by this path, then failing that,
-it's treated as an absolute {@link URL}.</td></tr>
+It can be either {@link String}, {@link URL}, or {@link SDDocumentSource}.
+<p>
+If <code>primaryWsdl</code> is a <code>String</code>,
+{@link ServletContext} (if available) and {@link ClassLoader}
+are searched for this path, then failing that, it's treated as an
+absolute {@link URL}.</td></tr>
   <tr><td>resolver</td><td>&lt;spring:bean/&gt;</td><td>Sets the {@link EntityResolver} to be used for resolving schemas/WSDLs
 that are referenced. Optional.</td></tr>
   <tr><td>servletContext</td><td>&lt;spring:bean/&gt;</td><td>Set automatically by Spring if JAX-WS is used inside web container.</td></tr>
