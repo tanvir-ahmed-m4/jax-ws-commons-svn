@@ -11,10 +11,6 @@ json/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -t
 json/src/test/java/foo/MyClient.java -text
 json/src/test/java/foo/MyDeployment.java -text
 json/src/test/java/foo/MyService.java -text
-json/test-app/build.xml -text
-json/test-app/src/foo/MyClient.java -text
-json/test-app/src/foo/MyDeployment.java -text
-json/test-app/src/foo/MyService.java -text
 spring/spring-core/publish-schemas.sh -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
