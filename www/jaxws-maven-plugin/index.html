@@ -11,14 +11,15 @@
 
 <html>
   <head>
-    <title>JAX-WS Maven plugin - 
-    jaxws-maven-plugin - Overview</title>
+    <title>JAX-WS Maven plugin - Maven 2 Jaxws maven plugin</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Dan T. Tran
+dantran@gmail.com" />
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
@@ -110,36 +111,7 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        
-  
-  
-    <a name="jaxws-maven-plugin"></a><div class="section"><h2>jaxws-maven-plugin</h2>
-      <p>Goals available: </p>
-      <table class="bodyTable">
-        <tr class="a">
-          <th>Goal</th>
-          <th>Description</th>
-        </tr>
-        <tr class="b">
-          <td>
-            <a href="wsgen-mojo.html">
-              <code>jaxws:wsgen</code>
-            </a>
-          </td>
-          <td><p> A Maven 2 plugin which reads a service endpoint implementation class and generates all of the portable artifacts for a JAX-WS web service. </p></td>
-        </tr>
-        <tr class="a">
-          <td>
-            <a href="wsimport-mojo.html">
-              <code>jaxws:wsimport</code>
-            </a>
-          </td>
-          <td>A Maven 2 plugin which parses wsdl and binding files and produces a corresponding object model based on the JAXWS WsImport parsing engine.</td>
-        </tr>
-      </table>
-    </div>
-  
-
+        <div class="section"><h2>JAX-WS Maven Plugin</h2><p>This plugin contains Maven adapter for <a href="https://jax-ws.dev.java.net/">JAX-WS</a>'s toolset. The original version of this was developed in the codehaus mojo project, but as of March 2007, the project is moved to jax-ws-commons.</p><div class="section"><h3>Usage</h3><p>Instructions on how to use the JAX-WS Maven Plugin can be found <a href="usage.html">here</a>.</p></div><div class="section"><h3>Goals Overview</h3><ul><li><a href="wsimport-mojo.html">jaxws:wsimport</a>: generates JAX-WS portable artifacts used in JAX-WS clients and services. The tool reads a WSDL and generates all the required artifacts for web service development, deployment, and invocation. </li><li><a href="wsgen-mojo.html">jaxws:wsgen</a>: reads a service endpoint implementation class and generates all of the portable artifacts for a JAX-WS web service.</li></ul></div><div class="section"><h3>Examples</h3><p>There are a number of buildable examples in <a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/jaxws-maven-plugin/src/it/"> SVN repository</a>.</p></div></div>
       </div>
     </div>
     <div class="clear">
@@ -154,8 +126,8 @@
 
   
   
-  &nbsp;| Last Published: 03/16/2007
-  &nbsp;| Version: 1.0
+  &nbsp;| Last Published: 04/09/2007
+  &nbsp;| Version: 1.3-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>
