@@ -8,6 +8,7 @@ json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingIDFactory.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONCodec.java -text
 json/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
+json/src/site/apt/index.apt -text
 json/src/test/java/foo/MyClient.java -text
 json/src/test/java/foo/MyDeployment.java -text
 json/src/test/java/foo/MyService.java -text
