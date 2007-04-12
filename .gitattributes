@@ -4,6 +4,7 @@ jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
 json/pom.xml -text
+json/src/main/java/org/jvnet/jax_ws_commons/json/ClientGenerator.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingIDFactory.java -text
 json/src/main/java/org/jvnet/jax_ws_commons/json/JSONCodec.java -text
