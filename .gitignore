@@ -11,6 +11,8 @@ jaxws-maven-plugin/target
 json/*.iml
 json/*.ipr
 json/*.iws
+json/jaxws-json/*.iml
+json/jaxws-json/target
 json/target
 json/test-app/*.iml
 json/test-app/*.ipr
