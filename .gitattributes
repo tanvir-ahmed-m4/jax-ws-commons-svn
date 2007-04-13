@@ -9,6 +9,7 @@ json/jaxws-json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -
 json/jaxws-json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingIDFactory.java -text
 json/jaxws-json/src/main/java/org/jvnet/jax_ws_commons/json/JSONCodec.java -text
 json/jaxws-json/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
+json/jaxws-json/src/main/resources/jaxws.js -text
 json/jaxws-json/src/site/apt/index.apt -text
 json/jaxws-json/src/test/java/foo/MyClient.java -text
 json/jaxws-json/src/test/java/foo/MyDeployment.java -text
