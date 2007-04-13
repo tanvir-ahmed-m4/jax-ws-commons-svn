@@ -12,6 +12,10 @@ json/*.iml
 json/*.ipr
 json/*.iws
 json/target
+json/test-app/*.iml
+json/test-app/*.ipr
+json/test-app/*.iws
+json/test-app/target
 spring/*.iml
 spring/*.ipr
 spring/*.iws
