@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>JAX-WS commons - JSON support for JAX-WS</title>
+    <title>JAX-WS commons - Configuring JSON support with Spring</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -33,11 +33,11 @@
         <dd><ul>
               
     <li class="none">
-              <strong>Introduction</strong>
+              <a href="index.html">Introduction</a>
         </li>
               
     <li class="none">
-              <a href="spring.html">Configuration with Spring</a>
+              <strong>Configuration with Spring</strong>
         </li>
               
     <li class="none">
@@ -100,27 +100,24 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>What is this?</h2><p>JAX-WS supports a &quot;pluggable encoding&quot; --- meaning it can use formats other than textual XML. This extension takes advantage of this and allows JAX-WS services to be exposed via JSON.</p><p>JSON support is implemented as a custom binding. So just like there are SOAP/HTTP binding or Plain Old XML binding, you can specify JSON binding to expose a service as JSON service. The following code shows one way of exposing a service over JSON:</p><div class="source"><pre>@BindingType(JSONBindingID.JSON_BINDING)
-public class MyService {
+        <p>JAX-WS JSON extension can be used with <a href="https://jax-ws-commons.dev.java.net/spring/">JAX-WS Spring extension</a> for more flexible configuration --- in particular to expose the same endpoint as both SOAP and JSON.</p><p>The following definitions show how to run <tt>GreetingService</tt> and expose it both as a SOAP endpoint (at <tt>http://yourhost/contextPath/soap</tt>) and as a JSON endpoint (at <tt>http://yourhost/contextPath/json</tt>)</p><div class="source"><pre>  &lt;wss:bindings id=&quot;jax-ws&quot;&gt;
+    &lt;wss:bindings&gt;
+      &lt;wss:binding url=&quot;/soap&quot;&gt;
+        &lt;wss:service&gt;
+          &lt;ws:service bean=&quot;#myService&quot; /&gt;
+        &lt;/wss:service&gt;
+      &lt;/wss:binding&gt;
+      &lt;wss:binding url=&quot;/json&quot;&gt;
+        &lt;wss:service&gt;
+          &lt;ws:service bean=&quot;#myService&quot; bindingID=&quot;https://jax-ws-commons.dev.java.net/json/&quot; /&gt;
+        &lt;/wss:service&gt;
+      &lt;/wss:binding&gt;
+    &lt;/wss:bindings&gt;
+  &lt;/wss:bindings&gt;
 
-    public Book get(@WebParam(name=&quot;id&quot;) int id) {
-        Book b = new Book();
-        b.id = id;
-        return b;
-    }
-
-    public static final class Book {
-        public int id = 1;
-        public String title = &quot;Java&quot;;
-    }
-
-}</pre></div><p>You just need <tt>jaxws-json.jar</tt> in your <tt>WEB-INF/lib</tt> for this to work.</p></div><div class="section"><h2>Client-side Programming</h2><p>Once the server exposes a JSON service, you'll write client-side JavaScript to access this service. First, you'll include the proxy script.</p><div class="source"><pre>&lt;script src=&quot;path/to/endpoint?js&quot;&gt;&lt;/script&gt;</pre></div><p>This creates a variable 'myService' with which you can make service invocations. All the parameters are passed as a single JavaScript object, where the property name is the parameter name. The call happens asynchronously, and when it's done your callback will be invoked with the return value as a parameter:</p><div class="source"><pre>myService.get(
-  {id:5},
-  function(r) {
-    alert(&quot;ID=&quot;+r.id);
-    alert(&quot;title=&quot;+r.title);
-  }
-);</pre></div><p>If you'd like to use a different variable name, specify that as the <tt>var</tt> query parameter, as shown below:</p><div class="source"><pre>&lt;script src=&quot;path/to/endpoint?js&amp;var=svc&quot;&gt;&lt;/script&gt;</pre></div></div>
+  &lt;bean id=&quot;myService&quot; class=&quot;greeter.GreetingService&quot; scope=&quot;prototype&quot;&gt;
+    ...
+  &lt;/bean&gt;</pre></div><p>See <a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/json/test-app/">the sample application</a> for the complete example of how to put this all together by using Maven.</p><p>The prototype scope is so that the two endpoints use different instances of <tt>GreetingService</tt>. This is necessary for <tt>WebServiceContext</tt> injection to happen properly.</p>
       </div>
     </div>
     <div class="clear">
