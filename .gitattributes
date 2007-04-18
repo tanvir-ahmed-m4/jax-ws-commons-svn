@@ -34,7 +34,6 @@ transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/Listener.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/MailHandler.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/MimeMessageEx.java -text
-transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/NewMailHandler.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/POP3Listener.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/SenderThread.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/UrlQueryParser.java -text
