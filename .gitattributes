@@ -47,6 +47,7 @@ transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/UrlQueryParser.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/SMTP.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/SMTPAdapter.java -text
+transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/SMTPConfig.java -text
 transport/smtp/jaxws-smtp/src/main/resources/META-INF/services/com.sun.xml.ws.api.pipe.TransportTubeFactory -text
 transport/smtp/jaxws-smtp/src/test/java/pop3/Book.java -text
 transport/smtp/jaxws-smtp/src/test/java/pop3/SmtpTest.java -text
