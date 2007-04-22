@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>Spring support extension - Source Repository</title>
+    <title>JAX-WS commons - Source Repository</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -21,71 +21,72 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <div id="banner">
-                    <span id="bannerLeft">
-    
-            Spring support extension
-    
-            </span>
-                    <div class="clear">
-        <hr/>
+    <!-- TODO: move this into JavaScript to patch the skin
+      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+          |
+          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
       </div>
-    </div>
-    <div id="breadcrumbs">
-          
-  
-
-  
-    
-  
-  
-            <div class="xleft">
-        Last Published: 04/22/2007
-                      </div>
-            <div class="xright">      <a href="">Spring support extension</a>
-          
-  
-
-  
-    
-  
-  
-  </div>
-      <div class="clear">
-        <hr/>
-      </div>
-    </div>
+    -->
     <div id="leftColumn">
       <div id="navcolumn">
-           
-  
-
-  
-    
-  
-  
-                   <ul>
-          </ul>
-          <h5>Modules</h5>
-        <ul>
+             <dl class=navgroup>
+        <dt>JAX-WS Spring extension</dt>
+        <dd><ul>
               
     <li class="none">
-              <a href="jaxws-spring/index.html">Spring support extension</a>
+              <a href="index.html">Introduction</a>
         </li>
               
     <li class="none">
-              <a href="test-app/index.html">Test application for JAX-WS Spring support</a>
+              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
         </li>
-          </ul>
-          <h5>Project Documentation</h5>
-        <ul>
+              
+          
+              
+      
+            
+      
+            
+      
+              
+        <li class="expanded">
+              <a href="reference.html">Reference</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="references/spring-jax-ws-core.xsd.html">Common</a>
+        </li>
+                  
+    <li class="none">
+              <a href="references/spring-jax-ws-servlet.xsd.html">Servlet</a>
+        </li>
+                  
+    <li class="none">
+              <a href="references/spring-jax-ws-local-transport.xsd.html">Local Transport</a>
+        </li>
+              </ul>
+        </li>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>How-to configure...</dt>
+        <dd><ul>
+              
+    <li class="none">
+              <a href="handler.html">Handler</a>
+        </li>
+              
+    <li class="none">
+              <a href="local-transport.html">Local Transport</a>
+        </li>
+          </ul></dd>
+    </dl>
+      <dl class=navgroup>
+        <dt>Project Documentation</dt>
+        <dd><ul>
               
                 
               
-      
-            
-      
-            
       
             
       
@@ -107,19 +108,11 @@
                 <ul>
                   
     <li class="none">
-              <a href="index.html">About</a>
-        </li>
-                  
-    <li class="none">
               <a href="integration.html">Continuous Integration</a>
         </li>
                   
     <li class="none">
               <a href="dependencies.html">Dependencies</a>
-        </li>
-                  
-    <li class="none">
-              <a href="dependency-convergence.html">Dependency Convergence</a>
         </li>
                   
     <li class="none">
@@ -147,22 +140,37 @@
         </li>
               </ul>
         </li>
-          </ul>
-                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
-            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
-          </a>
-                       
-  
-
-  
-    
-  
-  
+          </ul></dd>
+    </dl>
         </div>
+      <script>
+        // replace the java.net project tools with the navigation bar from Maven.
+        // also get rid of "Get Involved" thingie too, while we are at it
+        var pt = document.getElementById("projecttools");
+        var nv = document.getElementById("navcolumn");
+        
+        while(pt.previousSibling!=null)
+          pt.parentNode.removeChild(pt.previousSibling);
+        
+        pt.parentNode.insertBefore(nv,pt);
+        pt.parentNode.removeChild(pt);
+      </script>
+      <script>
+        // kill "description" h3 bar
+        var ld = document.getElementById("longdescription");
+        if(ld!=null) {
+          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
+            if(n.nodeType==1 && n.innerHTML=="Description" ) {
+              n.parentNode.removeChild(n);
+              break;
+            }
+          }
+        }
+      </script>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Overview</h2>This project uses <a href="http://subversion.tigris.org/">Subversion</a> to manage its source code. Instructions on Subversion use can be found at <a href="http://svnbook.red-bean.com/">http://svnbook.red-bean.com/</a>.</div><div class="section"><h2>Web Access</h2><p>The following is a link to the online source repository.</p><div class="source"><pre><a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring">https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring</a></pre></div></div><div class="section"><h2>Anonymous access</h2><p>The source can be checked out anonymously from SVN with this command:</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-common/trunk/spring spring</pre></div></div><div class="section"><h2>Developer access</h2><p>Everyone can access the Subversion repository via HTTPS, but Committers must checkout the Subversion repository via HTTPS.</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-commons/trunk/spring spring</pre></div><p>To commit changes to the repository, execute the following command to commit your changes (svn will prompt you for your password)</p><div class="source"><pre>$ svn commit --username your-username -m &quot;A message&quot;</pre></div></div><div class="section"><h2>Access from behind a firewall</h2><p>For those users who are stuck behind a corporate firewall which is blocking http access to the Subversion repository, you can try to access it via the developer connection:</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-commons/trunk/spring spring</pre></div></div><div class="section"><h2>Access through a proxy</h2><p>The Subversion client can go through a proxy, if you configure it to do so. First, edit your &quot;servers&quot; configuration file to indicate which proxy to use. The files location depends on your operating system. On Linux or Unix it is located in the directory &quot;~/.subversion&quot;. On Windows it is in &quot;%APPDATA%\Subversion&quot;. (Try &quot;echo %APPDATA%&quot;, note this is a hidden directory.)</p><p>There are comments in the file explaining what to do. If you don't have that file, get the latest Subversion client and run any command; this will cause the configuration directory and template files to be created.</p><p>Example : Edit the 'servers' file and add something like :</p><div class="source"><pre>[global]
+        <div class="section"><h2>Overview</h2>This project uses <a href="http://subversion.tigris.org/">Subversion</a> to manage its source code. Instructions on Subversion use can be found at <a href="http://svnbook.red-bean.com/">http://svnbook.red-bean.com/</a>.</div><div class="section"><h2>Web Access</h2><p>The following is a link to the online source repository.</p><div class="source"><pre><a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring/jaxws-spring">https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring/jaxws-spring</a></pre></div></div><div class="section"><h2>Anonymous access</h2><p>The source can be checked out anonymously from SVN with this command:</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-common/trunk/spring/jaxws-spring jaxws-spring</pre></div></div><div class="section"><h2>Developer access</h2><p>Everyone can access the Subversion repository via HTTPS, but Committers must checkout the Subversion repository via HTTPS.</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-commons/trunk/spring/jaxws-spring jaxws-spring</pre></div><p>To commit changes to the repository, execute the following command to commit your changes (svn will prompt you for your password)</p><div class="source"><pre>$ svn commit --username your-username -m &quot;A message&quot;</pre></div></div><div class="section"><h2>Access from behind a firewall</h2><p>For those users who are stuck behind a corporate firewall which is blocking http access to the Subversion repository, you can try to access it via the developer connection:</p><div class="source"><pre>$ svn checkout https://svn.dev.java.net/svn/jax-ws-commons/trunk/spring/jaxws-spring jaxws-spring</pre></div></div><div class="section"><h2>Access through a proxy</h2><p>The Subversion client can go through a proxy, if you configure it to do so. First, edit your &quot;servers&quot; configuration file to indicate which proxy to use. The files location depends on your operating system. On Linux or Unix it is located in the directory &quot;~/.subversion&quot;. On Windows it is in &quot;%APPDATA%\Subversion&quot;. (Try &quot;echo %APPDATA%&quot;, note this is a hidden directory.)</p><p>There are comments in the file explaining what to do. If you don't have that file, get the latest Subversion client and run any command; this will cause the configuration directory and template files to be created.</p><p>Example : Edit the 'servers' file and add something like :</p><div class="source"><pre>[global]
 http-proxy-host = your.proxy.name
 http-proxy-port = 3128
 </pre></div></div>
@@ -179,10 +187,10 @@ http-proxy-port = 3128
   
 
   
-    
   
-  
-  </div>
+  &nbsp;| Last Published: 04/22/2007
+  &nbsp;| Version: 1.5-SNAPSHOT
+</div>
       <div class="clear">
         <hr/>
       </div>
