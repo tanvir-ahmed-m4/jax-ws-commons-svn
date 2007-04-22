@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>JAX-WS commons - Team list</title>
+    <title>Spring support extension - Team list</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -21,72 +21,71 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
-          |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            Spring support extension
+    
+            </span>
+                    <div class="clear">
+        <hr/>
       </div>
-    -->
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 04/22/2007
+                      </div>
+            <div class="xright">      <a href="">Spring support extension</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
     <div id="leftColumn">
       <div id="navcolumn">
-             <dl class=navgroup>
-        <dt>JAX-WS Spring extension</dt>
-        <dd><ul>
+           
+  
+
+  
+    
+  
+  
+                   <ul>
+          </ul>
+          <h5>Modules</h5>
+        <ul>
               
     <li class="none">
-              <a href="index.html">Introduction</a>
-        </li>
-              
-    <li class="none">
-              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
-        </li>
-              
-          
-              
-      
-            
-      
-            
-      
-              
-        <li class="expanded">
-              <a href="reference.html">Reference</a>
-                <ul>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-core.xsd.html">Common</a>
-        </li>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-servlet.xsd.html">Servlet</a>
-        </li>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-local-transport.xsd.html">Local Transport</a>
-        </li>
-              </ul>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>How-to configure...</dt>
-        <dd><ul>
-              
-    <li class="none">
-              <a href="handler.html">Handler</a>
+              <a href="jaxws-spring/index.html">Spring support extension</a>
         </li>
               
     <li class="none">
-              <a href="local-transport.html">Local Transport</a>
+              <a href="test-app/index.html">Test application for JAX-WS Spring support</a>
         </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
+          </ul>
+          <h5>Project Documentation</h5>
+        <ul>
               
                 
               
+      
+            
+      
+            
       
             
       
@@ -108,11 +107,19 @@
                 <ul>
                   
     <li class="none">
+              <a href="index.html">About</a>
+        </li>
+                  
+    <li class="none">
               <a href="integration.html">Continuous Integration</a>
         </li>
                   
     <li class="none">
               <a href="dependencies.html">Dependencies</a>
+        </li>
+                  
+    <li class="none">
+              <a href="dependency-convergence.html">Dependency Convergence</a>
         </li>
                   
     <li class="none">
@@ -140,33 +147,18 @@
         </li>
               </ul>
         </li>
-          </ul></dd>
-    </dl>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
         </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
@@ -199,10 +191,10 @@ window.onLoad = init();
   
 
   
+    
   
-  &nbsp;| Last Published: 04/03/2007
-  &nbsp;| Version: 1.4-SNAPSHOT
-</div>
+  
+  </div>
       <div class="clear">
         <hr/>
       </div>
