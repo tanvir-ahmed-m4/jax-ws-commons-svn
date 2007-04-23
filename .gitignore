@@ -30,3 +30,5 @@ spring/test-app/*.iml
 spring/test-app/target
 transport/smtp/jaxws-smtp/*.iml
 transport/smtp/jaxws-smtp/target
+transport/smtp/test-app/*.iml
+transport/smtp/test-app/target
