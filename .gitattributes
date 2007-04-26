@@ -35,7 +35,9 @@ thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.jav
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
 transport/smtp/jaxws-smtp/pom.xml -text
+transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/POP3Info.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/SMTPFeature.java -text
+transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/SenderInfo.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SmtpTransportTube.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SmtpTransportTubeFactory.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/EmailEndpoint.java -text
@@ -45,7 +47,6 @@ transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/POP3Listener.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/SenderThread.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/UrlQueryParser.java -text
-transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/SMTP.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/SMTPAdapter.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/server/ServerSMTPFeature.java -text
 transport/smtp/jaxws-smtp/src/main/resources/META-INF/services/com.sun.xml.ws.api.pipe.TransportTubeFactory -text
