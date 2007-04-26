@@ -55,8 +55,6 @@ transport/smtp/jaxws-smtp/src/test/java/pop3/Book.java -text
 transport/smtp/jaxws-smtp/src/test/java/pop3/SmtpTest.java -text
 transport/smtp/pom.xml -text
 transport/smtp/test-app/pom.xml -text
-transport/smtp/test-app/src/main/java/foo/Book.java -text
-transport/smtp/test-app/src/main/java/foo/SmtpTest.java -text
 transport/smtp/test-app/src/main/java/greeter/GreetingService.java -text
 transport/smtp/test-app/src/main/webapp/WEB-INF/applicationContext.xml -text
 transport/smtp/test-app/src/main/webapp/WEB-INF/web.xml -text
