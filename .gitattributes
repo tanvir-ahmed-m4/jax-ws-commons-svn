@@ -204,8 +204,8 @@ transport/smtp/jaxws-smtp/pom.xml -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/POP3Info.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/SMTPFeature.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/SenderInfo.java -text
-transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SmtpTransportTube.java -text
-transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SmtpTransportTubeFactory.java -text
+transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SMTPTransportTube.java -text
+transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/client/SMTPTransportTubeFactory.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/EmailEndpoint.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/EmailException.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/mail/Listener.java -text
