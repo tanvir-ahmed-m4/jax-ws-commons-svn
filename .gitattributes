@@ -138,6 +138,37 @@ json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/a
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/tip16_1.gif -text
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/warn16_1.gif -text
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/datatable/assets/datatable.css -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/logger/assets/logger.css -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/map.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarodwn8_dim_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarodwn8_hov_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarodwn8_nrm_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarorght8_dim_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarorght8_hov_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuarorght8_nrm_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuaroup8_dim_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuaroup8_nrm_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuchk8_dim_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuchk8_hov_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/menu/assets/menuchk8_nrm_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/loading.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/newcats_bkgd.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/ptr.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/round_4px_trans_gray.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/tab_left.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/tabview/assets/img/tab_right.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/lm.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/lmh.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/ln.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/loading.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/lp.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/lph.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/tm.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/tmh.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/tn.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/tp.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/tph.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/treeview/assets/vline.gif -text
 json/json-jmaki-demo/web/resources/yahoo/rgbslider/images/yahoo-rgbslider.jpg -text svneol=unset#image/jpeg
 json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/hline.png -text svneol=unset#image/png
 json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/hue.png -text svneol=unset#image/png
