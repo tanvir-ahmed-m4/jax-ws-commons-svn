@@ -100,20 +100,17 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <p>JAX-WS JSON extension can be used with <a href="https://jax-ws-commons.dev.java.net/spring/">JAX-WS Spring extension</a> for more flexible configuration --- in particular to expose the same endpoint as both SOAP and JSON.</p><p>The following definitions show how to run <tt>GreetingService</tt> and expose it both as a SOAP endpoint (at <tt>http://yourhost/contextPath/soap</tt>) and as a JSON endpoint (at <tt>http://yourhost/contextPath/json</tt>)</p><div class="source"><pre>  &lt;wss:bindings id=&quot;jax-ws&quot;&gt;
-    &lt;wss:bindings&gt;
-      &lt;wss:binding url=&quot;/soap&quot;&gt;
-        &lt;wss:service&gt;
-          &lt;ws:service bean=&quot;#myService&quot; /&gt;
-        &lt;/wss:service&gt;
-      &lt;/wss:binding&gt;
-      &lt;wss:binding url=&quot;/json&quot;&gt;
-        &lt;wss:service&gt;
-          &lt;ws:service bean=&quot;#myService&quot; bindingID=&quot;https://jax-ws-commons.dev.java.net/json/&quot; /&gt;
-        &lt;/wss:service&gt;
-      &lt;/wss:binding&gt;
-    &lt;/wss:bindings&gt;
-  &lt;/wss:bindings&gt;
+        <p>JAX-WS JSON extension can be used with <a href="https://jax-ws-commons.dev.java.net/spring/">JAX-WS Spring extension</a> for more flexible configuration --- in particular to expose the same endpoint as both SOAP and JSON.</p><p>The following definitions show how to run <tt>GreetingService</tt> and expose it both as a SOAP endpoint (at <tt>http://yourhost/contextPath/soap</tt>) and as a JSON endpoint (at <tt>http://yourhost/contextPath/json</tt>)</p><div class="source"><pre>  &lt;wss:binding url=&quot;/soap&quot;&gt;
+    &lt;wss:service&gt;
+      &lt;ws:service bean=&quot;#myService&quot; /&gt;
+    &lt;/wss:service&gt;
+  &lt;/wss:binding&gt;
+
+  &lt;wss:binding url=&quot;/json&quot;&gt;
+    &lt;wss:service&gt;
+      &lt;ws:service bean=&quot;#myService&quot; bindingID=&quot;https://jax-ws-commons.dev.java.net/json/&quot; /&gt;
+    &lt;/wss:service&gt;
+  &lt;/wss:binding&gt;
 
   &lt;bean id=&quot;myService&quot; class=&quot;greeter.GreetingService&quot; scope=&quot;prototype&quot;&gt;
     ...
@@ -132,8 +129,8 @@
 
   
   
-  &nbsp;| Last Published: 04/18/2007
-  &nbsp;| Version: 1.0-SNAPSHOT
+  &nbsp;| Last Published: 04/27/2007
+  &nbsp;| Version: 1.1-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>
