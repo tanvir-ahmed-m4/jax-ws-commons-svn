@@ -17,6 +17,7 @@ json/jmaki-demo-app/*.iml
 json/jmaki-demo-app/*.ipr
 json/jmaki-demo-app/*.iws
 json/jmaki-demo-app/target
+json/json-jmaki-demo/build
 json/json-jmaki-demo/nbproject/private
 json/target
 json/test-app/*.iml
