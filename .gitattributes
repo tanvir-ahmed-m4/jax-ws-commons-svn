@@ -48,6 +48,44 @@ json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/xbean-spring-2.7.jar -text
 json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/xsom-20070323.jar -text
 json/json-jmaki-demo/setup/resources.zip -text
 json/json-jmaki-demo/setup/resources0.zip -text
+json/json-jmaki-demo/web/WEB-INF/lib/activation-1.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/aopalliance-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/avalon-framework-4.1.3.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/commons-collections-3.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/commons-lang-2.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/commons-logging-1.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxb-api-2.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxb-impl-2.1.3-SNAPSHOT.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxb-impl-2.1.3.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxws-api-2.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxws-json-1.0-SNAPSHOT.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxws-rt-2.1.2-SNAPSHOT.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jaxws-spring-1.4.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jettison-1.0-beta-1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jsr173_api-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jsr181-api-1.0-MR1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/jsr250-api-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/junit-3.8.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/log4j-1.2.12.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/logkit-1.0.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/oro-2.0.8.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/relaxngDatatype-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/resolver.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/saaj-api-1.3.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/saaj-impl-1.3.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/servlet-api-2.5.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/sjsxp-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/spring-2.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/spring-aop-2.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/spring-beans-2.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/spring-context-2.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/spring-core-2.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/stax-api-1.0.1.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/stax-ex-1.0.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/streambuffer-0.6.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/velocity-1.5.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/xbean-spring-2.7.jar -text
+json/json-jmaki-demo/web/WEB-INF/lib/xsom-20070323.jar -text
 json/json-jmaki-demo/web/resources/config.json -text
 json/json-jmaki-demo/web/resources/css/images/jmaki-2-row-right-sidebar-footer.jpg -text svneol=unset#image/jpeg
 json/json-jmaki-demo/web/resources/css/images/jmaki-2column-footer.jpg -text svneol=unset#image/jpeg
@@ -100,6 +138,25 @@ json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/a
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/tip16_1.gif -text
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/warn16_1.gif -text
 json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/datatable/assets/datatable.css -text
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/images/yahoo-rgbslider.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/hline.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/hue.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/pickerbg.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/select.gif -text
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/img/vline.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/rgbslider/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/simpledlg/images/yahoo-simpledlg.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/simpledlg/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/slider/images/yahoo-slider.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/slider/img/horizBg.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/slider/img/horizSlider.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/slider/img/vertBg.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/slider/img/vertSlider.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/slider/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/tabbedview/images/yahoo-tabbedview.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/tabbedview/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/tree/images/yahoo-tree.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/tree/widget.json -text
 spring/spring-core/publish-schemas.sh -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
