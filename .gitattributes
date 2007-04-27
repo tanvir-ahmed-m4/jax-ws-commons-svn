@@ -46,6 +46,60 @@ json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/streambuffer-0.6.jar -text
 json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/velocity-1.5.jar -text
 json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/xbean-spring-2.7.jar -text
 json/jmaki-demo-app/src/main/webapp/WEB-INF/lib/xsom-20070323.jar -text
+json/json-jmaki-demo/setup/resources.zip -text
+json/json-jmaki-demo/setup/resources0.zip -text
+json/json-jmaki-demo/web/resources/config.json -text
+json/json-jmaki-demo/web/resources/css/images/jmaki-2-row-right-sidebar-footer.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-2column-footer.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-2fixed-right-sidebars.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-3column-fixed-sidebars.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-3column-footer.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-3column-layout-footer.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-3column.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-centered.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-no-css.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-right-sidebar.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-standard-footer.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-standard-layout.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-standard-no-sidebars.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-standard-right-sidebar.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/images/jmaki-standard.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/themes/blue/images/bg-banner.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/css/themes/blue/images/bg-gradient.gif -text
+json/json-jmaki-demo/web/resources/css/themes/chocolate/images/bg-gradient.gif -text
+json/json-jmaki-demo/web/resources/css/themes/images/bg-charcol.gif -text
+json/json-jmaki-demo/web/resources/css/themes/images/bg-cobalt.gif -text
+json/json-jmaki-demo/web/resources/css/themes/images/bg-evergreen.gif -text
+json/json-jmaki-demo/web/resources/xhp.json -text
+json/json-jmaki-demo/web/resources/yahoo/button/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/calendar/images/1 -text
+json/json-jmaki-demo/web/resources/yahoo/calendar/images/yahoo-calendar.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/calendar/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/dataTable/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/geocoder/images/yahoo-geocoder.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/geocoder/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/grid/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/logger/images/yahoo-logger.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/logger/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/map/images/yahoo-map.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/map/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/menu/images/yahoo-menu.jpg -text svneol=unset#image/jpeg
+json/json-jmaki-demo/web/resources/yahoo/menu/widget.json -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/button/assets/background.png -text svneol=unset#image/png
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/button/assets/menuarrow.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/button/assets/splitarrow.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/button/assets/splitarrow_active.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/calendar/assets/callt.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/calendar/assets/calrt.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/calendar/assets/calx.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/alrt16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/blck16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/close12_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/hlp16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/info16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/tip16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/container/assets/warn16_1.gif -text
+json/json-jmaki-demo/web/resources/yahoo/resources/libs/yahoo/v2.2.1/datatable/assets/datatable.css -text
 spring/spring-core/publish-schemas.sh -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
