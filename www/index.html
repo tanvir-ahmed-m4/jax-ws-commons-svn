@@ -1,84 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+
   <style>
-    .app H3 {
-      clear: none;
-    }
-    .axial {
-      display: none;
-    }
-    #apphead {
-      display: none;
-    }
+.app H3 {
+clear: none;
+}
+.axial {
+display: none;
+}
+#apphead {
+display: none;
+}
   </style>
-  <title>JAXB 2.0 Commons</title>
+  <title>JAX-WS Commons</title>
+
+
 </head>
+
+
 <body>
+
 <script>
 // kill "description" h3 bar
 ld = document.getElementById("longdescription");
 for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-  if(n.nodeType==1 && n.innerHTML=="Description" ) {
-    n.parentNode.removeChild(n);
-    break;
-  }
+if(n.nodeType==1 && n.innerHTML=="Description" ) {
+n.parentNode.removeChild(n);
+break;
+}
 }
 </script>
 <table border="0" width="100%">
-  <tr>
-    <td><img src="https://jaxb.dev.java.net/javaxml-duke.gif" align="middle"></td>
-    <td>
+
+  <tbody>
+
+    <tr>
+
+      <td><img src="https://jaxb.dev.java.net/javaxml-duke.gif" align="middle"></td>
+
+      <td>
       <h1>JAX-WS Commons</h1>
-    </td>
-    <td width="*">
-      <div align=right>
-      <a href="/servlets/ProjectNewsRSS"><img src="https://jax-ws.dev.java.net/images/rss1.gif" border="0"></a><br>
-      <small>
-        (<a href="http://wiki.java.net/bin/view/Javawsxml/RssCorner">new to RSS?</a>)
-      </small>
-      </div>
-    </td>
-  </tr>
+
+      </td>
+
+      <td width="*">
+      <div align="right"> <a href="/servlets/ProjectNewsRSS"><img src="https://jax-ws.dev.java.net/images/rss1.gif" border="0"></a><br>
+
+      <small> (<a href="http://wiki.java.net/bin/view/Javawsxml/RssCorner">new
+to RSS?</a>) </small> </div>
+
+      </td>
+
+    </tr>
+
+  </tbody>
 </table>
 
-
-
-<div class=app>
-
-
+<div class="app">
 <h3>Project Description</h3>
-<p>Welcome to the JAX-WS 2.0 commons project. This is a project in the 
-<a href="http://community.java.net/java-ws-xml">Web Services and XML community</a>
+
+<p>Welcome to the JAX-WS commons project. This is a project
+in the <a href="http://community.java.net/java-ws-xml">Web
+Services and XML community</a>
 at java.net.</p>
 
 <p>This project aims to:</p>
+
 <ul>
- <li>collect convenient utility code around JAX-WS 2.0
- <li>collect useful plugins and extensions around the JAX-WS RI 2.0 (until they grow out of this project)
+
+  <li>collect convenient utility code around JAX-WS RI </li>
+
+  <li>collect useful plugins and extensions around the JAX-WS RI (until they grow out of this project) </li>
+
 </ul>
 
-
 <h3>Projects</h3>
+
 <ol>
-  <li><a href="http-session-scope/">HTTP Session-scope service</a>
-  <li><a href="nonav/thread-scope/">Thread scope service</a>
-  <li><a href="spring/">Spring support</a>
-  <li><a href="jaxws-maven-plugin/">JAX-WS Maven2 plugin</a>
-<!--
-  <li><a href="xyz/">xyz</a>
--->
+
+  <li><a href="http-session-scope/">HTTP
+Session-scope service</a> </li>
+
+  <li><a href="nonav/thread-scope/">Thread scope
+service</a> </li>
+
+  <li><a href="spring/">Spring support</a> </li>
+
+  <li><a href="jaxws-maven-plugin/">JAX-WS Maven2
+plugin</a>
+<!-- <li><a href="xyz/">xyz</a> --></li>
+
 </ol>
 
-
 <h3>Join us!</h3>
-<p>
-  If you are interested in hosting your utility/plug-in/tool etc, please write to
-  <a href="mailto:dev@jax-ws.dev.java.net">dev@jax-ws.dev.java.net</a> so that we
-  can arrange things. See <a href="contribute.html">this document</a> for more about
-  how to host your plugin.
+
+<p> If you are interested in hosting your utility/plug-in/tool
+etc, please write to <a href="mailto:dev@jax-ws.dev.java.net">dev@jax-ws.dev.java.net</a>
+so that we can arrange things. See <a href="contribute.html">this
+document</a> for more about how to host your plugin.
 </p>
 
-
 </div>
+
 </body>
 </html>
