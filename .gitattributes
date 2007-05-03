@@ -218,6 +218,8 @@ transport/smtp/jaxws-smtp/src/main/resources/META-INF/spring.schemas -text
 transport/smtp/jaxws-smtp/src/test/java/pop3/Book.java -text
 transport/smtp/jaxws-smtp/src/test/java/pop3/SmtpTest.java -text
 transport/smtp/pom.xml -text
+transport/smtp/smtp-demo-client/pom.xml -text
+transport/smtp/smtp-demo-client/src/test/java/foo/SmtpTest.java -text
 transport/smtp/smtp-demo-server/pom.xml -text
 transport/smtp/smtp-demo-server/src/main/java/books/Book.java -text
 transport/smtp/smtp-demo-server/src/main/java/books/BookService.java -text
