@@ -280,6 +280,7 @@ www/smtp/dependencies.html -text
 www/smtp/images/collapsed.gif -text
 www/smtp/images/expanded.gif -text
 www/smtp/index.html -text
+www/smtp/references/jaxws-smtp.xsd.html -text
 www/smtp/source-repository.html -text
 www/smtp/team-list.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/WSSpringServlet.html -text
