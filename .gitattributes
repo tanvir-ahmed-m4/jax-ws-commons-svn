@@ -276,6 +276,12 @@ www/json/source-repository.html -text
 www/json/spring.html -text
 www/json/team-list.html -text
 www/role-approval.policy -text
+www/smtp/dependencies.html -text
+www/smtp/images/collapsed.gif -text
+www/smtp/images/expanded.gif -text
+www/smtp/index.html -text
+www/smtp/source-repository.html -text
+www/smtp/team-list.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/WSSpringServlet.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/package-summary.html -text
 www/spring/apidocs/files -text
