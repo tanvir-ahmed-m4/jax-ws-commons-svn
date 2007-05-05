@@ -38,6 +38,8 @@ transport/smtp/*.iml
 transport/smtp/*.ipr
 transport/smtp/*.iws
 transport/smtp/jaxws-smtp/*.iml
+transport/smtp/jaxws-smtp/*.ipr
+transport/smtp/jaxws-smtp/*.iws
 transport/smtp/jaxws-smtp/target
 transport/smtp/target
 transport/smtp/test-app/*.iml
