@@ -189,6 +189,7 @@ json/json-jmaki-demo/web/resources/yahoo/tree/widget.json -text
 spring/spring-core/publish-schemas.sh -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
+spring/spring-core/src/site/apt/aop.apt -text
 spring/spring-core/src/site/apt/handler.apt -text
 spring/spring-core/src/site/apt/index.apt -text
 spring/spring-core/src/site/apt/local-transport.apt -text
