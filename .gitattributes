@@ -252,6 +252,8 @@ thread-scope/pom.xml -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeFeature.java -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInstanceResolver.java -text
+thread-scope/src/site/apt/index.apt -text
+thread-scope/src/site/site.xml -text
 transport/smtp/jaxws-smtp/pom.xml -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/POP3Info.java -text
 transport/smtp/jaxws-smtp/src/main/java/org/jvnet/jax_ws_commons/transport/smtp/SMTPFeature.java -text
