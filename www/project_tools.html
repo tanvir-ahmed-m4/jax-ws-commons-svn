@@ -1,34 +1,11 @@
 </dd>
 <script>document.getElementById("main").parentNode.style.display="none";</script>
 <dd id=menubar>
-<ul>
+<!-- main menu bar -->
+<ul id='menubar-main'>
   <!--li><a href="/servlets/ProjectNewsList">Announcements</a-->
   <li><a href="/http-session-scope/">HTTP Session-scope service</a> </li>
   <li><a href="/nonav/thread-scope/">Thread scope service</a> </li>
-  <li><a href="/spring/">Spring support</a>
-    <ul>
-      <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
-      <li><a href="/spring/reference.html">Reference</a>
-        <ul>
-          <li><a href="/spring/references/spring-jax-ws-core.xsd.html">Core</a>
-          <li><a href="/spring/references/spring-jax-ws-servlet.xsd.html">Servlet</a>
-          <li><a href="/spring/references/spring-jax-ws-local-transport.xsd.html">Local transport</a>
-        </ul>
-      </li>
-      <li><a href="#">How to configure...</a>
-        <ul>
-          <li><a href="/spring/handler.html">Handler</a>
-          <li><a href="/spring/local-transport.html">Local transport</a>
-          <li><a href="/spring/wsdl-first.html">WSDL first</a>
-        </ul>
-      </li>
-      <li><a href="#">Project Info</a>
-        <ul>
-          <li><a href="/source/browse/jax-ws-commons/trunk/spring/jaxws-spring">Subversion</a>
-        </ul>
-      </li>
-    </ul>
-  </li>
   <li><a href="/jaxws-maven-plugin/">JAX-WS Maven2 plugin</a> </li>
   <li><a href="/beans-generator/">JAX-WS Beans runtime-generator</a></li>
   <li>&nbsp;</li>
@@ -42,11 +19,52 @@
     </form>
   <li><a href="/source/browse/jax-ws-commons/">Source code</a>
 </ul>
+
+
+<!-- menubar for spring sub-project -->
+<ul id="menubar-spring" style="display:none;">
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
+  <li><a href="/spring/reference.html">Reference</a>
+    <ul>
+      <li><a href="/spring/references/spring-jax-ws-core.xsd.html">Core</a>
+      <li><a href="/spring/references/spring-jax-ws-servlet.xsd.html">Servlet</a>
+      <li><a href="/spring/references/spring-jax-ws-local-transport.xsd.html">Local transport</a>
+    </ul>
+  </li>
+  <li><a href="#">How to configure...</a>
+    <ul>
+      <li><a href="/spring/handler.html">Handler</a>
+      <li><a href="/spring/local-transport.html">Local transport</a>
+      <li><a href="/spring/wsdl-first.html">WSDL first</a>
+    </ul>
+  </li>
+  <li><a href="#">Project Info</a>
+    <ul>
+      <li><a href="/source/browse/jax-ws-commons/trunk/spring/jaxws-spring">Subversion</a>
+    </ul>
+  </li>
+</ul>
 <script>
 var info = {
 	title: "JAX-WS commons",
 	logo: "/images/javaxml-duke.gif"
 }
+
+(function() {
+  var menus = {
+    document.getElementById("menubar-main"),
+    document.getElementById("menubar-spring")
+  };
+
+  var activeMenu = menus[0];
+  
+  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/spring/")==0)
+    activeMenu = menus[1];
+  
+  for( var i=0; i<menus.length; i++ ) {
+    menus[i].style.display = menus[i]==activeMenu ? "" : "none";
+  }
+})();
 </script>
 <script src="https://glassfish-theme.dev.java.net/zone-ws.js"></script>
 <script src="https://glassfish-theme.dev.java.net/theme.js"></script>
