@@ -247,6 +247,7 @@ spring/spring-core/src/site/apt/handler.apt -text
 spring/spring-core/src/site/apt/index.apt -text
 spring/spring-core/src/site/apt/local-transport.apt -text
 spring/spring-core/src/site/apt/reference.apt -text
+spring/spring-core/src/site/apt/wsdl-first.apt -text
 spring/test-app/soapui.xml -text
 thread-scope/pom.xml -text
 thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScope.java -text
