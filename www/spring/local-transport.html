@@ -27,117 +27,6 @@
           <a href="http://glassfishi.dev.java.net/">Glassfish</a>
       </div>
     -->
-    <div id="leftColumn">
-      <div id="navcolumn">
-             <dl class=navgroup>
-        <dt>JAX-WS Spring extension</dt>
-        <dd><ul>
-              
-    <li class="none">
-              <a href="index.html">Introduction</a>
-        </li>
-              
-    <li class="none">
-              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
-        </li>
-              
-          
-              
-      
-            
-      
-            
-      
-              
-        <li class="expanded">
-              <a href="reference.html">Reference</a>
-                <ul>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-core.xsd.html">Common</a>
-        </li>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-servlet.xsd.html">Servlet</a>
-        </li>
-                  
-    <li class="none">
-              <a href="references/spring-jax-ws-local-transport.xsd.html">Local Transport</a>
-        </li>
-              </ul>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>How-to configure...</dt>
-        <dd><ul>
-              
-    <li class="none">
-              <a href="handler.html">Handler</a>
-        </li>
-              
-    <li class="none">
-              <strong>Local Transport</strong>
-        </li>
-              
-    <li class="none">
-              <a href="aop.html">AOP</a>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
-              
-                
-              
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-              
-        <li class="collapsed">
-              <a href="project-info.html">Project Information</a>
-              </li>
-          </ul></dd>
-    </dl>
-        </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
-    </div>
     <div id="bodyColumn">
       <div id="contentBox">
         <p>In-VM local transport allows TCP loop-back like SOAP communication between the client and the server in the same virtual machine. It is primarily designed to enable testing of web service endpoints without using a fully-fledged web container.</p><p>To use this transport, you need to declare one more namespace URI:</p><div class="source"><pre>&lt;beans ...
@@ -164,8 +53,8 @@
 
   
   
-  &nbsp;| Last Published: 06/29/2007
-  &nbsp;| Version: 1.5-SNAPSHOT
+  &nbsp;| Last Published: 08/14/2007
+  &nbsp;| Version: 1.7-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>

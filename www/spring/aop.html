@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>JAX-WS commons - Configuring Handlers</title>
+    <title>JAX-WS commons - Spring AOP</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -29,17 +29,13 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <p><a href="https://jax-ws.dev.java.net/jax-ws-21-ea3/docs/handlers.html">Handler</a>s for the service can be instanciated as beans and injected into service like this:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot;&gt;
-  &lt;ws:handlers&gt;
-    &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
-    &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
-    &lt;ref bean=&quot;aHandler&quot; /&gt;
-  &lt;/ws:handlers&gt;
-&lt;/ws:service&gt;
+        <p>When you use Spring AOP on your web service implementation class, Spring creates AOP proxy bean and pass that to Metro. This is problematic because Metro then tries to find annotations on the proxy bean, which doesn't exist. So when you do this, you need to configure the service with the additional &quot;implType&quot; attribute, so that annotations are discovered.</p><p>Here is <a href="http://forums.java.net/jive/thread.jspa?threadID=27930">the sample</a> contributed by an user</p><div class="source"><pre>&lt;wss:binding url=&quot;/websvc/services/xyz&quot;&gt;
+  &lt;wss:service&gt;
+    &lt;ws:service bean=&quot;#service&quot; impl=&quot;a.b.c.serviceImpl&quot;/&gt;
+  &lt;/wss:service&gt;
+&lt;/wss:binding&gt;
 
-&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div><p>If there's only one handler and that handler is defined as a named bean, you can use the simpler attribute syntax:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot; handlers=&quot;#aHandler&quot; /&gt;
-
-&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div>
+&lt;bean id=&quot;service&quot; ... /&gt;</pre></div>
       </div>
     </div>
     <div class="clear">

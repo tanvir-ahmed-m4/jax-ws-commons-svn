@@ -374,6 +374,7 @@ www/smtp/index.html -text
 www/smtp/references/jaxws-smtp.xsd.html -text
 www/smtp/source-repository.html -text
 www/smtp/team-list.html -text
+www/spring/aop.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/WSSpringServlet.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/package-summary.html -text
 www/spring/apidocs/files -text
@@ -384,6 +385,7 @@ www/spring/apidocs/org/jvnet/jax_ws_commons/spring/SpringMTOMFeature.html -text
 www/spring/apidocs/org/jvnet/jax_ws_commons/spring/SpringService.html -text
 www/spring/apidocs/package-list -text
 www/spring/apidocs/resources/inherit.gif -text
+www/spring/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text
 www/spring/dependencies.html -text
 www/spring/handler.html -text
 www/spring/images/collapsed.gif -text
@@ -509,6 +511,7 @@ www/spring/sorcerer/resource-files/tree/tn.gif -text
 www/spring/sorcerer/resource-files/tree/vline.gif -text
 www/spring/source-repository.html -text
 www/spring/team-list.html -text
+www/spring/wsdl-first.html -text
 www/thread-scope/css/maven-base.css -text
 www/thread-scope/css/maven-theme.css -text
 www/thread-scope/css/print.css -text
