@@ -90,10 +90,10 @@ var info = {
 
 // select the right menu
 (function() {
-  function entry(id,prefix) {
+  function entry2(id,prefix) {
     return { element: document.getElementById(id), url: "https://jax-ws-commons.dev.java.net/"+prefix };
   }
-  function entry2(name) {
+  function entry(name) {
     return entry("menubar-"+name,name+"/");
   }
 
