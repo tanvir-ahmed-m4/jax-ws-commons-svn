@@ -47,7 +47,7 @@
 
 
 <!-- menubar for in-vm transport -->
-<ul id="menubar-local" style="display:none;">
+<ul id="menubar-in-vm" style="display:none;">
   <li><a href="/in-vm/">Overview</a>
 </ul>
 
@@ -90,27 +90,29 @@ var info = {
 
 // select the right menu
 (function() {
+  function entry(id,prefix) {
+    return { element: document.getElementById(id), url: "https://jax-ws-commons.dev.java.net/"+prefix };
+  }
+  function entry(name) {
+    return entry("menubar-"+name,name+"/");
+  }
+
   var menus = [
-    document.getElementById("menubar-main"),
-    document.getElementById("menubar-spring"),
-    document.getElementById("menubar-local"),
-    document.getElementById("menubar-http-session-scope"),
-    document.getElementById("menubar-json")
+    entry("main",""),
+    entry("spring"),
+    entry("in-vm"),
+    entry("http-sesison-scope"),
+    entry("json")
   ];
 
   var activeMenu = menus[0];
-  
-  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/spring/")==0)
-    activeMenu = menus[1];
-  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/in-vm/")==0)
-    activeMenu = menus[2];
-  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/http-session-scope/")==0)
-    activeMenu = menus[3];
-  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/json/")==0)
-    activeMenu = menus[4];
+  for( var i=0; i<menus.length; i++ ) {
+    if(window.location.href.indexOf(menus[i].url)==0)
+      activeMenu = menus[i];
+  }
   
   for( var i=0; i<menus.length; i++ ) {
-    menus[i].style.display = menus[i]==activeMenu ? "" : "none";
+    menus[i].element.style.display = menus[i]==activeMenu ? "" : "none";
   }
 })();
 </script>
