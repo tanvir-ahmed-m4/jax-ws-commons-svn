@@ -44,6 +44,12 @@
     </ul>
   </li>
 </ul>
+
+
+<!-- menubar for local transport -->
+<ul id="menubar-local" style="display:none;">
+  <li><a href="/local-transport/">Overview</a>
+</ul>
 <script>
 var info = {
 	title: "JAX-WS commons",
@@ -54,13 +60,16 @@ var info = {
 (function() {
   var menus = [
     document.getElementById("menubar-main"),
-    document.getElementById("menubar-spring")
+    document.getElementById("menubar-spring"),
+    document.getElementById("menubar-local")
   ];
 
   var activeMenu = menus[0];
   
   if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/spring/")==0)
     activeMenu = menus[1];
+  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/local-transport/")==0)
+    activeMenu = menus[2];
   
   for( var i=0; i<menus.length; i++ ) {
     menus[i].style.display = menus[i]==activeMenu ? "" : "none";
