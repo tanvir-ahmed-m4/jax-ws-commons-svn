@@ -50,6 +50,21 @@
 <ul id="menubar-local" style="display:none;">
   <li><a href="/in-vm/">Overview</a>
 </ul>
+
+
+
+<!-- menubar for http-session-scope -->
+<ul id="menubar-http-session-scope" style="display:none;">
+  <li><a href="/http-session-scope/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/http-session-scope/">Download</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/http-session-scope/dependencies.html">Dependencies</a>
+      <li><a href="/http-session-scope/project-summary.html">Project Summary</a>
+      <li><a href="/http-session-scope/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
 <script>
 var info = {
 	title: "JAX-WS commons",
@@ -61,7 +76,8 @@ var info = {
   var menus = [
     document.getElementById("menubar-main"),
     document.getElementById("menubar-spring"),
-    document.getElementById("menubar-local")
+    document.getElementById("menubar-local"),
+    document.getElementById("menubar-http-session-scope")
   ];
 
   var activeMenu = menus[0];
@@ -70,6 +86,8 @@ var info = {
     activeMenu = menus[1];
   if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/in-vm/")==0)
     activeMenu = menus[2];
+  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/http-session-scope/")==0)
+    activeMenu = menus[3];
   
   for( var i=0; i<menus.length; i++ ) {
     menus[i].style.display = menus[i]==activeMenu ? "" : "none";
