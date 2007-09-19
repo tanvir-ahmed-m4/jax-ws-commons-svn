@@ -93,12 +93,12 @@ var info = {
   function entry(id,prefix) {
     return { element: document.getElementById(id), url: "https://jax-ws-commons.dev.java.net/"+prefix };
   }
-  function entry(name) {
+  function entry2(name) {
     return entry("menubar-"+name,name+"/");
   }
 
   var menus = [
-    entry("main",""),
+    entry2("main",""),
     entry("spring"),
     entry("in-vm"),
     entry("http-sesison-scope"),
