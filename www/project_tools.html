@@ -65,6 +65,23 @@
     </ul>
   </li>
 </ul>
+
+
+<!-- menubar for JSON -->
+<ul id="menubar-json" style="display:none;">
+  <li><a href="/json/">Introduction</a>
+  <li><a href="/json/spring.html">Configuration with Spring</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/json/">Download</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/json/dependencies.html">Dependencies</a>
+      <li><a href="/json/project-summary.html">Project Summary</a>
+      <li><a href="/json/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
 <script>
 var info = {
 	title: "JAX-WS commons",
@@ -77,7 +94,8 @@ var info = {
     document.getElementById("menubar-main"),
     document.getElementById("menubar-spring"),
     document.getElementById("menubar-local"),
-    document.getElementById("menubar-http-session-scope")
+    document.getElementById("menubar-http-session-scope"),
+    document.getElementById("menubar-json")
   ];
 
   var activeMenu = menus[0];
@@ -88,6 +106,8 @@ var info = {
     activeMenu = menus[2];
   if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/http-session-scope/")==0)
     activeMenu = menus[3];
+  if(window.location.href.indexOf("https://jax-ws-commons.dev.java.net/json/")==0)
+    activeMenu = menus[4];
   
   for( var i=0; i<menus.length; i++ ) {
     menus[i].style.display = menus[i]==activeMenu ? "" : "none";
