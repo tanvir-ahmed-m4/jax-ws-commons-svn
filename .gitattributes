@@ -337,6 +337,7 @@ www/http-session-scope/images/newwindow.png -text svneol=unset#image/png
 www/http-session-scope/index.html -text
 www/http-session-scope/source-repository.html -text
 www/http-session-scope/team-list.html -text
+www/in-vm/index.html -text
 www/index.html svneol=native#text/html
 www/jaxws-maven-plugin/apidocs/files -text
 www/jaxws-maven-plugin/apidocs/index-all.html -text
@@ -366,7 +367,6 @@ www/json/index.html -text
 www/json/source-repository.html -text
 www/json/spring.html -text
 www/json/team-list.html -text
-www/local-transport/index.html -text
 www/role-approval.policy -text
 www/smtp/dependencies.html -text
 www/smtp/images/collapsed.gif -text
