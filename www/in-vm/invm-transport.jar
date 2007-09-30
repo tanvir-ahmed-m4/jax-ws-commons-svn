@@ -1,11 +1,11 @@
---17:07:28--  http://kohsuke.sfbay.sun.com/hudson/job/jaxws-ri-2.1.3/lastSuccessfulBuild/artifact/jax-ws-sources/jaxws-ri/transports/local/build/jaxws-local-transport.jar
-           => `jaxws-local-transport.jar'
+--17:15:26--  http://kohsuke.sfbay.sun.com/hudson/job/jaxws-ri-2.1.3/lastSuccessfulBuild/artifact/jax-ws-sources/jaxws-ri/transports/local/build/jaxws-local-transport.jar
+           => `jaxws-local-transport.jar.1'
 Resolving kohsuke.sfbay.sun.com... 129.145.132.221
 Connecting to kohsuke.sfbay.sun.com|129.145.132.221|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 22,397 (22K) [application/java-archive]
 
-    0K .......... .......... .                               100%  305.29 KB/s
+    0K .......... .......... .                               100%  289.54 KB/s
 
-17:07:29 (305.29 KB/s) - `jaxws-local-transport.jar' saved [22397/22397]
+17:15:26 (289.54 KB/s) - `jaxws-local-transport.jar.1' saved [22397/22397]
 
