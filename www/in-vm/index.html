@@ -1,5 +1,66 @@
 <html>
 <body>
 <h1>Metro In-VM Transport</h1>
+In-VM local transport allows TCP loop-back like SOAP communication between the 
+client and the server in the same virtual machine. It is primarily designed to 
+enable testing of web service endpoints without using a fully-fledged web 
+container.<h3>Using Ant</h3>
+<p>In your ant build file you would need to define classpath to include Metro 
+jars and call Wsimport and Wsgen targets.</p>
+
+<pre>
+ &lt;!-- setup Metro runtime classpath --&gt;
+&lt;path id=&quot;runtime.cp&quot;&gt;
+    &lt;fileset dir=&quot;${lib.home}&quot; includes=&quot;*.jar&quot; excludes=&quot;webservices-tools.jar&quot;/&gt;
+    &lt;fileset dir=&quot;${basedir}/../lib&quot; includes=&quot;invm-transport.jar&quot;/&gt;
+    &lt;pathelement location=&quot;${build.classes}&quot;/&gt;
+&lt;/path&gt;
+
+&lt;!-- setup Metro tooltime classpath --&gt;
+&lt;path id=&quot;tool.cp&quot;&gt;
+    &lt;path refid=&quot;runtime.cp&quot;/&gt;
+    &lt;pathelement location=&quot;${lib.home}/webservices-tools.jar&quot;/&gt;
+&lt;/path&gt;
+
+&lt;!-- Setup Wsimport ant task. You would use this task in WSDL to Java case
+to compile a WSDL and generate Java classes.
+--&gt;
+&lt;taskdef name=&quot;wsimport&quot; classname=&quot;com.sun.tools.ws.ant.WsImport&quot;&gt;
+    &lt;classpath refid=&quot;tool.cp&quot;/&gt;
+&lt;/taskdef&gt;
+
+&lt;!-- Setup Wsgen ant task. You would use this task in Java to WSDL case to
+generate a WSDL or wrapper classes.
+--&gt;
+&lt;taskdef name=&quot;wsgen&quot; classname=&quot;com.sun.tools.ws.ant.WsGen&quot;&gt;
+    &lt;classpath refid=&quot;tool.cp&quot;/&gt;
+&lt;/taskdef&gt;</pre>
+<p>See the sample ant <a href="build.xml">build</a> script and the complete ant 
+based sample <a href="invmsample.zip">here</a>.</p>
+
+<h3>Using Spring</h3>
+<p>To use this transport with , you need to declare one more namespace URI: </p>
+
+<pre>&lt;beans ...
+  xmlns:wsl=&quot;http://jax-ws.dev.java.net/spring/local-transport&quot;
+  xsi:schemaLocation=&quot;
+    http://jax-ws.dev.java.net/spring/local-transport
+    http://jax-ws.dev.java.net/spring/local-transport.xsd&quot;&gt;
+</pre>
+
+Then you can export a bunch of services by using an ID of your choice:
+
+<pre>&lt;wsl:bindings id=&quot;test-local-endpoint&quot;&gt;
+  &lt;wsl:endpoints&gt;
+
+    &lt;ws:service ... /&gt;       &lt;!-- either define a service inline --&gt;
+    &lt;ref bean=&quot;myService&quot; /&gt; &lt;!-- or refer to another bean --&gt;
+  &lt;/wsl:endpoints&gt;
+&lt;/wsl:bindings&gt;
+</pre>
+
+These services can be accessed by setting the endpoint address URI as in-vm://test-local-endpoint/ (the spring bean ID becomes a part of the URI.) If multiple endpoints are deployed in a single local transport server, you can distinguish them by using the local name of the port QName as the query parameter, like ?port1
+<p>You can get the In-Vm transport jar from <a href="invm-transport.jar">here</a> 
+and put in the Metro or JAX-WS RI classpath, tryout and let us know.</p>
 </body>
 </html>

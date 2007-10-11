@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="invm-server" default="usage" basedir=".">
+    <!-- Setup metro.home to the METRO_HOME env variable.
+         This means before you run this ant task set METRO_HOME
+         to the metro distribution.
+
+         for example:
+
+         export METRO_HOME=/home/vivekp/metro
+    -->
+    <property environment="env"/>
+
+    <property name="lib.home" value="${env.METRO_HOME}/lib"/>
+
+
+    <property description="Location where all the build time artifacts are stored"
+              name="build.home" value="${basedir}/build/WEB-INF"/>
+
+    <property description="Location where classes are generated"
+              name="build.classes" value="${build.home}/classes"/>
+
+    <property description="Location of WSDL location"
+              name="build.wsdl" value="${build.home}/wsdl"/>
+
+    <property description="Location where the war file is generated"
+              name="build.war" value="${build.home}/../war"/>
+
+    <!-- setup Metro runtime classpath -->
+    <path id="runtime.cp">
+        <fileset dir="${lib.home}" includes="*.jar" excludes="webservices-tools.jar"/>
+        <fileset dir="${basedir}/../lib" includes="invm-transport.jar"/>
+        <pathelement location="${build.classes}"/>
+    </path>
+
+    <!-- setup Metro tooltime classpath -->
+    <path id="tool.cp">
+        <path refid="runtime.cp"/>
+        <pathelement location="${lib.home}/webservices-tools.jar"/>
+    </path>
+
+    <!-- Setup Wsimport ant task. You would use this task in WSDL to Java case
+         to compile a WSDL and generate Java classes.
+    -->
+    <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+        <classpath refid="tool.cp"/>
+    </taskdef>
+
+    <!-- Setup Wsgen ant task. You would use this task in Java to WSDL case to
+         generate a WSDL or wrapper classes.
+    -->
+    <taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+        <classpath refid="tool.cp"/>
+    </taskdef>
+
+    <!-- Setup XJC ant task. you would use this task to generate Java classes from a
+         given schema(s).
+    -->
+    <taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+        <classpath refid="tool.cp"/>
+    </taskdef>
+
+    <target name="setup">
+        <mkdir dir="${build.home}"/>
+        <mkdir dir="${build.classes}"/>
+        <mkdir dir="${build.wsdl}"/>
+    </target>
+
+    <target name="war">
+        <war warfile="${build.war}/invm-server.war"
+             webxml="config/web.xml">
+            <zipfileset dir="${basedir}/config" includes="**/*.wsdl, **/*.xsd" prefix="WEB-INF/wsdl"/>
+            <zipfileset dir="${build.home}" includes="*.wsdl, *.xsd" prefix="WEB-INF/wsdl"/>
+            <webinf dir="${basedir}/config/" includes="sun-jaxws.xml"/>
+            <classes dir="${build.classes}"/>
+        </war>
+    </target>
+
+    <target name="j2wsdl" depends="server">
+        <wsgen
+                debug="true"
+                extension="true"
+                keep="true"
+                destdir="${build.classes}"
+                sourceDestDir="${build.classes}"
+                verbose="false"
+                sei="server.HelloWorld"
+                genwsdl="true">
+            <jvmarg line="${jvmargs}"/>
+            <classpath refid="tool.cp"/>
+        </wsgen>
+
+        <!-- copy the wsdl and schema file to WEB-INF/wsdl location -->
+        <copy todir="${build.wsdl}">
+            <fileset dir="${build.classes}" includes="*.xsd, *.wsdl"/>
+        </copy>
+
+        <!-- copy the deployment descriptor -->
+        <copy todir="${build.home}">
+            <fileset dir="${basedir}/webapp" includes="sun-jaxws.xml"/>
+        </copy>
+    </target>
+
+    <target name="run">
+        <java classname="client.HelloWorldClient" fork="true">
+            <arg value="${basedir}/build"/>
+            <jvmarg value="-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl"/>
+            <classpath refid="runtime.cp"/>
+        </java>
+    </target>
+
+    <target name="rund">
+        <java classname="client.HelloWorldClient" fork="true">
+            <arg value="${basedir}/build"/>
+            <classpath refid="runtime.cp"/>
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,address=8000"/>
+        </java>
+    </target>
+
+    <target name="wsdl2j">
+        <wsimport
+                fork="false"
+                debug="true"
+                extension="true"
+                keep="true"
+                destdir="${build.classes}"
+                sourceDestDir="${build.classes}"
+                verbose="false"
+                package="client"
+                wsdl="${build.classes}/HelloWorldService.wsdl">
+            <jvmarg line="${jvmargs}"/>
+        </wsimport>
+    </target>
+
+    <target name="client" depends="wsdl2j">
+        <javac debug="true" destdir="${build.classes}" srcdir="${basedir}/src/client" includes="**/*.java">
+            <classpath refid="tool.cp"/>
+        </javac>
+        <antcall target="run"/>
+    </target>
+
+    <!-- compile class files in "server" and "common" directories -->
+    <target name="server" depends="setup">
+        <javac srcdir="${basedir}/src"
+               debug="true"
+               destdir="${build.classes}"
+               includes="server/**">
+            <classpath refid="runtime.cp"/>
+        </javac>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="usage">
+        <echo message="Usage: "/>
+        <echo message="ant j2wsdl (Use for Java first case, runs wsgen generates wsdl/wrapper classes)"/>
+        <echo message="ant client (runs wsimport and compiles client class and then runs the client"/>
+    </target>
+
+</project>
+
