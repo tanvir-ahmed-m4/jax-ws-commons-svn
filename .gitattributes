@@ -344,6 +344,8 @@ www/in-vm/invmsample.zip -text
 www/index.html svneol=native#text/html
 www/jaxws-maven-plugin/apidocs/files -text
 www/jaxws-maven-plugin/apidocs/index-all.html -text
+www/jaxws-maven-plugin/css/maven-base.css -text svneol=native#unset
+www/jaxws-maven-plugin/css/maven-theme.css -text svneol=native#unset
 www/jaxws-maven-plugin/dependencies.html -text
 www/jaxws-maven-plugin/faq.html -text
 www/jaxws-maven-plugin/images/collapsed.gif -text
