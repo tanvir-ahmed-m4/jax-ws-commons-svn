@@ -98,7 +98,12 @@ If <code>primaryWsdl</code> is a <code>String</code>,
 are searched for this path, then failing that, it's treated as an
 absolute {@link URL}.</td></tr>
   <tr><td>resolver</td><td>&lt;spring:bean/&gt;</td><td>Sets the {@link EntityResolver} to be used for resolving schemas/WSDLs
-that are referenced. Optional.</td></tr>
+that are referenced. Optional.
+
+<p>
+If omitted, the default catalog resolver is created by looking at
+<tt>/WEB-INF/jax-ws-catalog.xml</tt> (if we run as a servlet) or
+<tt>/META-INF/jax-ws-catalog.xml</tt> (otherwise.)</td></tr>
   <tr><td>servletContext</td><td>&lt;spring:bean/&gt;</td><td>Set automatically by Spring if JAX-WS is used inside web container.</td></tr>
 </table>
 

@@ -29,7 +29,9 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <p><a href="https://jax-ws.dev.java.net/jax-ws-21-ea3/docs/handlers.html">Handler</a>s for the service can be instanciated as beans and injected into service like this:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot;&gt;
+        <p><a href="https://jax-ws.dev.java.net/jax-ws-21-ea3/docs/handlers.html" class="externalLink">Handler</a>
+s for the service can be instanciated as beans and injected into service like this:</p>
+<div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot;&gt;
   &lt;ws:handlers&gt;
     &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
     &lt;bean class=&quot;foo.MyHandler&quot; /&gt;
@@ -37,9 +39,14 @@
   &lt;/ws:handlers&gt;
 &lt;/ws:service&gt;
 
-&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div><p>If there's only one handler and that handler is defined as a named bean, you can use the simpler attribute syntax:</p><div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot; handlers=&quot;#aHandler&quot; /&gt;
+&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre>
+</div>
+<p>If there's only one handler and that handler is defined as a named bean, you can use the simpler attribute syntax:</p>
+<div class="source"><pre>&lt;ws:service id=&quot;nestedHandlerService&quot; impl=&quot;foo.MyService&quot; handlers=&quot;#aHandler&quot; /&gt;
 
-&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre></div>
+&lt;bean id=&quot;aHandler&quot; ... /&gt;</pre>
+</div>
+
       </div>
     </div>
     <div class="clear">
@@ -47,15 +54,15 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2007
+          2008
     
           
   
 
   
   
-  &nbsp;| Last Published: 08/14/2007
-  &nbsp;| Version: 1.7-SNAPSHOT
+  &nbsp;| Last Published: 01/15/2008
+  &nbsp;| Version: 1.9-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>

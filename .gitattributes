@@ -392,6 +392,9 @@ www/spring/apidocs/org/jvnet/jax_ws_commons/spring/SpringService.html -text
 www/spring/apidocs/package-list -text
 www/spring/apidocs/resources/inherit.gif -text
 www/spring/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text
+www/spring/css/maven-base.css -text svneol=native#unset
+www/spring/css/maven-theme.css -text svneol=native#unset
+www/spring/css/site.css -text
 www/spring/dependencies.html -text
 www/spring/handler.html -text
 www/spring/images/collapsed.gif -text
@@ -404,7 +407,14 @@ www/spring/images/icon_warning_sml.gif -text
 www/spring/images/logos/maven-feather.png -text svneol=unset#image/png
 www/spring/images/newwindow.png -text svneol=unset#image/png
 www/spring/index.html -text
+www/spring/integration.html -text svneol=native#unset
+www/spring/issue-tracking.html -text svneol=native#unset
+www/spring/license.html -text svneol=native#unset
 www/spring/local-transport.html -text
+www/spring/mail-lists.html -text svneol=native#unset
+www/spring/project-info.html -text svneol=native#unset
+www/spring/project-summary.html -text svneol=native#unset
+www/spring/reference.html -text svneol=native#unset
 www/spring/references/spring-jax-ws-core.xsd.html -text
 www/spring/references/spring-jax-ws-local-transport.xsd.html -text
 www/spring/sorcerer-test/eclipse-public-license.url -text

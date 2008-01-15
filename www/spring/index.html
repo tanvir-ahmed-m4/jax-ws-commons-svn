@@ -29,7 +29,19 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>What is this?</h2><p>When your application uses <a href="http://www.springframework.org/">Spring</a> for wiring your code, you'll find it more convenient to use the same Spring for configuring JAX-WS. For example, that would allow your service implementations to receive resource injection via Spring, AOP stuff, logging, etc, etc. This RI extension provides this functionality.</p><p>Another purpose of this extension is to provide a general purpose mechanism that JAX-WS extension authors can use, to let users use their extensions. For example, when you write a custom transport, custom codec, or custom pipeline assembler, you can use Spring to allow users to configure your extensions.</p><p>This deployment mechanism supercedes <tt>sun-jaxws.xml</tt> and JSR-109 deployment.</p></div><div class="section"><h2>Quick Start</h2><p>Let's consider the most typical case, where you develop a web pplication and you want to deploy JAX-WS services. First your <tt>web.xml</tt> needs to have a JAX-WS servlet registered (if servlet could be deployed from Spring without <tt>web.xml</tt>, we could have gotten rid of this altogether!)</p><div class="source"><pre>&lt;web-app&gt;
+        <div class="section"><h2>What is this?</h2>
+<p>When your application uses <a href="http://www.springframework.org/" class="externalLink">Spring</a>
+ for wiring your code, you'll find it more convenient to use the same Spring for configuring JAX-WS. For example, that would allow your service implementations to receive resource injection via Spring, AOP stuff, logging, etc, etc. This RI extension provides this functionality.</p>
+<p>This Spring extension also allows you to configure various aspects of your web service through Spring, such as the use of MTOM, handlers, custom transports, encoding, etc., etc.</p>
+<p>Another purpose of this extension is to provide a general purpose mechanism that JAX-WS extension authors can use, to let users use their extensions. For example, when you write a custom transport, custom codec, or custom pipeline assembler, you can use Spring to allow users to configure your extensions.</p>
+<p>This deployment mechanism supercedes <tt>sun-jaxws.xml</tt>
+ and JSR-109 deployment.</p>
+</div>
+<div class="section"><h2>Quick Start</h2>
+<p>Let's consider the most typical case, where you develop a web pplication and you want to deploy JAX-WS services. First your <tt>web.xml</tt>
+ needs to have a JAX-WS servlet registered (if servlet could be deployed from Spring without <tt>web.xml</tt>
+, we could have gotten rid of this altogether!)</p>
+<div class="source"><pre>&lt;web-app&gt;
   &lt;!-- this is for Spring --&gt;
   &lt;listener&gt;
     &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
@@ -46,7 +58,11 @@
   &lt;/servlet-mapping&gt;
   ... if you deploy more services,
   you might need more &lt;servlet-mapping&gt;s ...
-&lt;/web-app&gt;</pre></div><p>Then you'd be writing something like this in your <tt>/WEB-INF/applicationContext.xml</tt>:</p><div class="source"><pre>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+&lt;/web-app&gt;</pre>
+</div>
+<p>Then you'd be writing something like this in your <tt>/WEB-INF/applicationContext.xml</tt>
+:</p>
+<div class="source"><pre>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
   xmlns:ws=&quot;http://jax-ws.dev.java.net/spring/core&quot;
   xmlns:wss=&quot;http://jax-ws.dev.java.net/spring/servlet&quot;
@@ -73,7 +89,17 @@
 
   &lt;bean id=&quot;myHandler&quot; class=&quot;foo.MyHandler&quot; /&gt;
 
-&lt;/beans&gt;</pre></div><p>The two <tt>wss:binding</tt> definitions define what services are exposed to which part of the URL space. In the above code, it deploys two services on two URLs, and one with a handler.</p><p>If you know Spring, you should know the &quot;rest&quot;, like how to configure your own service beans.</p></div><div class="section"><h2>Sample Project</h2><p><a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring/test-app/">A complete sample application</a> is also available.</p></div>
+&lt;/beans&gt;</pre>
+</div>
+<p>The two <tt>wss:binding</tt>
+ definitions define what services are exposed to which part of the URL space. In the above code, it deploys two services on two URLs, and one with a handler.</p>
+<p>If you know Spring, you should know the &quot;rest&quot;, like how to configure your own service beans.</p>
+</div>
+<div class="section"><h2>Sample Project</h2>
+<p><a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring/test-app/" class="externalLink">A complete sample application</a>
+ is also available.</p>
+</div>
+
       </div>
     </div>
     <div class="clear">
@@ -81,15 +107,15 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2007
+          2008
     
           
   
 
   
   
-  &nbsp;| Last Published: 08/14/2007
-  &nbsp;| Version: 1.7-SNAPSHOT
+  &nbsp;| Last Published: 01/15/2008
+  &nbsp;| Version: 1.9-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>
