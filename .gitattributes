@@ -394,8 +394,10 @@ www/spring/apidocs/resources/inherit.gif -text
 www/spring/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text
 www/spring/css/maven-base.css -text svneol=native#unset
 www/spring/css/maven-theme.css -text svneol=native#unset
+www/spring/css/print.css -text svneol=native#unset
 www/spring/css/site.css -text
 www/spring/dependencies.html -text
+www/spring/dependency-convergence.html -text svneol=native#unset
 www/spring/handler.html -text
 www/spring/images/collapsed.gif -text
 www/spring/images/expanded.gif -text
@@ -404,6 +406,8 @@ www/spring/images/icon_error_sml.gif -text
 www/spring/images/icon_info_sml.gif -text
 www/spring/images/icon_success_sml.gif -text
 www/spring/images/icon_warning_sml.gif -text
+www/spring/images/logos/build-by-maven-black.png -text svneol=unset#unset
+www/spring/images/logos/build-by-maven-white.png -text svneol=unset#unset
 www/spring/images/logos/maven-feather.png -text svneol=unset#image/png
 www/spring/images/newwindow.png -text svneol=unset#image/png
 www/spring/index.html -text
