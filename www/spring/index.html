@@ -9,10 +9,9 @@
 
 
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <title>Spring support extension - About</title>
+    <title>JAX-WS commons - Spring support for JAX-WS RI</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -22,151 +21,83 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <div id="banner">
-                    <span id="bannerLeft">
-    
-            Spring support extension
-    
-            </span>
-                    <div class="clear">
-        <hr/>
+    <!-- TODO: move this into JavaScript to patch the skin
+      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+          |
+          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
       </div>
-    </div>
-    <div id="breadcrumbs">
-          
-  
-
-  
-    
-  
-  
-    
-            <div class="xleft">
-        Last Published: 2008-01-18
-                      </div>
-            <div class="xright">            <a href="">Spring support extension</a>
-            
-  
-
-  
-    
-  
-  
-    
-  </div>
-      <div class="clear">
-        <hr/>
-      </div>
-    </div>
-    <div id="leftColumn">
-      <div id="navcolumn">
-           
-  
-
-  
-    
-  
-  
-    
-                             <h5>Modules</h5>
-            <ul>
-              
-    <li class="none">
-                    <a href="jaxws-spring/index.html">Spring support extension</a>
-          </li>
-              
-    <li class="none">
-                    <a href="test-app/index.html">Test application for JAX-WS Spring support</a>
-          </li>
-          </ul>
-              <h5>Project Documentation</h5>
-            <ul>
-              
-                
-              
-            
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-              
-            <li class="expanded">
-                    <a href="project-info.html">Project Information</a>
-                  <ul>
-                  
-    <li class="none">
-              <strong>About</strong>
-        </li>
-                  
-    <li class="none">
-                    <a href="integration.html">Continuous Integration</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="dependencies.html">Dependencies</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="dependency-convergence.html">Dependency Convergence</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="issue-tracking.html">Issue Tracking</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="mail-lists.html">Mailing Lists</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="license.html">Project License</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="project-summary.html">Project Summary</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="team-list.html">Project Team</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="source-repository.html">Source Repository</a>
-          </li>
-              </ul>
-        </li>
-          </ul>
-                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
-            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
-          </a>
-                       
-  
-
-  
-    
-  
-  
-    
-        </div>
-    </div>
+    -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>About Spring support extension</h2>
-<p>Configure JAX-WS with Spring</p>
+        <div class="section"><h2>What is this?</h2>
+<p>When your application uses <a class="externalLink" href="http://www.springframework.org/">Spring</a>
+ for wiring your code, you'll find it more convenient to use the same Spring for configuring JAX-WS. For example, that would allow your service implementations to receive resource injection via Spring, AOP stuff, logging, etc, etc. This RI extension provides this functionality.</p>
+<p>This Spring extension also allows you to configure various aspects of your web service through Spring, such as the use of MTOM, handlers, custom transports, encoding, etc., etc.</p>
+<p>Another purpose of this extension is to provide a general purpose mechanism that JAX-WS extension authors can use, to let users use their extensions. For example, when you write a custom transport, custom codec, or custom pipeline assembler, you can use Spring to allow users to configure your extensions.</p>
+<p>This deployment mechanism supercedes <tt>sun-jaxws.xml</tt>
+ and JSR-109 deployment.</p>
+</div>
+<div class="section"><h2>Quick Start</h2>
+<p>Let's consider the most typical case, where you develop a web pplication and you want to deploy JAX-WS services. First your <tt>web.xml</tt>
+ needs to have a JAX-WS servlet registered (if servlet could be deployed from Spring without <tt>web.xml</tt>
+, we could have gotten rid of this altogether!)</p>
+<div class="source"><pre>&lt;web-app&gt;
+  &lt;!-- this is for Spring --&gt;
+  &lt;listener&gt;
+    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+  &lt;/listener&gt;
+
+  &lt;!-- these are for JAX-WS --&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;jaxws-servlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;com.sun.xml.ws.transport.http.servlet.WSSpringServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;jaxws-servlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/add&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+  ... if you deploy more services,
+  you might need more &lt;servlet-mapping&gt;s ...
+&lt;/web-app&gt;</pre>
+</div>
+<p>Then you'd be writing something like this in your <tt>/WEB-INF/applicationContext.xml</tt>
+:</p>
+<div class="source"><pre>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xmlns:ws=&quot;http://jax-ws.dev.java.net/spring/core&quot;
+  xmlns:wss=&quot;http://jax-ws.dev.java.net/spring/servlet&quot;
+  xsi:schemaLocation=&quot;
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://jax-ws.dev.java.net/spring/core
+    http://jax-ws.dev.java.net/spring/core.xsd
+    http://jax-ws.dev.java.net/spring/servlet
+    http://jax-ws.dev.java.net/spring/servlet.xsd&quot;&gt;
+
+  &lt;wss:binding url=&quot;/add&quot; service=&quot;#addService&quot; /&gt;
+  &lt;wss:binding url=&quot;/sub&quot;&gt;
+    &lt;wss:service&gt;&lt;!-- nested bean is of course fine --&gt;
+      &lt;ws:service bean=&quot;#myService&quot; /&gt;
+    &lt;/wss:service&gt;
+  &lt;/wss:binding&gt;
+
+  &lt;!-- this bean implements web service methods --&gt;
+  &lt;bean id=&quot;myService&quot; class=&quot;foo.MyService&quot; /&gt;
+
+  &lt;!-- simplest definition only needs the class name --&gt;
+  &lt;ws:service id=&quot;addService&quot; impl=&quot;foo.MyAddService&quot; handlers=&quot;#myHandler&quot;/&gt;
+
+  &lt;bean id=&quot;myHandler&quot; class=&quot;foo.MyHandler&quot; /&gt;
+
+&lt;/beans&gt;</pre>
+</div>
+<p>The two <tt>wss:binding</tt>
+ definitions define what services are exposed to which part of the URL space. In the above code, it deploys two services on two URLs, and one with a handler.</p>
+<p>If you know Spring, you should know the &quot;rest&quot;, like how to configure your own service beans.</p>
+</div>
+<div class="section"><h2>Sample Project</h2>
+<p><a class="externalLink" href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/spring/test-app/">A complete sample application</a>
+ is also available.</p>
 </div>
 
       </div>
@@ -182,11 +113,10 @@
   
 
   
-    
   
-  
-    
-  </div>
+  &nbsp;| Last Published: 01/24/2008
+  &nbsp;| Version: 1.9-SNAPSHOT
+</div>
       <div class="clear">
         <hr/>
       </div>
