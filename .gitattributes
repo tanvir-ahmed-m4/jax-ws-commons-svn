@@ -1,5 +1,4 @@
 * text=auto !eol
-/LICENSE -text
 beans-generator/pom.xml -text
 beans-generator/src/main/java/org/jvnet/jax_ws_commons/beans_generator/ContextBuilder.java -text
 beans-generator/src/main/java/org/jvnet/jax_ws_commons/beans_generator/ContextJAXWSConstants.java -text
