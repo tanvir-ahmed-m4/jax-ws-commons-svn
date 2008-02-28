@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DIME Encoding for JAX-WS</title>
+</head>
+<body>
+<h1>DIME Encoding for JAX-WS</h1>
+<p>This plug-in brings plain old DIME encoding to JAX-WS. DIME is an
+old-fashioned format for binary web service attachments and was
+superseded by SwaRef and MTOM. So, why you want to use it anyway?</p>
+
+<p>Well, there are some web service clients out there, that cannot
+use Swaref or MTOM, but have support for DIME. One prominent memeber of
+this category it MS Office up to version 2003. If you have a newer
+Office version (i.e. 2007), then use the .Net framework with MTOM
+support on the client side and be happy. However, if you are like me and
+work for a company that still uses Office 2003 and you want to consume
+web services from VBA macros, then this is the right plug-in for you.</p>
+
+<p>The plug-in only provides server-side support for DIME because
+nobody would ever want to write a Java web service client that sends
+binary attachments in DIME format. The main pupose of the plug-in is to
+have a VBA macro in Office 2003 on the client side and a Java web
+service provider using JAX-WS.</p>
+
+<h2>How does it work?</h2>
+
+<p>A DIME message consists of one or more records. The first record
+always contains a SOAP 1.1 message. Any other records contain a binary
+attachment that is referenced from the SOAP message via a href
+attribute.</p>
+
+<h3>Example</h3>
+<p>Here is a simple web service that has two methods. One that takes
+a file argument and one that returns a file result. In JAX-WS binary
+attachments are specified as <code>javax.activation.DataHandler</code>
+objects. There are three things to note about this class:</p>
+<ol>
+	<li>The web service uses rpc style. This isn't strictly necessary,
+	but Office 2003 likes it.</li>
+	<li>The binding type is set to <code>DimeBindingID.DIME_BINDING</code>.
+	This enables the DIME encoding for the service.</li>
+	<li>Each method that returns a binary attachment gets a <code>DimeOutput</code>
+	annotation. Likewise, earch method that takes a binary attachments as
+	an argument gets a <code>DimeInput annotation</code>.</li>
+</ol>
+<pre>
+	@WebService
+	@SOAPBinding(style = Style.RPC)
+	@BindingType(DimeBindingID.DIME_BINDING)
+	public class Dime {
+	    @WebMethod
+	    @DimeOutput
+	    public DataHandler getFile() {
+	        final URL url = getClass().getResource("javaxml-duke.gif");
+	        final DataHandler data = new DataHandler(url);
+	        return data;
+	    }
+	
+	    @WebMethod
+	    @DimeInput
+	    public void setFile(@WebParam(name = "data")
+	    final DataHandler data) {
+	        try {
+	            data.writeTo(new FileOutputStream("/tmp/dummy.gif"));
+	        } catch (final FileNotFoundException e) {
+	            e.printStackTrace();
+	        } catch (final IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
+</pre>
+<p>The result SOAP message from the <code>getFile()</code> method
+looks like this on the wire:</p>
+<pre>
+	&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+		&lt;soap:Body&gt;
+			&lt;ns2:getFileResponse xmlns:ns2="http://dime.ws.sample.org/"&gt;
+				&lt;return href="uuid:c6777781-1b6b-4709-a147-f516357ea0c3"&gt;&lt;/return&gt;
+			&lt;/ns2:getFileResponse&gt;
+		&lt;/soap:Body&gt;
+	&lt;/soap:Envelope&gt;
+</pre>
+<p>The SOAP message is the first record of the DIME message. The
+second record contains the binary data of the binary attachment
+referenced by the content id <code>uuid:c6777781-1b6b-4709-a147-f516357ea0c3</code>.</p>
+<p>Like wise the SOAP request message for the <code>setFile()</code>
+method looks like this:</p>
+<pre>
+	&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+		&lt;soap:Body&gt;
+			&lt;ns2:setFile xmlns:ns2="http://dime.ws.sample.org/"&gt;
+				&lt;data href="uuid:C6A593AA-6A3D-4AA8-9440-24E7F2918B5A" /&gt;
+			&lt;/ns2:setFile&gt;
+		&lt;/soap:Body&gt;
+	&lt;/soap:Envelope&gt;
+</pre>
+<p>Again, the actual data of the binary attachment is in the second
+DIME record referenced by the href attribute.</p>
+
+<h2>Downloads</h2>
+<ul>
+	<li>Binary package: <a href="dimebinding.jar">dimebinding.jar</a>
+	<li>Sample service provider: <a href="server.war">server.war</a>
+	<li>Sample client as a VBA macro: <a href="client.doc">client.doc</a>
+	<li>Source code: <a href="dimebinding.zip">dimebinding.zip</a>
+	<li>SVN repository: <a href="https://jax-ws-commons.dev.java.net/svn/jax-ws-commons/trunk/dime">https://jax-ws-commons.dev.java.net/svn/jax-ws-commons/trunk/dime</a>
+</ul>
+</body>
+</html>

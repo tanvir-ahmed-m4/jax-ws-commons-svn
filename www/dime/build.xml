@@ -1,0 +1,9 @@
+<project default="all">
+	<property name="project" value="../DimeBinding" />
+	<target name="all">
+		<copy file="${project}/build/dimebinding.jar" todir="${basedir}" />
+		<copy file="${project}/samples/client/Client.doc" tofile="${basedir}/client.doc" />
+		<copy file="${project}/samples/server/build/SampleDimeServer.war" tofile="${basedir}/server.war" />
+		<zip destfile="dimebinding.zip" basedir="${project}" excludes="**/build/**" />
+	</target>
+</project>

@@ -358,6 +358,13 @@ www/beans-generator/source-repository.html -text
 www/beans-generator/team-list.html -text
 www/beans-generator/usages.html -text
 www/beans-generator/very-very-simple-example.html -text
+www/dime/.project -text
+www/dime/build.xml -text
+www/dime/client.doc -text
+www/dime/dimebinding.jar -text
+www/dime/dimebinding.zip -text
+www/dime/index.html -text
+www/dime/server.war -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
