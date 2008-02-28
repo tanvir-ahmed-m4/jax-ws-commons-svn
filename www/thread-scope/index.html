@@ -9,7 +9,8 @@
 
 
 
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>JAX-WS commons - Thread-scope service extension</title>
     <style type="text/css" media="all">
@@ -39,19 +40,21 @@
     
   
   
+    
             <div class="xleft">
-        Last Published: 02/08/2007
+        Last Published: 2008-02-28
                       </div>
-            <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
-          |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
-          
+            <div class="xright">            <a href="http://jax-ws.dev.java.net/" class="externalLink">JAX-WS</a>
+            |
+                <a href="http://glassfishi.dev.java.net/" class="externalLink">Glassfish</a>
+            
   
 
   
     
   
   
+    
   </div>
       <div class="clear">
         <hr/>
@@ -66,18 +69,19 @@
     
   
   
-                   <ul>
+    
+                       <ul>
               
     <li class="none">
               <strong>Introduction</strong>
         </li>
               
     <li class="none">
-              <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/thread-scope/">Download</a>
-        </li>
+                    <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/org/jvnet/jax-ws-commons/thread-scope/" class="externalLink">Download</a>
+          </li>
           </ul>
-          <h5>Project Documentation</h5>
-        <ul>
+              <h5>Project Documentation</h5>
+            <ul>
               
                 
               
@@ -98,10 +102,10 @@
       
               
         <li class="collapsed">
-              <a href="project-info.html">Project Information</a>
-              </li>
+                    <a href="project-info.html">Project Information</a>
+                </li>
           </ul>
-                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
             <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
           </a>
                        
@@ -111,11 +115,17 @@
     
   
   
+    
         </div>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>What is this?</h2><p>This is similar to the other extension <a href="https://jax-ws-commons.dev.java.net/nonav/http-session-scope/"><tt>HttpSessionScope</tt></a>. Traditionally JAX-WS has never taken advantage of object state, just like servlet. That is, the container creates only one instance of your service class, and then have it serve all the requests concurrently. This makes it impossible to set values to instance fields, as you'll experience concurrency problem as soon as multiple threads hit your service.</p><p>Say you have a service, and its web methods try to access Database using Connection object. Connection object doesn't handle concurrent accesses, hence the access needs to be synchronized. For e.g.:</p><div class="source"><pre>@WebService
+        <div class="section"><h2>What is this?</h2>
+<p>This is similar to the other extension <a class="externalLink" href="https://jax-ws-commons.dev.java.net/nonav/http-session-scope/"><tt>HttpSessionScope</tt>
+</a>
+. Traditionally JAX-WS has never taken advantage of object state, just like servlet. That is, the container creates only one instance of your service class, and then have it serve all the requests concurrently. This makes it impossible to set values to instance fields, as you'll experience concurrency problem as soon as multiple threads hit your service.</p>
+<p>Say you have a service, and its web methods try to access Database using Connection object. Connection object doesn't handle concurrent accesses, hence the access needs to be synchronized. For e.g.:</p>
+<div class="source"><pre>@WebService
 public class DataService {
     Connection con;
 
@@ -128,7 +138,10 @@ public class DataService {
         Statement stmt = con.createStatement();
         stmt.executeQuery();
     }
-}</pre></div><p>This will have performance issues since some of the requests need to wait until a current request is finished. To avoid synchronization, one could create Connection objects in each invocation and that is even more expensive! So we need exclusive access to Connection object and reuse them exclusively for other invocations. This can be achieved by creating more instances and using an instance exclusively for one invocation. To achive this, jax-ws runtime creates instances and stores and reuses them from ThreadLocal.</p><div class="source"><pre>import org.jvnet.jax_ws_commons.thread_scope.ThreadScope;
+}</pre>
+</div>
+<p>This will have performance issues since some of the requests need to wait until a current request is finished. To avoid synchronization, one could create Connection objects in each invocation and that is even more expensive! So we need exclusive access to Connection object and reuse them exclusively for other invocations. This can be achieved by creating more instances and using an instance exclusively for one invocation. To achive this, jax-ws runtime creates instances and stores and reuses them from ThreadLocal.</p>
+<div class="source"><pre>import org.jvnet.jax_ws_commons.thread_scope.ThreadScope;
 
 @WebService
 @ThreadScope
@@ -144,7 +157,20 @@ public class DataService {
         Statement stmt = con.createStatement();
         stmt.executeQuery();
     }
-}</pre></div><p>The <tt>@ThreadScope</tt> annotation tells the JAX-WS RI to create one instance of <tt>DataService</tt> per each thread. No need to have synchronized keyword.</p></div><div class="section"><h2>How it's implemented?</h2><p>This extension is based on a publicly available extension point in the JAX-WS RI 2.1 called <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/rt/src/com/sun/xml/ws/api/server/InstanceResolver.java">InstanceResolver</a>. This provides a pluggability point where 3rd party could control how the JAX-WS RI dispatches incoming requests to service instances. It is implemented similar to <a href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/developer/servlet/HttpSessionScope.java?r=1.1.2.1"><tt>HttpSessionScope</tt> annotation</a>.</p><p>This extension requires the JAX-WS RI 2.1 EA2 or later.</p></div>
+}</pre>
+</div>
+<p>The <tt>@ThreadScope</tt>
+ annotation tells the JAX-WS RI to create one instance of <tt>DataService</tt>
+ per each thread. No need to have synchronized keyword.</p>
+</div>
+<div class="section"><h2>How it's implemented?</h2>
+<p>This extension is based on a publicly available extension point in the JAX-WS RI 2.1 called <a class="externalLink" href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/rt/src/com/sun/xml/ws/api/server/InstanceResolver.java">InstanceResolver</a>
+. This provides a pluggability point where 3rd party could control how the JAX-WS RI dispatches incoming requests to service instances. It is implemented similar to <a class="externalLink" href="http://fisheye5.cenqua.com/browse/jax-ws-sources/jaxws-ri/servlet/src/com/sun/xml/ws/developer/servlet/HttpSessionScope.java?r=1.1.2.1"><tt>HttpSessionScope</tt>
+ annotation</a>
+.</p>
+<p>This extension requires the JAX-WS RI 2.1 EA2 or later.</p>
+</div>
+
       </div>
     </div>
     <div class="clear">
@@ -152,7 +178,7 @@ public class DataService {
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2007
+          2008
     
           
   
@@ -161,6 +187,7 @@ public class DataService {
     
   
   
+    
   </div>
       <div class="clear">
         <hr/>

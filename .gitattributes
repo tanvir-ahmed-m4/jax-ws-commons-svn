@@ -601,6 +601,7 @@ www/spring/wsdl-first.html -text
 www/thread-scope/css/maven-base.css -text
 www/thread-scope/css/maven-theme.css -text
 www/thread-scope/css/print.css -text
+www/thread-scope/css/site.css -text
 www/thread-scope/dependencies.html -text
 www/thread-scope/images/collapsed.gif -text
 www/thread-scope/images/expanded.gif -text
@@ -609,6 +610,8 @@ www/thread-scope/images/icon_error_sml.gif -text
 www/thread-scope/images/icon_info_sml.gif -text
 www/thread-scope/images/icon_success_sml.gif -text
 www/thread-scope/images/icon_warning_sml.gif -text
+www/thread-scope/images/logos/build-by-maven-black.png -text svneol=unset#unset
+www/thread-scope/images/logos/build-by-maven-white.png -text svneol=unset#unset
 www/thread-scope/images/logos/maven-feather.png -text
 www/thread-scope/images/newwindow.png -text
 www/thread-scope/index.html -text
