@@ -54,6 +54,9 @@ beans-generator/src/site/site.xml -text
 beans-generator/src/site/site_ru.xml -text
 dime/DimeBinding/.classpath -text
 dime/DimeBinding/.project -text
+dime/DimeBinding/.settings/org.eclipse.jdt.core.prefs -text
+dime/DimeBinding/.settings/org.eclipse.wst.common.component -text
+dime/DimeBinding/.settings/org.eclipse.wst.common.project.facet.core.xml -text
 dime/DimeBinding/samples/client/Client.doc -text
 dime/DimeBinding/samples/server/build.xml -text
 dime/DimeBinding/samples/server/etc/sun-jaxws.xml -text
