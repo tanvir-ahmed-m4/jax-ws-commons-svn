@@ -86,7 +86,6 @@ beans-generator/src/test/java/.settings
 beans-generator/src/test/java/target
 beans-generator/src/test/target
 beans-generator/target
-dime/DimeBinding/build
 dime/samples/server/build
 http-session-scope/*.iml
 http-session-scope/*.ipr
