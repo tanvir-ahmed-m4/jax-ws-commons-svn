@@ -27,12 +27,13 @@
     <div id="bodyColumn">
       <div id="contentBox">
         <div class="section"><h2>What is this?</h2>
-<p>This plug-in brings plain old DIME encoding to JAX-WS. DIME is an old-fashioned format for binary web service attachments and was superseded by SwaRef and MTOM. So, why you want to use it anyway?</p>
-<p>Well, there are some web service clients out there, that cannot use Swaref or MTOM, but have support for DIME. One prominent memeber of this category it MS Office up to version 2003. If you have a newer Office version (i.e. 2007), then use the .Net framework with MTOM support on the client side and be happy. However, if you are like me and work for a company that still uses Office 2003 and you want to consume web services from VBA macros, then this is the right plug-in for you.</p>
-<p>The plug-in only provides server-side support for DIME because nobody would ever want to write a Java web service client that sends binary attachments in DIME format. The main pupose of the plug-in is to have a VBA macro in Office 2003 on the client side and a Java web service provider using JAX-WS.</p>
+<p>This extension brings plain old DIME encoding to JAX-WS. DIME is an old-fashioned format for binary web service attachments and was superseded by SwaRef and MTOM. So, why you want to use it anyway?</p>
+<p>Well, there are some web service clients out there, that cannot use Swaref or MTOM, but have support for DIME. One prominent member of this category it MS Office up to version 2003. If you have a newer Office version (i.e. 2007), then use the .Net framework with MTOM support on the client side and be happy. However, if you are like me and work for a company that still uses Office 2003 and you want to consume web services from VBA macros, then this is the right extension for you.</p>
+<p>The extension only provides server-side support for DIME because nobody would ever want to write a Java web service client that sends binary attachments in DIME format. The main purpose of the extension is to have a VBA macro in Office 2003 on the client side and a Java web service provider using JAX-WS.</p>
 </div>
 <div class="section"><h2>How does it work?</h2>
-<p>A DIME message consists of one or more records. The first record always contains a SOAP 1.1 message. Any other records contain a binary attachment that is referenced from the SOAP message via a href attribute.</p>
+<p>A DIME message consists of one or more records. The first record always contains a SOAP 1.1 message. Any other records contain a binary attachment that is referenced from the SOAP message via a <tt>href</tt>
+ attribute.</p>
 <div class="section"><h3>Sample Service Provider</h3>
 <p>Here is a simple web service that has two methods. One that takes a file argument and one that returns a file result. In JAX-WS binary attachments are specified as <tt>javax.activation.DataHandler</tt>
  objects. There are three things to note about this class:</p>
@@ -40,8 +41,8 @@
 <li>The binding type is set to <tt>DimeBindingID.DIME_BINDING</tt>
 . This enables the DIME encoding for the service.</li>
 <li>Each method that returns a binary attachment gets a <tt>DimeOutput</tt>
- annotation. Likewise, earch method that takes a binary attachments as an argument gets a <tt>DimeInput annotation</tt>
-.</li>
+ annotation. Likewise, earch method that takes a binary attachments as an argument gets a <tt>DimeInput</tt>
+ annotation.</li>
 </ol>
 <div class="source"><pre>@WebService
 @SOAPBinding(style = Style.RPC)
@@ -50,26 +51,23 @@ public class Dime {
     @WebMethod
     @DimeOutput
     public DataHandler getFile() {
-        final URL url = getClass().getResource(&quot;javaxml-duke.gif&quot;);
+        final URL url = getClass().getResource(&quot;/images/javaxml-duke.gif&quot;);
         final DataHandler data = new DataHandler(url);
         return data;
     }
 
     @WebMethod
     @DimeInput
-    public void setFile(@WebParam(name = &quot;data&quot;)
-    final DataHandler data) {
+    public void setFile(@WebParam(name = &quot;data&quot;) final DataHandler data) {
         try {
             data.writeTo(new FileOutputStream(&quot;/tmp/dummy.gif&quot;));
-        } catch (final FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (final IOException e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
 }</pre>
 </div>
-<p>The result SOAP message from the <tt>getFile()</tt>
+<p>The SOAP result message from the <tt>getFile()</tt>
  method looks like this on the wire:</p>
 <div class="source"><pre>&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
         &lt;soap:Body&gt;
@@ -79,8 +77,8 @@ public class Dime {
         &lt;/soap:Body&gt;
 &lt;/soap:Envelope&gt;</pre>
 </div>
-<p>The SOAP message is the first record of the DIME message. The second record contains the binary data of the binary attachment referenced by the content id <tt>uuid:c6777781-1b6b-4709-a147-f516357ea0c3</tt>
-. Like wise the SOAP request message for the <tt>setFile()</tt>
+<p>The SOAP message is the first record of the DIME message. The second record contains the data of the binary attachment referenced by the content id <tt>uuid:c6777781-1b6b-4709-a147-f516357ea0c3</tt>
+. Likewise the SOAP request message for the <tt>setFile()</tt>
  method looks like this:</p>
 <div class="source"><pre>&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
         &lt;soap:Body&gt;
@@ -90,7 +88,8 @@ public class Dime {
         &lt;/soap:Body&gt;
 &lt;/soap:Envelope&gt;</pre>
 </div>
-<p>Again, the actual data of the binary attachment is in the second DIME record referenced by the href attribute.</p>
+<p>Again, the actual data of the binary attachment is in the second DIME record referenced by the <tt>href</tt>
+ attribute.</p>
 </div>
 <div class="section"><h3>Sample Service Consumer</h3>
 <p>The sample service consumer is implemented as a VBA macro in Word 2003. Open the VBA editor using ALT-F11 in Word to see the code.</p>
@@ -108,8 +107,10 @@ End Sub</pre>
 </div>
 <p><tt>FileAttachment30</tt>
  and <tt>IReceivedAttachment</tt>
- come with the Office 2003 SOAP Toolkit runtime.</p>
-<p>DimeService is a VBA class that was generated by the toolkit.</p>
+ come with the <a class="externalLink" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=ba611554-5943-444c-b53c-c0a450b7013c&amp;DisplayLang=en">SOAP Toolkit 3.0 runtime</a>
+. <tt>DimeService</tt>
+ is a VBA class that was generated by the <a class="externalLink" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=C943C0DD-CEEC-4088-9753-86F052EC8450&amp;displaylang=en">SOAP Toolkit 3.0 SDK</a>
+ from the WSDL.</p>
 <div class="source"><pre>Private sc_DimeService As SoapClient30
 Private Const c_WSDL_URL As String = &quot;http://zaphod.treichels.de:8080/jaxws/services/dime?wsdl&quot;
 Private Const c_SERVICE As String = &quot;DimeService&quot;
