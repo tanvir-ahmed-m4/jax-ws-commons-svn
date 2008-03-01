@@ -52,10 +52,10 @@ beans-generator/src/site/resources/pics/example/war_lib.jpg -text
 beans-generator/src/site/resources/pics/example/watch.jpg -text
 beans-generator/src/site/site.xml -text
 beans-generator/src/site/site_ru.xml -text
+dime/.classpath -text
 dime/.settings/org.eclipse.jdt.core.prefs -text
 dime/.settings/org.eclipse.wst.common.component -text
 dime/.settings/org.eclipse.wst.common.project.facet.core.xml -text
-dime/DimeBinding/.classpath -text
 dime/DimeBinding/.project -text
 dime/DimeBinding/build.xml -text
 dime/samples/client/Client.doc -text
