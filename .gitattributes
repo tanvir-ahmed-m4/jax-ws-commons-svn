@@ -59,7 +59,6 @@ dime/.settings/org.eclipse.wst.common.component -text
 dime/.settings/org.eclipse.wst.common.project.facet.core.xml -text
 dime/pom.xml -text
 dime/samples/client/Client.doc -text
-dime/samples/server/build.xml -text
 dime/samples/server/pom.xml -text
 dime/samples/server/src/main/java/org/sample/ws/dime/Dime.java -text
 dime/samples/server/src/main/resources/images/javaxml-duke.gif -text
@@ -85,6 +84,10 @@ dime/src/main/java/org/jvnet/jax_ws_commons/dime/wsdl/DimeWSDLGeneratorExtension
 dime/src/main/java/org/jvnet/jax_ws_commons/dime/wsdl/package.html -text
 dime/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
 dime/src/main/resources/META-INF/services/com.sun.xml.ws.api.wsdl.writer.WSDLGeneratorExtension -text
+dime/src/site/apt/index.apt -text
+dime/src/site/resources/dime-client.doc -text
+dime/src/site/resources/dime-server.war -text
+dime/src/site/site.xml -text
 http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
