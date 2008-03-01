@@ -1,0 +1,16 @@
+-classpath '/home/oli/workspaces/jax-ws/dime/target/classes:/home/oli/.m2/repository/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar:/home/oli/.m2/repository/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar:/home/oli/.m2/repository/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1.jar:/home/oli/.m2/repository/org/jvnet/mimepull/1.1/mimepull-1.1.jar:/home/oli/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6.jar:/home/oli/.m2/repository/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar:/home/oli/.m2/repository/junit/junit/3.8/junit-3.8.jar:/home/oli/.m2/repository/javax/xml/stream/stax-api/1.0/stax-api-1.0.jar:/home/oli/.m2/repository/javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1.jar:/home/oli/.m2/repository/com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7.jar:/home/oli/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/oli/.m2/repository/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar:/home/oli/.m2/repository/com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0.jar:/home/oli/.m2/repository/com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3.jar:/home/oli/.m2/repository/javax/xml/soap/saaj-api/1.3/saaj-api-1.3.jar:/home/oli/.m2/repository/com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3.jar' -protected
+-sourcepath
+'/home/oli/workspaces/jax-ws/dime/src/main/java'
+-author
+-bottom
+'Copyright &copy; 2008. All Rights Reserved.'
+-charset
+'ISO-8859-1'
+-d
+'/home/oli/workspaces/jax-ws/dime/target/site/apidocs'
+-doctitle
+'DIME binding extension 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'DIME binding extension 1.0-SNAPSHOT API'

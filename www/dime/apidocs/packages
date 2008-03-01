@@ -1,0 +1,5 @@
+org.jvnet.jax_ws_commons.dime.wsdl
+org.jvnet.jax_ws_commons.dime.codec
+org.jvnet.jax_ws_commons.dime.annotation
+org.jvnet.jax_ws_commons.dime.binding
+org.jvnet.jax_ws_commons.dime.attachment

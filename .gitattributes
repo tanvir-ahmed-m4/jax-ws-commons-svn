@@ -362,12 +362,86 @@ www/beans-generator/team-list.html -text
 www/beans-generator/usages.html -text
 www/beans-generator/very-very-simple-example.html -text
 www/dime/.project -text
+www/dime/apidocs/allclasses-frame.html -text
+www/dime/apidocs/allclasses-noframe.html -text
+www/dime/apidocs/constant-values.html -text
+www/dime/apidocs/deprecated-list.html -text
+www/dime/apidocs/help-doc.html -text
+www/dime/apidocs/index-all.html -text
+www/dime/apidocs/index.html -text
+www/dime/apidocs/options -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/DimeInput.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/DimeOutput.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/class-use/DimeInput.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/class-use/DimeOutput.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-frame.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-summary.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-tree.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-use.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeMessage.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeRecord.TypeNameFormat.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeRecord.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeMessage.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeRecord.TypeNameFormat.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeRecord.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-frame.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-summary.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-tree.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-use.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/DimeBindingID.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/DimeBindingIDFactory.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/class-use/DimeBindingID.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/class-use/DimeBindingIDFactory.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-frame.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-summary.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-tree.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-use.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeCodec.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeContentType.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeStreamReader.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeStreamWriter.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeCodec.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeContentType.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeStreamReader.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeStreamWriter.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-frame.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-summary.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-tree.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-use.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/DimeWSDLGeneratorExtension.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/class-use/DimeWSDLGeneratorExtension.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-frame.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-summary.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-tree.html -text
+www/dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-use.html -text
+www/dime/apidocs/overview-frame.html -text
+www/dime/apidocs/overview-summary.html -text
+www/dime/apidocs/overview-tree.html -text
+www/dime/apidocs/package-list -text
+www/dime/apidocs/packages -text
+www/dime/apidocs/resources/inherit.gif -text svneol=unset#unset
+www/dime/apidocs/stylesheet.css -text
 www/dime/build.xml -text
 www/dime/client.doc -text
+www/dime/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
+www/dime/css/maven-base.css -text
+www/dime/css/maven-theme.css -text
+www/dime/css/site.css -text
+www/dime/dependencies.html -text
+www/dime/dime-client.doc -text svneol=unset#unset
+www/dime/dime-server.war -text svneol=unset#unset
 www/dime/dimebinding.jar -text
 www/dime/dimebinding.zip -text
+www/dime/images/collapsed.gif -text svneol=unset#unset
+www/dime/images/expanded.gif -text svneol=unset#unset
 www/dime/index.html -text
+www/dime/license.html -text
+www/dime/project-info.html -text
+www/dime/project-reports.html -text
+www/dime/project-summary.html -text
 www/dime/server.war -text
+www/dime/source-repository.html -text
+www/dime/team-list.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
