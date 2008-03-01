@@ -58,12 +58,6 @@ dime/.settings/org.eclipse.wst.common.project.facet.core.xml -text
 dime/DimeBinding/.classpath -text
 dime/DimeBinding/.project -text
 dime/DimeBinding/build.xml -text
-dime/DimeBinding/samples/client/Client.doc -text
-dime/DimeBinding/samples/server/build.xml -text
-dime/DimeBinding/samples/server/etc/sun-jaxws.xml -text
-dime/DimeBinding/samples/server/etc/web.xml -text
-dime/DimeBinding/samples/server/src/org/sample/ws/dime/Dime.java -text
-dime/DimeBinding/samples/server/src/org/sample/ws/dime/javaxml-duke.gif -text
 dime/DimeBinding/src/META-INF/MANIFEST.MF -text
 dime/DimeBinding/src/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
 dime/DimeBinding/src/META-INF/services/com.sun.xml.ws.api.wsdl.writer.WSDLGeneratorExtension -text
@@ -85,6 +79,12 @@ dime/DimeBinding/src/org/jvnet/jax_ws_commons/dime/codec/DimeStreamWriter.java -
 dime/DimeBinding/src/org/jvnet/jax_ws_commons/dime/codec/package.html -text
 dime/DimeBinding/src/org/jvnet/jax_ws_commons/dime/wsdl/DimeWSDLGeneratorExtension.java -text
 dime/DimeBinding/src/org/jvnet/jax_ws_commons/dime/wsdl/package.html -text
+dime/samples/client/Client.doc -text
+dime/samples/server/build.xml -text
+dime/samples/server/etc/sun-jaxws.xml -text
+dime/samples/server/etc/web.xml -text
+dime/samples/server/src/org/sample/ws/dime/Dime.java -text
+dime/samples/server/src/org/sample/ws/dime/javaxml-duke.gif -text
 http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
