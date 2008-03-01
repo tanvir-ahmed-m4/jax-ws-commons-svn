@@ -57,13 +57,94 @@ dime/.project -text
 dime/.settings/org.eclipse.jdt.core.prefs -text
 dime/.settings/org.eclipse.wst.common.component -text
 dime/.settings/org.eclipse.wst.common.project.facet.core.xml -text
+dime/apidocs/allclasses-frame.html -text
+dime/apidocs/allclasses-noframe.html -text
+dime/apidocs/constant-values.html -text
+dime/apidocs/deprecated-list.html -text
+dime/apidocs/help-doc.html -text
+dime/apidocs/index-all.html -text
+dime/apidocs/index.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/DimeInput.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/DimeOutput.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/class-use/DimeInput.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/class-use/DimeOutput.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-frame.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-summary.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-tree.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/annotation/package-use.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeMessage.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeRecord.TypeNameFormat.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/DimeRecord.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeMessage.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeRecord.TypeNameFormat.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/class-use/DimeRecord.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-frame.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-summary.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-tree.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/attachment/package-use.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/DimeBindingID.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/DimeBindingIDFactory.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/class-use/DimeBindingID.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/class-use/DimeBindingIDFactory.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-frame.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-summary.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-tree.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/binding/package-use.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeCodec.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeContentType.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeStreamReader.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/DimeStreamWriter.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeCodec.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeContentType.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeStreamReader.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/class-use/DimeStreamWriter.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-frame.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-summary.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-tree.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/codec/package-use.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/DimeWSDLGeneratorExtension.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/class-use/DimeWSDLGeneratorExtension.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-frame.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-summary.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-tree.html -text
+dime/apidocs/org/jvnet/jax_ws_commons/dime/wsdl/package-use.html -text
+dime/apidocs/overview-frame.html -text
+dime/apidocs/overview-summary.html -text
+dime/apidocs/overview-tree.html -text
+dime/apidocs/package-list -text
+dime/apidocs/resources/inherit.gif -text svneol=unset#unset
+dime/apidocs/stylesheet.css -text
+dime/css/maven-base.css -text
+dime/css/maven-theme.css -text
+dime/css/print.css -text
+dime/css/site.css -text
+dime/dependencies.html -text
+dime/dime-client.doc -text svneol=unset#unset
+dime/dime-server.war -text svneol=unset#unset
+dime/images/collapsed.gif -text svneol=unset#unset
+dime/images/expanded.gif -text svneol=unset#unset
+dime/images/external.png -text svneol=unset#unset
+dime/images/icon_error_sml.gif -text svneol=unset#unset
+dime/images/icon_info_sml.gif -text svneol=unset#unset
+dime/images/icon_success_sml.gif -text svneol=unset#unset
+dime/images/icon_warning_sml.gif -text svneol=unset#unset
+dime/images/logos/build-by-maven-black.png -text svneol=unset#unset
+dime/images/logos/build-by-maven-white.png -text svneol=unset#unset
+dime/images/logos/maven-feather.png -text svneol=unset#unset
+dime/images/newwindow.png -text svneol=unset#unset
+dime/index.html -text
+dime/license.html -text
 dime/pom.xml -text
+dime/project-info.html -text
+dime/project-reports.html -text
+dime/project-summary.html -text
 dime/samples/client/Client.doc -text
 dime/samples/server/pom.xml -text
 dime/samples/server/src/main/java/org/sample/ws/dime/Dime.java -text
 dime/samples/server/src/main/resources/images/javaxml-duke.gif -text
 dime/samples/server/src/main/webapp/WEB-INF/sun-jaxws.xml -text
 dime/samples/server/src/main/webapp/WEB-INF/web.xml -text
+dime/source-repository.html -text
 dime/src/main/java/org/jvnet/jax_ws_commons/dime/annotation/DimeInput.java -text
 dime/src/main/java/org/jvnet/jax_ws_commons/dime/annotation/DimeOutput.java -text
 dime/src/main/java/org/jvnet/jax_ws_commons/dime/annotation/package.html -text
@@ -88,6 +169,7 @@ dime/src/site/apt/index.apt -text
 dime/src/site/resources/dime-client.doc -text
 dime/src/site/resources/dime-server.war -text
 dime/src/site/site.xml -text
+dime/team-list.html -text
 http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
