@@ -57,7 +57,7 @@ dime/.project -text
 dime/.settings/org.eclipse.jdt.core.prefs -text
 dime/.settings/org.eclipse.wst.common.component -text
 dime/.settings/org.eclipse.wst.common.project.facet.core.xml -text
-dime/DimeBinding/build.xml -text
+dime/build.xml -text
 dime/samples/client/Client.doc -text
 dime/samples/server/build.xml -text
 dime/samples/server/etc/sun-jaxws.xml -text
