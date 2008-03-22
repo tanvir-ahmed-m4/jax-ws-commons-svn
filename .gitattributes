@@ -292,10 +292,10 @@ thread-scope/src/main/java/org/jvnet/jax_ws_commons/thread_scope/ThreadScopeInst
 thread-scope/src/site/apt/index.apt -text
 thread-scope/src/site/site.xml -text
 transport/grizzly-transport/jaxws-grizzly/pom.xml -text
-transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/GrizzlyAdapter.java -text
-transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/GrizzlyAsyncFilter.java -text
-transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/GrizzlyConnection.java -text
-transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/GrizzlyTransport.java -text
+transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyAdapter.java -text
+transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyAsyncFilter.java -text
+transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyConnection.java -text
+transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyTransport.java -text
 transport/grizzly-transport/jaxws-grizzly/src/site/apt/index.apt -text
 transport/grizzly-transport/jaxws-grizzly/src/site/site.xml -text
 transport/grizzly-transport/jaxws-grizzly/src/test/java/grizzlytest/Book.java -text
