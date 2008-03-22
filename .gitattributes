@@ -293,7 +293,6 @@ thread-scope/src/site/apt/index.apt -text
 thread-scope/src/site/site.xml -text
 transport/grizzly-transport/jaxws-grizzly/pom.xml -text
 transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyAdapter.java -text
-transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyAsyncFilter.java -text
 transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyConnection.java -text
 transport/grizzly-transport/jaxws-grizzly/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly/server/JaxwsGrizzlyTransport.java -text
 transport/grizzly-transport/jaxws-grizzly/src/site/apt/index.apt -text
