@@ -480,6 +480,8 @@ www/dime/project-reports.html -text
 www/dime/project-summary.html -text
 www/dime/source-repository.html -text
 www/dime/team-list.html -text
+www/grails/bin/grails-metro-1.0.zip -text
+www/grails/sources.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
