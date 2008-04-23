@@ -1,0 +1,81 @@
+<html>
+<head><title>Metro Plugin for Grails Framework</title></head>
+<body>
+<h1>Metro Plugin for Grails Framework</h1>
+<a href="http://metro.dev.java.net">Metro</a> plugin allows applications developed with 
+<a href="http://grails.codehaus.org">Grails</a> framework to expose service 
+classes as SOAP Web Services. It uses the SOAP implementation from <a href="http://metro.dev.java.net">Metro</a> web service
+stack, which includes JAX-WS.
+
+<h2>How to Install</h2>
+
+In your grails application directory, invoke:
+<pre>grails install-plugin http://jax-ws-commons.dev.java.net/grails/bin/grails-metro-1.0.zip</pre>
+
+<h2>How to Use</h2>
+
+<ol>
+   <li>In grails application directory, invoke:
+   <pre>grails create-service Calculator</pre>
+   which creates class <code>grails-app/services/CalculatorService.groovy</code>
+   </li><br/>
+   
+   <li>Implement your methods, e.g. <code>add</code>, <code>multiply</code>, and annotate the class 
+   with <code>@WebService</code>, <code>@WebMethod</code> annotations. The resulting class should look like below:
+   
+   
+   <pre>
+import javax.jws.*
+
+@WebService(targetNamespace="http://com.calculator")
+class CalculatorService {
+
+    @WebMethod
+    def int add(int i, int j) {
+        return i+j;
+    }
+    
+    @WebMethod
+    def multiply(int i, int j) {
+        return i*j;
+    }
+}
+   </pre>
+   </li>
+   
+   <li>Run your application, using
+       <pre>grails run-app</pre>
+   </li>
+   
+   <li>Test if your service is deployed, by pointing your browser to:
+   <pre>http://localhost:8080/CalculatorApp/services/CalculatorService</pre>
+</li>   
+</ol>
+
+   Note that the <code>targetNamespace</code> attribute is required only for classes in default package. 
+   If your classes are specified in a package, the <code>targetNamespace</code> value is defaulted based on package name
+   and doesn't need to be specified explicitly.
+
+<h2>How it works</h2>
+
+<p>The plugin uses <a href="../spring/">Jax-ws spring integration</a>. When the grails application is executed, 
+classes are scanned for @WebService annotations. If such annotation is present, 
+appropriate entries are generated to <code>grails-app/conf/spring/resources.xml</code>, and wsgen is called to generate
+required classes.
+</p>
+<p>Another option is to specify web service classes in <code>web-app/WEB-INF/sun-jaxws.xml</code> file. If the file exists,
+only entries in the file are used to generate entries in resources.xml or web.xml. No other classes are scanned for 
+presence of <code>@WebService</code> annotations.
+</p>
+<h2>Download</h2>
+
+<table>
+    <tr><th>Version</th><th>&nbsp;</th></tr>
+    <tr><td align="center">1.0</td><td><a href="bin/grails-metro-1.0.zip">Download</a></td></tr>
+</table>
+
+<h2>Sources</h2>
+
+Sources are stored in Subversion. <a href="sources.html">Read more</a>
+</body>
+</html>
