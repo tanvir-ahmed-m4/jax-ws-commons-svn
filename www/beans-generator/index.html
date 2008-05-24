@@ -28,87 +28,24 @@
           <a href="http://glassfishi.dev.java.net/">Glassfish</a>
       </div>
     -->
-    <div id="leftColumn">
-      <div id="navcolumn">
-             <dl class=navgroup>
-        <dd><ul>
-              
-    <li class="none">
-              <strong>Introduction</strong>
-        </li>
-              
-    <li class="none">
-              <a href="configuration.html">Configuration</a>
-        </li>
-              
-    <li class="none">
-              <a href="beans-generator-1.0-SNAPSHOT.jar">Download</a>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Samples</dt>
-        <dd><ul>
-              
-    <li class="none">
-              <a href="very-very-simple-example.html">Very, very simple example</a>
-        </li>
-              
-    <li class="none">
-              <a href="usages.html">Usages</a>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
-              
-                
-              
-      
-            
-      
-            
-      
-            
-      
-            
-      
-              
-        <li class="collapsed">
-              <a href="project-info.html">Project Information</a>
-              </li>
-          </ul></dd>
-    </dl>
-        </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
-    </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Introduction</h2><div class="section"><h3>Long unclear introduction </h3><p>This tool intended to make other programmers' lives easier while they create web-services with JAX-WS. </p><p>When you create JAX-WS you write your 'implementator' (class which serves as business-logic engine) and after that you generate artifacts like request, response and fault beans (in case document/literal wrapped mapping style). So you have to customize your IDE settings to invoke additional intermediate steps to create these artifacts, you must add these artifacts in ignore list to your favorite version control system and have to wait when generation process completes.</p><p>I often experienced the same problems too, so I decided to solve this problem for myself and my group. </p></div><div class="section"><h3>Short introduction </h3><p>In brief this tool was made to get rid of wsgen steps while creating of your product. (thanks to kohsuke :))</p><div class="section"><h4>This thing was intended to:</h4><ul><li>Generate JAX-WS artifacts at runtime</li><li>Getting chance for developer to control invocation of his/her web-service class-implementators (with help of IImplmentatorInvoker interface)</li></ul></div></div></div>
+        <div class="section"><h2>Introduction</h2>
+<div class="section"><h3>Long unclear introduction </h3>
+<p>This tool intended to make other programmers' lives easier while they create web-services with JAX-WS. </p>
+<p>When you create JAX-WS you write your 'implementator' (class which serves as business-logic engine) and after that you generate artifacts like request, response and fault beans (in case document/literal wrapped mapping style). So you have to customize your IDE settings to invoke additional intermediate steps to create these artifacts, you must add these artifacts in ignore list to your favorite version control system and have to wait when generation process completes.</p>
+<p>I often experienced the same problems too, so I decided to solve this problem for myself and my group. </p>
+</div>
+<div class="section"><h3>Short introduction </h3>
+<p>In brief this tool was made to get rid of wsgen steps while creating of your product. (thanks to kohsuke :))</p>
+<div class="section"><h4>This thing was intended to:</h4>
+<ul><li>Generate JAX-WS artifacts at runtime</li>
+<li>Getting chance for developer to control invocation of his/her web-service class-implementators (with help of IImplmentatorInvoker interface)</li>
+</ul>
+</div>
+</div>
+</div>
+
       </div>
     </div>
     <div class="clear">
@@ -116,14 +53,14 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2007
+          2008
     
           
   
 
   
   
-  &nbsp;| Last Published: 07/10/2007
+  &nbsp;| Last Published: 05/24/2008
   &nbsp;| Version: 1.0-SNAPSHOT
 </div>
       <div class="clear">

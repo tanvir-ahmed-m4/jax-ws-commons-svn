@@ -381,10 +381,12 @@ virtualbox/src/wsdl/vboxwebService.wsdl -text
 www/alm-process/snippets/page.xml -text
 www/beans-generator/architecture.html -text
 www/beans-generator/beans-generator-1.0-SNAPSHOT.jar -text
+www/beans-generator/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
 www/beans-generator/configuration.html -text
 www/beans-generator/css/maven-base.css -text
 www/beans-generator/css/maven-theme.css -text
 www/beans-generator/css/print.css -text
+www/beans-generator/css/site.css -text
 www/beans-generator/dependencies.html -text
 www/beans-generator/faq.html -text
 www/beans-generator/format.html -text
