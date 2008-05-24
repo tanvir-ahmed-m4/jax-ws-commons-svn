@@ -26,10 +26,10 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <p>This library packages pre-generated web service client API for <a href="http://www.virtualbox.org/" class="externalLink">Sun xVM VirtualBox</a>
+        <p>This library packages pre-generated web service client API for <a class="externalLink" href="http://www.virtualbox.org/">Sun xVM VirtualBox</a>
 . In addition to the standard code generated from <tt>wsimport</tt>
 , this library packages additional wrapper code that drastically improves the usability of the VirtualBox web service API.</p>
-<p>To use web services to interact with VirtualBox, you have to first start a server. VirtualBox 1.6.0 has <a href="http://www.virtualbox.org/ticket/1565" class="externalLink">a bug</a>
+<p>To use web services to interact with VirtualBox, you have to first start a server. VirtualBox 1.6.0 has <a class="externalLink" href="http://www.virtualbox.org/ticket/1565">a bug</a>
  that requires you to disable authentication, so first you'd run <tt>VBoxManage</tt>
  to do this, as follows:</p>
 <div class="source"><pre>$ VBoxManage setproperty websrvauthlibrary null</pre>
@@ -37,7 +37,7 @@
 <p>Then run the VirtualBox web service server, as follows:</p>
 <div class="source"><pre>$ vboxwebsrv</pre>
 </div>
-<p>For more about these commands, refer to <a href="http://www.virtualbox.org/wiki/Downloads" class="externalLink">VirtualBox User Guide</a>
+<p>For more about these commands, refer to <a class="externalLink" href="http://www.virtualbox.org/wiki/Downloads">VirtualBox User Guide</a>
 .</p>
 <p>The following short program snippet illustrates how to use this API. The interfaces closely model the COM API, so refer to the VirtualBox API documentation for more details.</p>
 <div class="source"><pre>IVirtualBox box = VirtualBox.connect(&quot;http://129.145.132.188:18083/&quot;);
@@ -59,7 +59,7 @@ System.out.println(&quot;version=&quot;+box.getVersion());</pre>
   
   
   &nbsp;| Last Published: 05/24/2008
-  &nbsp;| Version: 1.6-SNAPSHOT
+  &nbsp;| Version: 1.6
 </div>
       <div class="clear">
         <hr/>
