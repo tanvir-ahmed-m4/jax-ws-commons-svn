@@ -3,9 +3,6 @@
 <dd id=menubar>
 <!-- main menu bar -->
 <ul id='menubar-main'>
-  <!--li><a href="/servlets/ProjectNewsList">Announcements</a-->
-  <li><a href="/beans-generator/">JAX-WS Beans runtime-generator</a></li>
-  <li>&nbsp;</li>
   <li>
     <a href="http://forums.java.net/jive/forum.jspa?forumID=46&start=0">Discussion forums</a>
   <li><a href="/servlets/ProjectMailingListList">Mailing lists</a>
@@ -132,6 +129,27 @@
 </ul>
 
 
+<!-- menubar for beans-generator -->
+<ul id="menubar-beans-generator" style="display:none;">
+  <li><a href="/beans-generator/">Introduction</a>
+  <li><a href="/beans-generator/configuration.html">Introduction</a>
+  <li><a href="/beans-generator/beans-generator-1.0-SNAPSHOT.jar">Download</a>
+  <li><a href="#">Samples</a>
+    <ul>
+      <li><a href="/beans-generator/very-very-simple-example.html">Very, very simple example</a>
+      <li><a href="/beans-generator/usages.html">Usages</a>
+    </ul>
+  </li>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/beans-generator/dependencies.html">Dependencies</a>
+      <li><a href="/beans-generator/project-summary.html">Project Summary</a>
+      <li><a href="/beans-generator/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
 <!-- menubar for grails integration -->
 <ul id="menubar-grails" style="display:none;">
   <li><a href="/grails/">Overview</a>
@@ -164,6 +182,7 @@ var info = {
     entry("json"),
     entry("dime"),
     entry("jaxws-maven-plugin"),
+    entry("beans-generator"),
     entry("grails")
   ];
 
