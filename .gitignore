@@ -137,3 +137,7 @@ transport/smtp/jaxws-smtp/target
 transport/smtp/target
 transport/smtp/test-app/*.iml
 transport/smtp/test-app/target
+virtualbox/target
+virtualbox/virtualbox.iml
+virtualbox/virtualbox.ipr
+virtualbox/virtualbox.iws
