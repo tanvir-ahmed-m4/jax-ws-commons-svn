@@ -374,6 +374,7 @@ virtualbox/pom.xml -text
 virtualbox/src/CodeGen.groovy -text
 virtualbox/src/VirtualBox.xidl -text
 virtualbox/src/main/java/com/sun/xml/ws/commons/virtualbox/Helper.java -text
+virtualbox/src/main/java/com/sun/xml/ws/commons/virtualbox/VirtualBox.java -text
 virtualbox/src/test/java/Main.java -text
 virtualbox/src/wsdl/vboxweb.wsdl -text
 virtualbox/src/wsdl/vboxwebService.wsdl -text
