@@ -724,6 +724,7 @@ www/spring/test-app/project-summary.html -text
 www/spring/test-app/source-repository.html -text
 www/spring/test-app/team-list.html -text
 www/spring/wsdl-first.html -text
+www/thread-scope/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
 www/thread-scope/css/maven-base.css -text
 www/thread-scope/css/maven-theme.css -text
 www/thread-scope/css/print.css -text
