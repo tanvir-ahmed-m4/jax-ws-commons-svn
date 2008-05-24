@@ -24,92 +24,14 @@
     <!-- TODO: move this into JavaScript to patch the skin
       <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
           |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+          <a href="http://glassfish.dev.java.net/">Glassfish</a>
       </div>
     -->
-    <div id="leftColumn">
-      <div id="navcolumn">
-             <dl class=navgroup>
-        <dt>Overview</dt>
-        <dd><ul>
-              
-    <li class="none">
-              <a href="index.html">Introduction</a>
-        </li>
-              
-    <li class="none">
-              <a href="plugin-info.html">Goals</a>
-        </li>
-              
-    <li class="none">
-              <strong>Usage</strong>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
-              
-                
-              
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-            
-      
-              
-        <li class="collapsed">
-              <a href="project-info.html">Project Information</a>
-              </li>
-              
-                
-              
-      
-              
-        <li class="collapsed">
-              <a href="project-reports.html">Project Reports</a>
-              </li>
-          </ul></dd>
-    </dl>
-        </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
-    </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Usage</h2><p>This plugin runs the JAXWS WsImport compiler from Maven2. Please be aware this plugin requires a Java 5.0 compiler.</p><div class="source"><pre>&lt;project&gt;
+        <div class="section"><h2>Usage</h2>
+<p>This plugin runs the JAXWS WsImport compiler from Maven2. Please be aware this plugin requires a Java 5.0 compiler.</p>
+<div class="source"><pre>&lt;project&gt;
   ...
   &lt;dependencies&gt;
       ...
@@ -157,7 +79,10 @@
     &lt;/plugins&gt;
   &lt;build&gt;
   ...
-&lt;/project&gt;</pre></div></div>
+&lt;/project&gt;</pre>
+</div>
+</div>
+
       </div>
     </div>
     <div class="clear">
@@ -165,15 +90,15 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2007
+          2008
     
           
   
 
   
   
-  &nbsp;| Last Published: 12/20/2007
-  &nbsp;| Version: 1.9
+  &nbsp;| Last Published: 05/24/2008
+  &nbsp;| Version: 1.10-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>
