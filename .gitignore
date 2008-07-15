@@ -88,6 +88,10 @@ beans-generator/src/test/target
 beans-generator/target
 dime/samples/server/build
 dime/samples/server/target
+grails/plugin/.classpath
+grails/plugin/.project
+grails/plugin/.settings
+grails/servlet/target
 http-session-scope/*.iml
 http-session-scope/*.ipr
 http-session-scope/*.iws
