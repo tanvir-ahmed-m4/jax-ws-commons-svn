@@ -391,6 +391,7 @@ json/json-jmaki-demo/web/resources/yahoo/tabbedview/images/yahoo-tabbedview.jpg 
 json/json-jmaki-demo/web/resources/yahoo/tabbedview/widget.json -text
 json/json-jmaki-demo/web/resources/yahoo/tree/images/yahoo-tree.jpg -text svneol=unset#image/jpeg
 json/json-jmaki-demo/web/resources/yahoo/tree/widget.json -text
+spring/CDDL+GPLv2.txt -text
 spring/spring-core/publish-schemas.sh -text
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
