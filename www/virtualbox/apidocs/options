@@ -12,10 +12,10 @@
 -d
 '/home/kohsuke/ws/jax-ws/commons/virtualbox/target/checkout/target/site/apidocs'
 -doctitle
-'VirtualBox web service client 1.6-rev4 API'
+'VirtualBox web service client 1.6-rev5 API'
 -link
 'http://java.sun.com/javase/6/docs/api'
 -use
 -version
 -windowtitle
-'VirtualBox web service client 1.6-rev4 API'
+'VirtualBox web service client 1.6-rev5 API'
