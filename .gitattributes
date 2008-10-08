@@ -208,6 +208,15 @@ http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
+jms-binding/jaxws-jms/pom.xml -text
+jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/JMSBindingID.java -text
+jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/JMSBindingIDFactory.java -text
+jms-binding/jaxws-jms/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
+jms-binding/jaxws-jms/src/site/apt/index.apt -text
+jms-binding/jaxws-jms/src/site/site.xml -text
+jms-binding/jaxws-jms/src/test/java/foo/JmsTest.java -text
+jms-binding/jaxws-jms/src/test/java/foo/MyService.java -text
+jms-binding/pom.xml -text
 json/jaxws-json/pom.xml -text
 json/jaxws-json/src/main/java/org/jvnet/jax_ws_commons/json/ClientGenerator.java -text
 json/jaxws-json/src/main/java/org/jvnet/jax_ws_commons/json/JSONBindingID.java -text
