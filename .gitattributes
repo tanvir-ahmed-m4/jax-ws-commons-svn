@@ -637,6 +637,29 @@ www/jaxws-maven-plugin/usage.html -text
 www/jaxws-maven-plugin/wsgen-mojo.html -text
 www/jaxws-maven-plugin/wsgen-test-mojo.html -text
 www/jaxws-maven-plugin/wsimport-mojo.html -text
+www/jms/css/maven-base.css -text
+www/jms/css/maven-theme.css -text
+www/jms/css/print.css -text
+www/jms/dependencies.html -text
+www/jms/dependency-convergence.html -text
+www/jms/images/collapsed.gif -text svneol=unset#unset
+www/jms/images/expanded.gif -text svneol=unset#unset
+www/jms/images/external.png -text svneol=unset#unset
+www/jms/images/icon_error_sml.gif -text svneol=unset#unset
+www/jms/images/icon_info_sml.gif -text svneol=unset#unset
+www/jms/images/icon_success_sml.gif -text svneol=unset#unset
+www/jms/images/icon_warning_sml.gif -text svneol=unset#unset
+www/jms/images/logos/maven-feather.png -text svneol=unset#unset
+www/jms/images/newwindow.png -text svneol=unset#unset
+www/jms/index.html -text
+www/jms/integration.html -text
+www/jms/issue-tracking.html -text
+www/jms/license.html -text
+www/jms/mail-lists.html -text
+www/jms/project-info.html -text
+www/jms/project-summary.html -text
+www/jms/source-repository.html -text
+www/jms/team-list.html -text
 www/json/dependencies.html -text
 www/json/images/collapsed.gif -text
 www/json/images/expanded.gif -text
