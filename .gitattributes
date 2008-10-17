@@ -436,8 +436,13 @@ transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/ht
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/httpserver/spi/HttpServerProvider.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/httpserver/spi/package-info.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/GrizzlyLWHSProvider.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSAdapter.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSContext.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSExchange.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSRequestHeaders.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSResponseHeaders.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSServer.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/resources/META-INF/services/com.sun.net.httpserver.spi.HttpServerProvider -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/site/apt/index.apt -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/site/site.xml -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/test/java/grizzlytest/Book.java -text
