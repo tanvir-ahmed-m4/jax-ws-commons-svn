@@ -629,7 +629,21 @@ www/grails/bin/grails-metro-1.0.2.zip -text
 www/grails/bin/grails-metro-1.0.zip -text
 www/grails/index.html -text
 www/grails/sources.html -text
+www/grizzly-lwhs/css/maven-base.css -text
+www/grizzly-lwhs/css/maven-theme.css -text
+www/grizzly-lwhs/dependencies.html -text
+www/grizzly-lwhs/dependency-convergence.html -text
+www/grizzly-lwhs/images/collapsed.gif -text
+www/grizzly-lwhs/images/expanded.gif -text
 www/grizzly-lwhs/index.html -text
+www/grizzly-lwhs/integration.html -text
+www/grizzly-lwhs/issue-tracking.html -text
+www/grizzly-lwhs/license.html -text
+www/grizzly-lwhs/mail-lists.html -text
+www/grizzly-lwhs/project-info.html -text
+www/grizzly-lwhs/project-summary.html -text
+www/grizzly-lwhs/source-repository.html -text
+www/grizzly-lwhs/team-list.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
