@@ -435,10 +435,10 @@ transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/ht
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/httpserver/package-info.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/httpserver/spi/HttpServerProvider.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/com/sun/net/httpserver/spi/package-info.java -text
-transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/GrizzlyLWHSProvider.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSAdapter.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSContext.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSExchange.java -text
+transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSProvider.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSRequestHeaders.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSResponseHeaders.java -text
 transport/grizzly-lwhs-transport/jaxws-grizzly-lwhs/src/main/java/org/jvnet/jax_ws_commons/transport/grizzly_lwhs/server/LWHSServer.java -text
