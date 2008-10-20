@@ -629,6 +629,7 @@ www/grails/bin/grails-metro-1.0.2.zip -text
 www/grails/bin/grails-metro-1.0.zip -text
 www/grails/index.html -text
 www/grails/sources.html -text
+www/grizzly-lwhs/index.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
