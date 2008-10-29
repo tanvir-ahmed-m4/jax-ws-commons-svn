@@ -91,8 +91,6 @@ dime/src/site/site.xml -text
 ec2/pom.xml -text
 ec2/src/main/java/com/sun/xml/ws/commons/EC2.java -text
 ec2/src/main/java/com/sun/xml/ws/commons/ec2/CertStoreCallBackImpl.java -text
-ec2/src/main/java/com/sun/xml/ws/commons/ec2/TransportTubeFactoryImpl.java -text
-ec2/src/main/resources/META-INF/services/com.sun.xml.ws.api.pipe.TransportTubeFactory -text
 ec2/src/test/java/EchoService.java -text
 ec2/src/test/java/FooTest.java -text
 ec2/src/test/java/test/ValidatorImpl.java -text
