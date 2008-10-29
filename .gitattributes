@@ -88,6 +88,14 @@ dime/src/site/apt/index.apt -text
 dime/src/site/resources/dime-client.doc -text
 dime/src/site/resources/dime-server.war -text
 dime/src/site/site.xml -text
+ec2/pom.xml -text
+ec2/src/main/java/com/sun/xml/ws/commons/EC2.java -text
+ec2/src/main/java/com/sun/xml/ws/commons/ec2/CertStoreCallBackImpl.java -text
+ec2/src/test/java/EchoService.java -text
+ec2/src/test/java/FooTest.java -text
+ec2/src/test/java/test/ValidatorImpl.java -text
+ec2/src/test/resources/echo.wsdl -text
+ec2/src/wsdl/ec2.wsdl -text
 grails/plugin/MetroGrailsPlugin.groovy -text
 grails/plugin/application.properties -text
 grails/plugin/build.xml -text

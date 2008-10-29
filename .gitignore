@@ -88,6 +88,11 @@ beans-generator/src/test/target
 beans-generator/target
 dime/samples/server/build
 dime/samples/server/target
+ec2/classes
+ec2/ec2.iml
+ec2/ec2.ipr
+ec2/ec2.iws
+ec2/target
 grails/plugin/.classpath
 grails/plugin/.project
 grails/plugin/.settings
