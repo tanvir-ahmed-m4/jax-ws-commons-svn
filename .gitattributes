@@ -89,6 +89,7 @@ dime/src/site/resources/dime-client.doc -text
 dime/src/site/resources/dime-server.war -text
 dime/src/site/site.xml -text
 ec2/pom.xml -text
+ec2/readme.txt -text
 ec2/src/main/java/com/sun/xml/ws/commons/EC2.java -text
 ec2/src/main/java/com/sun/xml/ws/commons/ec2/CertStoreCallBackImpl.java -text
 ec2/src/test/java/EchoService.java -text
