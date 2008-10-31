@@ -92,6 +92,8 @@ ec2/pom.xml -text
 ec2/readme.txt -text
 ec2/src/main/java/com/sun/xml/ws/commons/EC2.java -text
 ec2/src/main/java/com/sun/xml/ws/commons/ec2/CertStoreCallBackImpl.java -text
+ec2/src/site/apt/index.apt -text
+ec2/src/site/site.xml -text
 ec2/src/test/java/EchoService.java -text
 ec2/src/test/java/FooTest.java -text
 ec2/src/test/java/test/ValidatorImpl.java -text
