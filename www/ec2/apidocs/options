@@ -3,7 +3,7 @@
 'ISO-8859-1'
 -protected
 -sourcepath
-'/home/kohsuke/ws/jax-ws/commons/ec2/src/main/java'
+'/home/kohsuke/ws/jax-ws/commons/ec2/src/main/java:/home/kohsuke/ws/jax-ws/commons/ec2/target/jaxws/wsimport/java'
 -author
 -bottom
 'Copyright &#169; 2008. All Rights Reserved.'
