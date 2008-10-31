@@ -655,10 +655,12 @@ www/ec2/apidocs/deprecated-list.html -text
 www/ec2/apidocs/help-doc.html -text
 www/ec2/apidocs/index-all.html -text
 www/ec2/apidocs/index.html -text
+www/ec2/apidocs/options -text
 www/ec2/apidocs/overview-frame.html -text
 www/ec2/apidocs/overview-summary.html -text
 www/ec2/apidocs/overview-tree.html -text
 www/ec2/apidocs/package-list -text
+www/ec2/apidocs/packages -text
 www/ec2/apidocs/resources/inherit.gif -text svneol=unset#unset
 www/ec2/apidocs/stylesheet.css -text
 www/ec2/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
@@ -682,6 +684,7 @@ www/ec2/testapidocs/EchoService.html -text
 www/ec2/testapidocs/FooTest.html -text
 www/ec2/testapidocs/allclasses-frame.html -text
 www/ec2/testapidocs/allclasses-noframe.html -text
+www/ec2/testapidocs/argfile -text
 www/ec2/testapidocs/class-use/EchoService.html -text
 www/ec2/testapidocs/class-use/FooTest.html -text
 www/ec2/testapidocs/constant-values.html -text
@@ -689,6 +692,7 @@ www/ec2/testapidocs/deprecated-list.html -text
 www/ec2/testapidocs/help-doc.html -text
 www/ec2/testapidocs/index-all.html -text
 www/ec2/testapidocs/index.html -text
+www/ec2/testapidocs/options -text
 www/ec2/testapidocs/overview-frame.html -text
 www/ec2/testapidocs/overview-summary.html -text
 www/ec2/testapidocs/overview-tree.html -text
@@ -697,6 +701,7 @@ www/ec2/testapidocs/package-list -text
 www/ec2/testapidocs/package-summary.html -text
 www/ec2/testapidocs/package-tree.html -text
 www/ec2/testapidocs/package-use.html -text
+www/ec2/testapidocs/packages -text
 www/ec2/testapidocs/resources/inherit.gif -text svneol=unset#unset
 www/ec2/testapidocs/stylesheet.css -text
 www/ec2/testapidocs/test/ValidatorImpl.html -text
