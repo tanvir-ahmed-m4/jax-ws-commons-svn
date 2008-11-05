@@ -216,6 +216,11 @@ grails/plugin/web-app/js/prototype/sound.js -text
 grails/plugin/web-app/js/prototype/unittest.js -text
 grails/servlet/pom.xml -text
 grails/servlet/src/main/java/com/sun/xml/ws/transport/http/servlet/GrailsWsServlet.java -text
+guice/README -text
+guice/build.xml -text
+guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManaged.java -text
+guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedFeature.java -text
+guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedInstanceResolver.java -text
 http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
@@ -1038,6 +1043,8 @@ www/grizzly-lwhs/project-info.html -text
 www/grizzly-lwhs/project-summary.html -text
 www/grizzly-lwhs/source-repository.html -text
 www/grizzly-lwhs/team-list.html -text
+www/guice/bin/guicemanaged-0.1.jar -text
+www/guice/index.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png

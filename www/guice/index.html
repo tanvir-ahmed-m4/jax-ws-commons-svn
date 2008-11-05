@@ -1,0 +1,69 @@
+<html>
+<head><title>JAX-WS Guice integration</title></head>
+<body>
+<h1>JAX-WS Guice integration</h1>
+<a href="http://google-guice.googlecode.com">Google Guice</a> - light weight dependecy injection framework.
+
+<h2>How to Install</h2>
+
+Download the extension (links below) and put it on the classpath of your web services project. You also have to download the guice libraries from <a href="http://google-guice.googlecode.com/files/guice-snapshot20081016.zip">here</a> (I link the latest snapshot of guice - if you want to use any other release of guice you will have to check out the extension code and rebuild it against that library).
+<br>
+Step-by-step:
+<ul>
+  <li> Download the jar (look below) </li>
+  <li> Put it on the classpath </li>
+  <li> Annotate your web service with @GuiceManaged(module = YourModule.class) (check below for example)</li>
+  <li> Inject dependecies like crazy </li>
+</ul>
+
+<h2>Example</h2>
+The only thing you need to change in your current web service end points is to annotate them with @GuiceManaged like below. For guice details, please check the guice documentation
+<div id="source"><pre>
+@GuiceManaged(module = WebServiceModule.class)
+@WebService
+public class AddNumbersImpl implements AddNumbers {
+
+    private Calculator calculator;
+
+    @Inject
+    public void setCalculator(Calculator calc)
+    {
+        this.calculator=calc;
+    }
+    @WebMethod
+    public int addNumbers(int num1, int num2)
+    {
+        return this.calculator.calc(num1,num2);
+    }
+}
+</pre></div>
+The WebServiceModule looks like this:
+<div id="source"><pre>
+public class WebServiceModule extends AbstractModule {
+    protected void configure() {
+        bind(Calculator.class).to(CalculatorImpl.class).in(Singleton.class);
+    }
+}
+</pre></div>
+This means that Guice will find all @Inject annotations and then inject a singleton instance of CalculatorImpl.class wherever it finds Calculator.class. 
+
+<h2>Guice scopes</h2>
+It is possible to have both Singleton and the default "request"-scope. I.e. if you define your Endpoint implementation in Singleton scope, Guice will only create one instance of it, and if you don't define any scope at all, guice will create a new instance of the endpoint class for every web service request. Note that since the endpoint implementation class is not injected anywhere, you need to either annotate the class with @Singleton, or do like this:<br>
+<div id="source"><pre>
+bind(AddNumbersImpl.class).in(Singleton.class);
+</pre>
+</div>
+in your module.
+
+<h2>Download</h2>
+
+<table>
+    <tr><th>Version</th><th>&nbsp;</th><th>Changes</th></tr>
+    <tr><td align="center">0.1</td><td><a href="bin/guicemanaged-0.1.jar">Download</a></td><td>Initial rev.</td></tr>
+</table>
+
+<h2>Sources</h2>
+
+Sources are stored in Subversion. <a href="sources.html">Read more</a>
+</body>
+</html>
