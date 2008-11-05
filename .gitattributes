@@ -1045,6 +1045,7 @@ www/grizzly-lwhs/source-repository.html -text
 www/grizzly-lwhs/team-list.html -text
 www/guice/bin/guicemanaged-0.1.jar -text
 www/guice/index.html -text
+www/guice/sources.html -text
 www/http-session-scope/images/collapsed.gif -text
 www/http-session-scope/images/expanded.gif -text
 www/http-session-scope/images/external.png -text svneol=unset#image/png
