@@ -11,7 +11,7 @@
 
 <html>
   <head>
-    <title>JAX-WS Maven plugin - Plugin documentation</title>
+    <title>JAX-WS Maven plugin - Plugin Documentation</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -29,18 +29,16 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Plugin documentation</h2>
+        <div class="section"><h2>Plugin Documentation</h2>
 <p>Goals available for this plugin:</p>
 <table class="bodyTable"><tr class="a"><th>Goal</th>
 <th>Description</th>
 </tr>
-<tr class="b"><td><a href="wsimport-mojo.html">jaxws:wsimport</a>
-</td>
-<td>Parses wsdl and binding files and generates Java code needed to
-access it.</td>
+<tr class="b"><td><a href="wsgen-mojo.html">jaxws:wsgen</a></td>
+<td>Reads a JAX-WS service endpoint implementation class and generates
+all of the portable artifacts for a JAX-WS web service.</td>
 </tr>
-<tr class="a"><td><a href="wsgen-test-mojo.html">jaxws:wsgen-test</a>
-</td>
+<tr class="a"><td><a href="wsgen-test-mojo.html">jaxws:wsgen-test</a></td>
 <td>Reads a JAX-WS service endpoint implementation class and generates
 all of the portable artifacts for a JAX-WS web service (into the
 generate test source directroy.) 
@@ -49,10 +47,9 @@ generate test source directroy.)
 href="http://jira.codehaus.org/browse/MNG-1508">MNG-1508</a>, this
 requires 2.0.5 or higher.</p></td>
 </tr>
-<tr class="b"><td><a href="wsgen-mojo.html">jaxws:wsgen</a>
-</td>
-<td>Reads a JAX-WS service endpoint implementation class and generates
-all of the portable artifacts for a JAX-WS web service.</td>
+<tr class="b"><td><a href="wsimport-mojo.html">jaxws:wsimport</a></td>
+<td>Parses wsdl and binding files and generates Java code needed to
+access it.</td>
 </tr>
 </table>
 </div>
@@ -73,16 +70,17 @@ all of the portable artifacts for a JAX-WS web service.</td>
 </table>
 </div>
 <div class="section"><h2>Usage</h2>
-<p>You could run 'mvn -up' to get the latest version of this plugin, or specify the version in your project's plugin configuration:<div class="source"><pre>&lt;project&gt;
+<p>You should specify the version in your project's plugin configuration:</p>
+<div class="source"><pre>&lt;project&gt;
   ...
   &lt;build&gt;
     &lt;!-- To define the plugin version in your parent POM --&gt;
     &lt;pluginManagement&gt;
       &lt;plugins&gt;
         &lt;plugin&gt;
-          &lt;groupId&gt;org.codehaus.mojo&lt;groupId&gt;
-          &lt;artifactId&gt;jaxws-maven-plugin&lt;artifactId&gt;
-          &lt;version&gt;1.10&lt;version&gt;
+          &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+          &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
+          &lt;version&gt;1.11&lt;/version&gt;
         &lt;/plugin&gt;
         ...
       &lt;/plugins&gt;
@@ -90,9 +88,9 @@ all of the portable artifacts for a JAX-WS web service.</td>
     &lt;!-- To use the plugin goals in your POM or parent POM --&gt;
     &lt;plugins&gt;
       &lt;plugin&gt;
-        &lt;groupId&gt;org.codehaus.mojo&lt;groupId&gt;
-        &lt;artifactId&gt;jaxws-maven-plugin&lt;artifactId&gt;
-        &lt;version&gt;1.10&lt;version&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.11&lt;/version&gt;
       &lt;/plugin&gt;
       ...
     &lt;/plugins&gt;
@@ -101,8 +99,7 @@ all of the portable artifacts for a JAX-WS web service.</td>
 &lt;/project&gt;
 </pre>
 </div>
-For more information, see <a href="http://maven.apache.org/guides/mini/guide-configuring-plugins.html" class="externalLink">&quot;Guide to Configuring Plug-ins&quot;</a>
-</p>
+<p>For more information, see <a href="http://maven.apache.org/guides/mini/guide-configuring-plugins.html" class="externalLink">&quot;Guide to Configuring Plug-ins&quot;</a></p>
 </div>
 
       </div>
@@ -119,8 +116,8 @@ For more information, see <a href="http://maven.apache.org/guides/mini/guide-con
 
   
   
-  &nbsp;| Last Published: 06/20/2008
-  &nbsp;| Version: 1.10
+  &nbsp;| Last Published: 11/20/2008
+  &nbsp;| Version: 1.11
 </div>
       <div class="clear">
         <hr/>
