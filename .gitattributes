@@ -566,11 +566,6 @@ www/beans-generator/source-repository.html -text
 www/beans-generator/team-list.html -text
 www/beans-generator/usages.html -text
 www/beans-generator/very-very-simple-example.html -text
-www/css/maven-base.css -text
-www/css/maven-theme.css -text
-www/css/print.css -text
-www/css/site.css -text
-www/dependencies.html -text
 www/dime/apidocs/allclasses-frame.html -text
 www/dime/apidocs/allclasses-noframe.html -text
 www/dime/apidocs/constant-values.html -text
@@ -1063,25 +1058,11 @@ www/http-session-scope/images/newwindow.png -text svneol=unset#image/png
 www/http-session-scope/index.html -text
 www/http-session-scope/source-repository.html -text
 www/http-session-scope/team-list.html -text
-www/images/close.gif -text svneol=unset#unset
-www/images/collapsed.gif -text svneol=unset#unset
-www/images/expanded.gif -text svneol=unset#unset
-www/images/external.png -text svneol=unset#unset
-www/images/icon_error_sml.gif -text svneol=unset#unset
-www/images/icon_info_sml.gif -text svneol=unset#unset
-www/images/icon_success_sml.gif -text svneol=unset#unset
-www/images/icon_warning_sml.gif -text svneol=unset#unset
-www/images/logos/build-by-maven-black.png -text svneol=unset#unset
-www/images/logos/build-by-maven-white.png -text svneol=unset#unset
-www/images/logos/maven-feather.png -text svneol=unset#unset
-www/images/newwindow.png -text svneol=unset#unset
 www/in-vm/build.xml -text
 www/in-vm/index.html -text
 www/in-vm/invm-transport.jar -text svneol=unset#unset
 www/in-vm/invmsample.zip -text
 www/index.html svneol=native#text/html
-www/integration.html -text
-www/issue-tracking.html -text
 www/jaxws-maven-plugin/apidocs/files -text
 www/jaxws-maven-plugin/apidocs/index-all.html -text
 www/jaxws-maven-plugin/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
@@ -1139,11 +1120,6 @@ www/json/index.html -text
 www/json/source-repository.html -text
 www/json/spring.html -text
 www/json/team-list.html -text
-www/license.html -text
-www/mail-lists.html -text
-www/plugins.html -text
-www/project-info.html -text
-www/project-summary.html -text
 www/role-approval.policy -text
 www/smtp/dependencies.html -text
 www/smtp/images/collapsed.gif -text
@@ -1152,7 +1128,6 @@ www/smtp/index.html -text
 www/smtp/references/jaxws-smtp.xsd.html -text
 www/smtp/source-repository.html -text
 www/smtp/team-list.html -text
-www/source-repository.html -text
 www/spring/aop.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/WSSpringServlet.html -text
 www/spring/apidocs/com/sun/xml/ws/transport/http/servlet/package-summary.html -text
@@ -1331,7 +1306,6 @@ www/spring/test-app/project-summary.html -text
 www/spring/test-app/source-repository.html -text
 www/spring/test-app/team-list.html -text
 www/spring/wsdl-first.html -text
-www/team-list.html -text
 www/thread-scope/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
 www/thread-scope/css/maven-base.css -text
 www/thread-scope/css/maven-theme.css -text
