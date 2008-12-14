@@ -217,10 +217,10 @@ grails/plugin/web-app/js/prototype/unittest.js -text
 grails/servlet/pom.xml -text
 grails/servlet/src/main/java/com/sun/xml/ws/transport/http/servlet/GrailsWsServlet.java -text
 guice/README -text
-guice/build.xml -text
-guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManaged.java -text
-guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedFeature.java -text
-guice/src/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedInstanceResolver.java -text
+guice/pom.xml -text
+guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManaged.java -text
+guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedFeature.java -text
+guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedInstanceResolver.java -text
 http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
