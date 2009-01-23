@@ -228,6 +228,9 @@ jaxws-maven-plugin/src/site/fml/faq.fml -text
 jms-binding/jaxws-jms/pom.xml -text
 jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/JMSBindingID.java -text
 jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/JMSBindingIDFactory.java -text
+jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/SOAP11JMSWsgenExtension.java -text
+jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/SOAP12JMSWsgenExtension.java -text
+jms-binding/jaxws-jms/src/main/resources/META-INF/services/com.sun.tools.ws.api.WsgenExtension -text
 jms-binding/jaxws-jms/src/main/resources/META-INF/services/com.sun.xml.ws.api.BindingIDFactory -text
 jms-binding/jaxws-jms/src/site/apt/index.apt -text
 jms-binding/jaxws-jms/src/site/site.xml -text
