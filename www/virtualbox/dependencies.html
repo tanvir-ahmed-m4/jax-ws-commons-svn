@@ -32,16 +32,12 @@
 <table class="bodyTable"><tr class="a"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
-<th>Classifier</th>
 <th>Type</th>
-<th>Optional</th>
 </tr>
 <tr class="b"><td>com.sun.xml.ws</td>
 <td>jaxws-rt</td>
 <td>2.1.3</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
 </tr>
 </table>
 </div>
@@ -50,16 +46,19 @@
 <table class="bodyTable"><tr class="a"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
-<th>Classifier</th>
 <th>Type</th>
-<th>Optional</th>
 </tr>
 <tr class="b"><td>com.sun.codemodel</td>
-<td>codemodel</td>
+<td><a href="https://codemodel.dev.java.net/codemodel" class="externalLink">codemodel</a>
+</td>
 <td>2.1</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
+</tr>
+<tr class="a"><td>junit</td>
+<td><a href="http://junit.org" class="externalLink">junit</a>
+</td>
+<td>3.8.1</td>
+<td>jar</td>
 </tr>
 </table>
 </div>
@@ -68,257 +67,786 @@
 <p>The following is a list of transitive dependencies for this project. Transitive dependencies are the dependencies of the project dependencies.</p>
 <div class="section"><h3>compile</h3>
 <p>The following is a list of compile dependencies for this project. These dependencies are required to compile and run the application:</p>
-<table class="bodyTable"><tr class="a"><th>GroupId</th>
-<th>ArtifactId</th>
-<th>Version</th>
-<th>Classifier</th>
-<th>Type</th>
-<th>Optional</th>
-</tr>
-<tr class="b"><td>com.sun.org.apache.xml.internal</td>
-<td>resolver</td>
-<td>20050927</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>com.sun.xml.bind</td>
-<td>jaxb-impl</td>
-<td>2.1.6</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>com.sun.xml.messaging.saaj</td>
-<td>saaj-impl</td>
-<td>1.3</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>com.sun.xml.stream</td>
-<td>sjsxp</td>
-<td>1.0</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>com.sun.xml.stream.buffer</td>
-<td>streambuffer</td>
-<td>0.7</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>javax.activation</td>
-<td>activation</td>
-<td>1.1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>javax.annotation</td>
-<td>jsr250-api</td>
-<td>1.0</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>javax.jws</td>
-<td>jsr181-api</td>
-<td>1.0-MR1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>javax.xml.bind</td>
-<td>jaxb-api</td>
-<td>2.1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>javax.xml.soap</td>
-<td>saaj-api</td>
-<td>1.3</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>javax.xml.stream</td>
-<td>stax-api</td>
-<td>1.0</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>javax.xml.ws</td>
-<td>jaxws-api</td>
-<td>2.1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="b"><td>org.jvnet</td>
-<td>mimepull</td>
-<td>1.1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-<tr class="a"><td>org.jvnet.staxex</td>
-<td>stax-ex</td>
-<td>1.2</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-</table>
-</div>
-<div class="section"><h3>test</h3>
-<p>The following is a list of test dependencies for this project. These dependencies are only required to compile and run unit tests for the application:</p>
 <table class="bodyTable"><tr class="b"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
-<th>Classifier</th>
 <th>Type</th>
-<th>Optional</th>
 </tr>
-<tr class="a"><td>junit</td>
-<td>junit</td>
-<td>3.8.1</td>
-<td>-</td>
+<tr class="a"><td>com.sun.org.apache.xml.internal</td>
+<td>resolver</td>
+<td>20050927</td>
 <td>jar</td>
-<td> </td>
+</tr>
+<tr class="b"><td>com.sun.xml.bind</td>
+<td>jaxb-impl</td>
+<td>2.1.6</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>com.sun.xml.messaging.saaj</td>
+<td>saaj-impl</td>
+<td>1.3</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>com.sun.xml.stream</td>
+<td>sjsxp</td>
+<td>1.0</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>com.sun.xml.stream.buffer</td>
+<td>streambuffer</td>
+<td>0.7</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>javax.activation</td>
+<td>activation</td>
+<td>1.1</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>javax.annotation</td>
+<td>jsr250-api</td>
+<td>1.0</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>javax.jws</td>
+<td>jsr181-api</td>
+<td>1.0-MR1</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>javax.xml.bind</td>
+<td>jaxb-api</td>
+<td>2.1</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>javax.xml.soap</td>
+<td>saaj-api</td>
+<td>1.3</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>javax.xml.stream</td>
+<td>stax-api</td>
+<td>1.0</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>javax.xml.ws</td>
+<td>jaxws-api</td>
+<td>2.1</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>org.jvnet</td>
+<td>mimepull</td>
+<td>1.1</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>org.jvnet.staxex</td>
+<td><a href="https://stax-ex.dev.java.net/" class="externalLink">stax-ex</a>
+</td>
+<td>1.2</td>
+<td>jar</td>
 </tr>
 </table>
 </div>
 </div>
 <div class="section"><h2>Project Dependency Graph</h2>
+<script language="javascript" type="text/javascript">
+      function toggleDependencyDetail( divId, imgId )
+      {
+        var div = document.getElementById( divId );
+        var img = document.getElementById( imgId );
+        if( div.style.display == '' )
+        {
+          div.style.display = 'none';
+          img.src='./images/icon_info_sml.gif';
+        }
+        else
+        {
+          div.style.display = '';
+          img.src='./images/close.gif';
+        }
+      }
+</script>
 <div class="section"><h3>Dependency Tree</h3>
-<p><ul><li><a href="#org.jvnet.jax-ws-commons:virtualbox:jar">org.jvnet.jax-ws-commons:virtualbox:jar</a>
-<ul><li><a href="#com.sun.xml.ws:jaxws-rt:jar">com.sun.xml.ws:jaxws-rt:jar</a>
-<ul><li><a href="#javax.xml.ws:jaxws-api:jar">javax.xml.ws:jaxws-api:jar</a>
-<ul><li><a href="#javax.annotation:jsr250-api:jar">javax.annotation:jsr250-api:jar</a>
+<ul><li>org.jvnet.jax-ws-commons:virtualbox:jar:2.2-rev1 <img id="_1425812106" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1551226052', '_1425812106' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1551226052" style="display:none"><table class="bodyTable"><tr class="a"><th>VirtualBox web service client</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>URL: </b>
+<a href="https://jax-ws-commons.dev.java.net/virtualbox" class="externalLink">https://jax-ws-commons.dev.java.net/virtualbox</a>
+</p>
+<p><b>Project License: </b>
+<a href="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html" class="externalLink">CDDL + GPLv2 with classpath exception</a>
+</p>
+</td>
+</tr>
+</table>
+</div><ul><li>com.sun.xml.ws:jaxws-rt:jar:2.1.3 (compile) <img id="_2047907442" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1755438168', '_2047907442' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1755438168" style="display:none"><table class="bodyTable"><tr class="a"><th>JAX-WS (JSR-224) Reference Implementation</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+Open source Reference Implementation of JSR-224: Java API for XML Web Services</p>
+<p><b>URL: </b>
+https://jax-ws.dev.java.net//</p>
+<p><b>Project License: </b>
+<a href="http://www.opensource.org/licenses/cddl1.php" class="externalLink">COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</a>
+<a href="http://www.gnu.org/software/classpath/license.html" class="externalLink">GPLv2 with classpath exception</a>
+</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.ws:jaxws-api:jar:2.1 (compile) <img id="_964401955" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_955644557', '_964401955' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_955644557" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.ws:jaxws-api:jar:2.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.bind:jaxb-api:jar:2.1 (compile) <img id="_871763571" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_875761250', '_871763571' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_875761250" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.bind:jaxb-api:jar:2.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.activation:activation:jar:1.1 (compile) <img id="_271114285" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1497715702', '_271114285' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1497715702" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.activation:activation:jar:1.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
 </li>
-<li><a href="#javax.jws:jsr181-api:jar">javax.jws:jsr181-api:jar</a>
+<li>javax.xml.soap:saaj-api:jar:1.3 (compile) <img id="_510481747" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_2030366225', '_510481747' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_2030366225" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.soap:saaj-api:jar:1.3</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.activation:activation:jar:1.1 (compile) <img id="_636155666" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1214000719', '_636155666' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1214000719" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.activation:activation:jar:1.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>javax.annotation:jsr250-api:jar:1.0 (compile) <img id="_1597000698" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_18744752', '_1597000698' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_18744752" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.annotation:jsr250-api:jar:1.0</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>javax.jws:jsr181-api:jar:1.0-MR1 (compile) <img id="_1658576970" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_187006195', '_1658576970' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_187006195" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.jws:jsr181-api:jar:1.0-MR1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>com.sun.xml.bind:jaxb-impl:jar:2.1.6 (compile) <img id="_550352521" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1624459346', '_550352521' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1624459346" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.sun.xml.bind:jaxb-impl:jar:2.1.6</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.bind:jaxb-api:jar:2.1 (compile) <img id="_872541279" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1422260644', '_872541279' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1422260644" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.bind:jaxb-api:jar:2.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>com.sun.xml.messaging.saaj:saaj-impl:jar:1.3 (compile) <img id="_198335789" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1060470342', '_198335789' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1060470342" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.sun.xml.messaging.saaj:saaj-impl:jar:1.3</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.soap:saaj-api:jar:1.3 (compile) <img id="_1651751412" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_745713405', '_1651751412' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_745713405" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.soap:saaj-api:jar:1.3</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>com.sun.xml.stream.buffer:streambuffer:jar:0.7 (compile) <img id="_1064831886" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_479777306', '_1064831886' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_479777306" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.sun.xml.stream.buffer:streambuffer:jar:0.7</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.activation:activation:jar:1.1 (compile) <img id="_1881500970" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_670060568', '_1881500970' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_670060568" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.activation:activation:jar:1.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>com.sun.xml.stream:sjsxp:jar:1.0 (compile) <img id="_1103137381" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_192169120', '_1103137381' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_192169120" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.sun.xml.stream:sjsxp:jar:1.0</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.stream:stax-api:jar:1.0 (compile) <img id="_2111751179" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1283548512', '_2111751179' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1283548512" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.stream:stax-api:jar:1.0</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>org.jvnet.staxex:stax-ex:jar:1.2 (compile) <img id="_602894947" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_876557704', '_602894947' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_876557704" style="display:none"><table class="bodyTable"><tr class="a"><th>Extended StAX API</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+Extensions to JSR-173 StAX API.</p>
+<p><b>URL: </b>
+<a href="https://stax-ex.dev.java.net/" class="externalLink">https://stax-ex.dev.java.net/</a>
+</p>
+<p><b>Project License: </b>
+<a href="http://www.sun.com/cddl/cddl.html" class="externalLink">Common Development And Distribution License (CDDL) Version 1.0</a>
+</p>
+</td>
+</tr>
+</table>
+</div><ul><li>javax.xml.stream:stax-api:jar:1.0 (compile) <img id="_261226399" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1644587621', '_261226399' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1644587621" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.xml.stream:stax-api:jar:1.0</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>javax.activation:activation:jar:1.1 (compile) <img id="_1816608752" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_392200965', '_1816608752' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_392200965" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - javax.activation:activation:jar:1.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>com.sun.org.apache.xml.internal:resolver:jar:20050927 (compile) <img id="_2118922261" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1240478376', '_2118922261' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1240478376" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.sun.org.apache.xml.internal:resolver:jar:20050927</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>org.jvnet:mimepull:jar:1.1 (compile) <img id="_853271675" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_370369811', '_853271675' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_370369811" style="display:none"><table class="bodyTable"><tr class="a"><th>MIME streaming extension</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+<li>junit:junit:jar:3.8.1 (test) <img id="_475060579" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1534580309', '_475060579' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1534580309" style="display:none"><table class="bodyTable"><tr class="a"><th>JUnit</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
+<p><b>URL: </b>
+<a href="http://junit.org" class="externalLink">http://junit.org</a>
+</p>
+<p><b>Project License: </b>
+<a href="http://www.opensource.org/licenses/cpl1.0.txt" class="externalLink">Common Public License Version 1.0</a>
+</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>com.sun.codemodel:codemodel:jar:2.1 (test) <img id="_2012884885" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_259868077', '_2012884885' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_259868077" style="display:none"><table class="bodyTable"><tr class="a"><th>Codemodel Core</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+The core functionality of the CodeModel java source code generation library</p>
+<p><b>URL: </b>
+<a href="https://codemodel.dev.java.net/codemodel" class="externalLink">https://codemodel.dev.java.net/codemodel</a>
+</p>
+<p><b>Project License: </b>
+<a href="http://www.sun.com/cddl/cddl.html" class="externalLink">COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</a>
+</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
 </li>
 </ul>
-</p>
-</li>
-<li><a href="#com.sun.xml.bind:jaxb-impl:jar">com.sun.xml.bind:jaxb-impl:jar</a>
-<ul><li><a href="#javax.xml.bind:jaxb-api:jar">javax.xml.bind:jaxb-api:jar</a>
-</li>
-</ul>
-</p>
-</li>
-<li><a href="#com.sun.xml.messaging.saaj:saaj-impl:jar">com.sun.xml.messaging.saaj:saaj-impl:jar</a>
-<ul><li><a href="#javax.xml.soap:saaj-api:jar">javax.xml.soap:saaj-api:jar</a>
-</li>
-</ul>
-</p>
-</li>
-<li><a href="#com.sun.xml.stream.buffer:streambuffer:jar">com.sun.xml.stream.buffer:streambuffer:jar</a>
-</li>
-<li><a href="#com.sun.xml.stream:sjsxp:jar">com.sun.xml.stream:sjsxp:jar</a>
-</li>
-<li><a href="#org.jvnet.staxex:stax-ex:jar">org.jvnet.staxex:stax-ex:jar</a>
-<ul><li><a href="#javax.xml.stream:stax-api:jar">javax.xml.stream:stax-api:jar</a>
-</li>
-<li><a href="#javax.activation:activation:jar">javax.activation:activation:jar</a>
-</li>
-</ul>
-</p>
-</li>
-<li><a href="#com.sun.org.apache.xml.internal:resolver:jar">com.sun.org.apache.xml.internal:resolver:jar</a>
-</li>
-<li><a href="#org.jvnet:mimepull:jar">org.jvnet:mimepull:jar</a>
-</li>
-</ul>
-</p>
-</li>
-<li><a href="#com.sun.codemodel:codemodel:jar">com.sun.codemodel:codemodel:jar</a>
-<ul><li><a href="#junit:junit:jar">junit:junit:jar</a>
-</li>
-</ul>
-</p>
-</li>
-</ul>
-</p>
-</li>
-</ul>
-</p>
 </div>
-<div class="section"><h3>Dependency Listings</h3>
-<p><a name="org.jvnet.jax-ws-commons:virtualbox:jar"><b>VirtualBox web service client</b>
-</a>
-</p>
-<p><a class="externalLink" href="https://jax-ws-commons.dev.java.net/virtualbox">https://jax-ws-commons.dev.java.net/virtualbox</a>
-</p>
-<p><a name="com.sun.xml.ws:jaxws-rt:jar"><b>JAX-WS (JSR-224) Reference Implementation</b>
-</a>
-</p>
-<p>Open source Reference Implementation of JSR-224: Java API for XML Web Services</p>
-<p><a class="externalLink" href="https://jax-ws.dev.java.net//">https://jax-ws.dev.java.net//</a>
-</p>
-<p><a name="javax.xml.ws:jaxws-api:jar"><b>Unnamed - javax.xml.ws:jaxws-api:jar:2.1</b>
-</a>
-</p>
-<p><a name="javax.annotation:jsr250-api:jar"><b>Unnamed - javax.annotation:jsr250-api:jar:1.0</b>
-</a>
-</p>
-<p><a name="javax.jws:jsr181-api:jar"><b>Unnamed - javax.jws:jsr181-api:jar:1.0-MR1</b>
-</a>
-</p>
-<p><a name="com.sun.xml.bind:jaxb-impl:jar"><b>Unnamed - com.sun.xml.bind:jaxb-impl:jar:2.1.6</b>
-</a>
-</p>
-<p><a name="javax.xml.bind:jaxb-api:jar"><b>Unnamed - javax.xml.bind:jaxb-api:jar:2.1</b>
-</a>
-</p>
-<p><a name="com.sun.xml.messaging.saaj:saaj-impl:jar"><b>Unnamed - com.sun.xml.messaging.saaj:saaj-impl:jar:1.3</b>
-</a>
-</p>
-<p><a name="javax.xml.soap:saaj-api:jar"><b>Unnamed - javax.xml.soap:saaj-api:jar:1.3</b>
-</a>
-</p>
-<p><a name="com.sun.xml.stream.buffer:streambuffer:jar"><b>Unnamed - com.sun.xml.stream.buffer:streambuffer:jar:0.7</b>
-</a>
-</p>
-<p><a name="com.sun.xml.stream:sjsxp:jar"><b>Unnamed - com.sun.xml.stream:sjsxp:jar:1.0</b>
-</a>
-</p>
-<p><a name="org.jvnet.staxex:stax-ex:jar"><b>Extended StAX API</b>
-</a>
-</p>
-<p>Extensions to JSR-173 StAX API.</p>
-<p><a class="externalLink" href="https://stax-ex.dev.java.net/">https://stax-ex.dev.java.net/</a>
-</p>
-<p><a name="javax.xml.stream:stax-api:jar"><b>Unnamed - javax.xml.stream:stax-api:jar:1.0</b>
-</a>
-</p>
-<p><a name="javax.activation:activation:jar"><b>Unnamed - javax.activation:activation:jar:1.1</b>
-</a>
-</p>
-<p><a name="com.sun.org.apache.xml.internal:resolver:jar"><b>Unnamed - com.sun.org.apache.xml.internal:resolver:jar:20050927</b>
-</a>
-</p>
-<p><a name="org.jvnet:mimepull:jar"><b>MIME streaming extension</b>
-</a>
-</p>
-<p><a name="com.sun.codemodel:codemodel:jar"><b>Codemodel Core</b>
-</a>
-</p>
-<p>The core functionality of the CodeModel java source code generation library</p>
-<p><a class="externalLink" href="https://codemodel.dev.java.net/codemodel">https://codemodel.dev.java.net/codemodel</a>
-</p>
-<p><a name="junit:junit:jar"><b>JUnit</b>
-</a>
-</p>
-<p>JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
-<p><a class="externalLink" href="http://junit.org">http://junit.org</a>
-</p>
 </div>
+<div class="section"><h2>Licenses</h2>
+<p><b>Common Development And Distribution License (CDDL) Version 1.0: </b>
+Extended StAX API</p>
+<p><b>CDDL + GPLv2 with classpath exception: </b>
+VirtualBox web service client</p>
+<p><b>Unknown: </b>
+MIME streaming extension, Unnamed - com.sun.org.apache.xml.internal:resolver:jar:20050927, Unnamed - com.sun.xml.bind:jaxb-impl:jar:2.1.6, Unnamed - com.sun.xml.messaging.saaj:saaj-impl:jar:1.3, Unnamed - com.sun.xml.stream.buffer:streambuffer:jar:0.7, Unnamed - com.sun.xml.stream:sjsxp:jar:1.0, Unnamed - javax.activation:activation:jar:1.1, Unnamed - javax.annotation:jsr250-api:jar:1.0, Unnamed - javax.jws:jsr181-api:jar:1.0-MR1, Unnamed - javax.xml.bind:jaxb-api:jar:2.1, Unnamed - javax.xml.soap:saaj-api:jar:1.3, Unnamed - javax.xml.stream:stax-api:jar:1.0, Unnamed - javax.xml.ws:jaxws-api:jar:2.1</p>
+<p><b>Common Public License Version 1.0: </b>
+JUnit</p>
+<p><b>GPLv2 with classpath exception: </b>
+JAX-WS (JSR-224) Reference Implementation</p>
+<p><b>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0: </b>
+Codemodel Core, JAX-WS (JSR-224) Reference Implementation</p>
+</div>
+<div class="section"><h2>Dependency File Details</h2>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Filename</th>
+<th align="right">Size</th>
+<th align="right">Entries</th>
+<th align="right">Classes</th>
+<th align="right">Packages</th>
+<th align="center">JDK Rev</th>
+<th align="center">Debug</th>
+</tr>
+<tr class="b"><td align="left">codemodel-2.1.jar</td>
+<td align="right">136.34 kB</td>
+<td align="right">126</td>
+<td align="right">113</td>
+<td align="right">4</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">resolver-20050927.jar</td>
+<td align="right">66.58 kB</td>
+<td align="right">37</td>
+<td align="right">25</td>
+<td align="right">4</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">jaxb-impl-2.1.6.jar</td>
+<td align="right">829.57 kB</td>
+<td align="right">687</td>
+<td align="right">641</td>
+<td align="right">28</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">saaj-impl-1.3.jar</td>
+<td align="right">271.78 kB</td>
+<td align="right">182</td>
+<td align="right">149</td>
+<td align="right">13</td>
+<td align="center">1.4</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">sjsxp-1.0.jar</td>
+<td align="right">326.32 kB</td>
+<td align="right">183</td>
+<td align="right">157</td>
+<td align="right">11</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">streambuffer-0.7.jar</td>
+<td align="right">56.62 kB</td>
+<td align="right">40</td>
+<td align="right">31</td>
+<td align="right">3</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">jaxws-rt-2.1.3.jar</td>
+<td align="right">1.13 MB</td>
+<td align="right">942</td>
+<td align="right">846</td>
+<td align="right">67</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">activation-1.1.jar</td>
+<td align="right">61.54 kB</td>
+<td align="right">50</td>
+<td align="right">38</td>
+<td align="right">3</td>
+<td align="center">1.4</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">jsr250-api-1.0.jar</td>
+<td align="right">5.71 kB</td>
+<td align="right">16</td>
+<td align="right">11</td>
+<td align="right">2</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">jsr181-api-1.0-MR1.jar</td>
+<td align="right">7.80 kB</td>
+<td align="right">19</td>
+<td align="right">14</td>
+<td align="right">2</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">jaxb-api-2.1.jar</td>
+<td align="right">101.56 kB</td>
+<td align="right">115</td>
+<td align="right">101</td>
+<td align="right">6</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">saaj-api-1.3.jar</td>
+<td align="right">18.33 kB</td>
+<td align="right">34</td>
+<td align="right">29</td>
+<td align="right">1</td>
+<td align="center">1.4</td>
+<td align="center">release</td>
+</tr>
+<tr class="b"><td align="left">stax-api-1.0.jar</td>
+<td align="right">25.69 kB</td>
+<td align="right">47</td>
+<td align="right">40</td>
+<td align="right">5</td>
+<td align="center">1.2</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">jaxws-api-2.1.jar</td>
+<td align="right">35.32 kB</td>
+<td align="right">68</td>
+<td align="right">57</td>
+<td align="right">7</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">junit-3.8.1.jar</td>
+<td align="right">118.23 kB</td>
+<td align="right">119</td>
+<td align="right">100</td>
+<td align="right">6</td>
+<td align="center">1.1</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">mimepull-1.1.jar</td>
+<td align="right">36.51 kB</td>
+<td align="right">42</td>
+<td align="right">32</td>
+<td align="right">1</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">stax-ex-1.2.jar</td>
+<td align="right">10.81 kB</td>
+<td align="right">19</td>
+<td align="right">9</td>
+<td align="right">1</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><th align="left">Total</th>
+<th align="right">Size</th>
+<th align="right">Entries</th>
+<th align="right">Classes</th>
+<th align="right">Packages</th>
+<th align="center">JDK Rev</th>
+<th align="center">Debug</th>
+</tr>
+<tr class="b"><td align="right">17</td>
+<td align="right">3.19 MB</td>
+<td align="right">2,726</td>
+<td align="right">2,393</td>
+<td align="right">164</td>
+<td align="center">1.5</td>
+<td align="right">16</td>
+</tr>
+<tr class="a"><td align="right">compile: 15</td>
+<td align="right">compile: 2.94 MB</td>
+<td align="right">compile: 2,481</td>
+<td align="right">compile: 2,180</td>
+<td align="right">compile: 154</td>
+<td align="center">-</td>
+<td align="right">compile: 14</td>
+</tr>
+<tr class="b"><td align="right">test: 2</td>
+<td align="right">test: 254.57 kB</td>
+<td align="right">test: 245</td>
+<td align="right">test: 213</td>
+<td align="right">test: 10</td>
+<td align="center">-</td>
+<td align="right">test: 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h2>Dependency Repository Locations</h2>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Repo ID</th>
+<th align="left">URL</th>
+<th align="center">Release</th>
+<th align="center">Snapshot</th>
+<th align="center">Blacklisted</th>
+</tr>
+<tr class="b"><td align="left">java.net</td>
+<td align="left"><a href="https://maven-repository.dev.java.net/nonav/repository" class="externalLink">https://maven-repository.dev.java.net/nonav/repository</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">m.g.o-public</td>
+<td align="left"><a href="http://maven.glassfish.org/content/groups/public/" class="externalLink">http://maven.glassfish.org/content/groups/public/</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">maven2-repository.dev.java.net</td>
+<td align="left"><a href="http://download.java.net/maven/2/" class="externalLink">http://download.java.net/maven/2/</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">central</td>
+<td align="left"><a href="http://repo1.maven.org/maven2" class="externalLink">http://repo1.maven.org/maven2</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">java.net2</td>
+<td align="left">https://maven2-repository.dev.java.net/nonav/repository</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Repository locations for each of the Dependencies.</p>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Artifact</th>
+<th align="center">java.net</th>
+<th align="center">m.g.o-public</th>
+<th align="center">maven2-repository.dev.java.net</th>
+<th align="center">central</th>
+</tr>
+<tr class="b"><td align="left">com.sun.codemodel:codemodel:jar:2.1</td>
+<td align="center">-</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/codemodel/codemodel/2.1/codemodel-2.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://download.java.net/maven/2//com/sun/codemodel/codemodel/2.1/codemodel-2.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">com.sun.org.apache.xml.internal:resolver:jar:20050927</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.org.apache.xml.internal/jars/resolver-20050927.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">com.sun.xml.bind:jaxb-impl:jar:2.1.6</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.xml.bind/jars/jaxb-impl-2.1.6.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">com.sun.xml.messaging.saaj:saaj-impl:jar:1.3</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.xml.messaging.saaj/jars/saaj-impl-1.3.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">com.sun.xml.stream:sjsxp:jar:1.0</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.xml.stream/jars/sjsxp-1.0.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">com.sun.xml.stream.buffer:streambuffer:jar:0.7</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.xml.stream.buffer/jars/streambuffer-0.7.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">com.sun.xml.ws:jaxws-rt:jar:2.1.3</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/com.sun.xml.ws/jars/jaxws-rt-2.1.3.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">javax.activation:activation:jar:1.1</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.activation/jars/activation-1.1.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/activation/activation/1.1/activation-1.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">javax.annotation:jsr250-api:jar:1.0</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.annotation/jars/jsr250-api-1.0.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">javax.jws:jsr181-api:jar:1.0-MR1</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.jws/jars/jsr181-api-1.0-MR1.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">javax.xml.bind:jaxb-api:jar:2.1</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.xml.bind/jars/jaxb-api-2.1.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">javax.xml.soap:saaj-api:jar:1.3</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.xml.soap/jars/saaj-api-1.3.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/xml/soap/saaj-api/1.3/saaj-api-1.3.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/xml/soap/saaj-api/1.3/saaj-api-1.3.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">javax.xml.stream:stax-api:jar:1.0</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.xml.stream/jars/stax-api-1.0.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/xml/stream/stax-api/1.0/stax-api-1.0.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/xml/stream/stax-api/1.0/stax-api-1.0.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">javax.xml.ws:jaxws-api:jar:2.1</td>
+<td align="center"><a href="https://maven-repository.dev.java.net/nonav/repository/javax.xml.ws/jars/jaxws-api-2.1.jar" class="externalLink"><img alt="Found at https://maven-repository.dev.java.net/nonav/repository" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">junit:junit:jar:3.8.1</td>
+<td align="center">-</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//junit/junit/3.8.1/junit-3.8.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://download.java.net/maven/2//junit/junit/3.8.1/junit-3.8.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">org.jvnet:mimepull:jar:1.1</td>
+<td align="center">-</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//org/jvnet/mimepull/1.1/mimepull-1.1.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://download.java.net/maven/2//org/jvnet/mimepull/1.1/mimepull-1.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/org/jvnet/mimepull/1.1/mimepull-1.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="b"><td align="left">org.jvnet.staxex:stax-ex:jar:1.2</td>
+<td align="center">-</td>
+<td align="center"><a href="http://maven.glassfish.org/content/groups/public//org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar" class="externalLink"><img alt="Found at http://maven.glassfish.org/content/groups/public/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://download.java.net/maven/2//org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center"><a href="http://repo1.maven.org/maven2/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><th align="left">Total</th>
+<th align="center">java.net</th>
+<th align="center">m.g.o-public</th>
+<th align="center">maven2-repository.dev.java.net</th>
+<th align="center">central</th>
+</tr>
+<tr class="b"><td align="left">17 (compile: 15, test: 2)</td>
+<td align="center">13</td>
+<td align="center">17</td>
+<td align="center">4</td>
+<td align="center">15</td>
+</tr>
+</tbody>
+</table>
 </div>
 
       </div>
@@ -335,8 +863,8 @@
 
   
   
-  &nbsp;| Last Published: 01/15/2009
-  &nbsp;| Version: 2.1-rev1
+  &nbsp;| Last Published: 05/03/2009
+  &nbsp;| Version: 2.2-rev1
 </div>
       <div class="clear">
         <hr/>

@@ -41,7 +41,7 @@ function offsetDate(id, offset) {
     var now = new Date();
     var nowTime = now.getTime();
     var localOffset = now.getTimezoneOffset();
-    var developerTime = nowTime + ( offset * 60 * 60 * 1000 ) + ( localOffset * 60 * 1000 );
+    var developerTime = nowTime + ( offset * 60 * 60 * 1000 )+ ( localOffset * 60 * 1000 );
     var developerDate = new Date(developerTime);
 
     document.getElementById(id).innerHTML = developerDate;
@@ -66,8 +66,8 @@ window.onLoad = init();
 
   
   
-  &nbsp;| Last Published: 01/15/2009
-  &nbsp;| Version: 2.1-rev1
+  &nbsp;| Last Published: 05/03/2009
+  &nbsp;| Version: 2.2-rev1
 </div>
       <div class="clear">
         <hr/>
