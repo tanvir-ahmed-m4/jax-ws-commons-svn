@@ -2748,6 +2748,7 @@ www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/StorageControllerType.h
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/TSBool.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/USBDeviceFilterAction.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/USBDeviceState.html -text
+www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/VBoxObject.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/VRDPAuthType.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/VboxPortType.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/VboxService.html -text
@@ -4160,6 +4161,7 @@ www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/StorageContro
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/TSBool.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/USBDeviceFilterAction.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/USBDeviceState.html -text
+www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/VBoxObject.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/VRDPAuthType.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/VboxPortType.html -text
 www/virtualbox/apidocs/com/sun/xml/ws/commons/virtualbox/class-use/VboxService.html -text

@@ -12,10 +12,10 @@
 -d
 '/home/kohsuke/ws/jax-ws/commons/virtualbox/target/checkout/target/site/testapidocs'
 -doctitle
-'VirtualBox web service client 2.2-rev1 Test API'
+'VirtualBox web service client 2.2-rev2 Test API'
 -link
 'http://java.sun.com/javase/6/docs/api'
 -use
 -version
 -windowtitle
-'VirtualBox web service client 2.2-rev1 Test API'
+'VirtualBox web service client 2.2-rev2 Test API'
