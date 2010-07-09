@@ -1049,12 +1049,22 @@ www/grails/index.html -text
 www/grails/sources.html -text
 www/grizzly-httpspi/css/maven-base.css -text
 www/grizzly-httpspi/css/maven-theme.css -text
+www/grizzly-httpspi/css/print.css -text
 www/grizzly-httpspi/css/site.css -text
 www/grizzly-httpspi/dependencies.html -text
 www/grizzly-httpspi/dependency-convergence.html -text
 www/grizzly-httpspi/images/close.gif -text
 www/grizzly-httpspi/images/collapsed.gif -text
 www/grizzly-httpspi/images/expanded.gif -text
+www/grizzly-httpspi/images/external.png -text svneol=unset#unset
+www/grizzly-httpspi/images/icon_error_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/images/icon_info_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/images/icon_success_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/images/icon_warning_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/images/logos/build-by-maven-black.png -text svneol=unset#unset
+www/grizzly-httpspi/images/logos/build-by-maven-white.png -text svneol=unset#unset
+www/grizzly-httpspi/images/logos/maven-feather.png -text svneol=unset#unset
+www/grizzly-httpspi/images/newwindow.png -text svneol=unset#unset
 www/grizzly-httpspi/index.html -text
 www/grizzly-httpspi/integration.html -text
 www/grizzly-httpspi/issue-tracking.html -text

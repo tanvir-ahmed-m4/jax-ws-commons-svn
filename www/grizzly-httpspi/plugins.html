@@ -9,9 +9,10 @@
 
 
 
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>JAX-WS commons - Project Build Plugins</title>
+    <title>JAXWS HTTP SPI using grizzly - Project Build Plugins</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -21,28 +22,70 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
-          |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            JAXWS HTTP SPI using grizzly
+    
+            </span>
+                    <div class="clear">
+        <hr/>
       </div>
-    -->
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2010-07-09
+                      </div>
+            <div class="xright">            <a href="">JAXWS HTTP SPI using grizzly</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
     <div id="leftColumn">
       <div id="navcolumn">
-             <dl class=navgroup>
-        <dd><ul>
+           
+  
+
+  
+    
+  
+  
+    
+                             <h5>Modules</h5>
+            <ul>
               
     <li class="none">
-              <a href="index.html">Introduction</a>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
+                    <a href="jaxws-grizzly-httpspi/index.html">Grizzly httpspi transport extension</a>
+          </li>
+              
+    <li class="none">
+                    <a href="jaxws-grizzly-httpspi-testapp/index.html">Test app for JAX-WS Grizzly HTTP spi support</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
               
                 
               
+      
+            
       
             
       
@@ -66,81 +109,71 @@
       
               
             <li class="expanded">
-              <a href="project-info.html">Project Information</a>
-                <ul>
+                    <a href="project-info.html">Project Information</a>
+                  <ul>
                   
     <li class="none">
-              <a href="integration.html">Continuous Integration</a>
-        </li>
+                    <a href="index.html">About</a>
+          </li>
                   
     <li class="none">
-              <a href="dependencies.html">Dependencies</a>
-        </li>
+                    <a href="integration.html">Continuous Integration</a>
+          </li>
                   
     <li class="none">
-              <a href="dependency-convergence.html">Dependency Convergence</a>
-        </li>
+                    <a href="dependencies.html">Dependencies</a>
+          </li>
                   
     <li class="none">
-              <a href="issue-tracking.html">Issue Tracking</a>
-        </li>
+                    <a href="dependency-convergence.html">Dependency Convergence</a>
+          </li>
                   
     <li class="none">
-              <a href="mail-lists.html">Mailing Lists</a>
-        </li>
+                    <a href="issue-tracking.html">Issue Tracking</a>
+          </li>
                   
     <li class="none">
-              <a href="plugin-management.html">Plugin Management</a>
-        </li>
+                    <a href="mail-lists.html">Mailing Lists</a>
+          </li>
                   
     <li class="none">
-              <a href="license.html">Project License</a>
-        </li>
+                    <a href="plugin-management.html">Plugin Management</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="license.html">Project License</a>
+          </li>
                   
     <li class="none">
               <strong>Project Plugins</strong>
         </li>
                   
     <li class="none">
-              <a href="project-summary.html">Project Summary</a>
-        </li>
+                    <a href="project-summary.html">Project Summary</a>
+          </li>
                   
     <li class="none">
-              <a href="team-list.html">Project Team</a>
-        </li>
+                    <a href="team-list.html">Project Team</a>
+          </li>
                   
     <li class="none">
-              <a href="source-repository.html">Source Repository</a>
-        </li>
+                    <a href="source-repository.html">Source Repository</a>
+          </li>
               </ul>
         </li>
-          </ul></dd>
-    </dl>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
         </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
@@ -158,8 +191,20 @@
 <td>2.0.2</td>
 </tr>
 <tr class="b"><td>org.apache.maven.plugins</td>
+<td><a href="http://maven.apache.org/plugins/maven-deploy-plugin" class="externalLink">maven-deploy-plugin</a></td>
+<td>2.4</td>
+</tr>
+<tr class="a"><td>org.apache.maven.plugins</td>
 <td><a href="http://maven.apache.org/plugins/maven-idea-plugin" class="externalLink">maven-idea-plugin</a></td>
 <td>2.2</td>
+</tr>
+<tr class="b"><td>org.apache.maven.plugins</td>
+<td><a href="http://maven.apache.org/plugins/maven-javadoc-plugin" class="externalLink">maven-javadoc-plugin</a></td>
+<td>2.5</td>
+</tr>
+<tr class="a"><td>org.apache.maven.plugins</td>
+<td><a href="http://maven.apache.org/plugins/maven-source-plugin" class="externalLink">maven-source-plugin</a></td>
+<td>2.0.4</td>
 </tr>
 </table>
 </div>
@@ -180,10 +225,11 @@
   
 
   
+    
   
-  &nbsp;| Last Published: 07/08/2010
-  &nbsp;| Version: 1.0-SNAPSHOT
-</div>
+  
+    
+  </div>
       <div class="clear">
         <hr/>
       </div>

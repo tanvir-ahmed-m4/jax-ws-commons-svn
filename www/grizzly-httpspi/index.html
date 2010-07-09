@@ -9,9 +9,10 @@
 
 
 
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>JAX-WS commons - Grizzly HTTP SPI transport for JAX-WS</title>
+    <title>JAXWS HTTP SPI using grizzly - About</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -21,28 +22,70 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
       </head>
   <body class="composite">
-    <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
-          |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            JAXWS HTTP SPI using grizzly
+    
+            </span>
+                    <div class="clear">
+        <hr/>
       </div>
-    -->
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2010-07-09
+                      </div>
+            <div class="xright">            <a href="">JAXWS HTTP SPI using grizzly</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
     <div id="leftColumn">
       <div id="navcolumn">
-             <dl class=navgroup>
-        <dd><ul>
+           
+  
+
+  
+    
+  
+  
+    
+                             <h5>Modules</h5>
+            <ul>
               
     <li class="none">
-              <strong>Introduction</strong>
-        </li>
-          </ul></dd>
-    </dl>
-      <dl class=navgroup>
-        <dt>Project Documentation</dt>
-        <dd><ul>
+                    <a href="jaxws-grizzly-httpspi/index.html">Grizzly httpspi transport extension</a>
+          </li>
+              
+    <li class="none">
+                    <a href="jaxws-grizzly-httpspi-testapp/index.html">Test app for JAX-WS Grizzly HTTP spi support</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
               
                 
               
+            
+            
       
             
       
@@ -65,63 +108,77 @@
             
       
               
-        <li class="collapsed">
-              <a href="project-info.html">Project Information</a>
-              </li>
-          </ul></dd>
-    </dl>
+            <li class="expanded">
+                    <a href="project-info.html">Project Information</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>About</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="integration.html">Continuous Integration</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="dependencies.html">Dependencies</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="dependency-convergence.html">Dependency Convergence</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="issue-tracking.html">Issue Tracking</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="mail-lists.html">Mailing Lists</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="plugin-management.html">Plugin Management</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="license.html">Project License</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="plugins.html">Project Plugins</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="project-summary.html">Project Summary</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="source-repository.html">Source Repository</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
         </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>What is this?</h2>
-<p>JAX-WS 2.2 has defined <a href="https://jax-ws.dev.java.net/nonav/jaxws-api/2.2/javax/xml/ws/spi/http/package-summary.html" class="externalLink">HTTP SPI</a> that allows to plugin a http transport with any JAX-WS runtime. This project implements the HTTP SPI using <a href="http://grizzly.dev.java.net" class="externalLink">Grizzly</a>. That means ANY JAX-WS 2.2 runtime can be used with this grizzly transport portably(zero dependency on RI code). The following example shows on how to use this transport to host endpoints:</p>
-<div class="source"><pre>public void testApp() throws Exception {
-    String contextPath = &quot;/ctxt&quot;;
-    String path = &quot;/echo&quot;;
-    int port = 12345;
-
-    String address = &quot;http://localhost:&quot;+port+contextPath+path;
-
-    GrizzlyWebServer server = new GrizzlyWebServer(port);
-    HttpContext context = GrizzlyHttpContextFactory.createHttpContext(server, contextPath, path);
-
-    Endpoint endpoint = Endpoint.create(new EchoService());
-    endpoint.publish(context);      // Use grizzly HTTP context for publishing
-
-    server.start();
-
-    testWSDL(address);
-    testService(address);
-    endpoint.stop();
-
-    server.stop();
-}</pre>
-</div>
+        <div class="section"><h2>About JAXWS HTTP SPI using grizzly</h2>
+<p>There is currently no description associated with this project.</p>
 </div>
 
       </div>
@@ -137,10 +194,11 @@
   
 
   
+    
   
-  &nbsp;| Last Published: 07/08/2010
-  &nbsp;| Version: 1.0-SNAPSHOT
-</div>
+  
+    
+  </div>
       <div class="clear">
         <hr/>
       </div>
