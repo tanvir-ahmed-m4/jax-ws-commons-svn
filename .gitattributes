@@ -1068,6 +1068,35 @@ www/grizzly-httpspi/images/newwindow.png -text svneol=unset#unset
 www/grizzly-httpspi/index.html -text
 www/grizzly-httpspi/integration.html -text
 www/grizzly-httpspi/issue-tracking.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/css/maven-base.css -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/css/maven-theme.css -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/css/print.css -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/css/site.css -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/dependencies.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/dependency-convergence.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/close.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/collapsed.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/expanded.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/external.png -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/icon_error_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/icon_info_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/icon_success_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/icon_warning_sml.gif -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/logos/build-by-maven-black.png -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/logos/build-by-maven-white.png -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/logos/maven-feather.png -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/images/newwindow.png -text svneol=unset#unset
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/index.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/integration.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/issue-tracking.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/license.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/mail-lists.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/plugin-management.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/plugins.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/project-info.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/project-summary.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/source-repository.html -text
+www/grizzly-httpspi/jaxws-grizzly-httpspi-testapp/team-list.html -text
 www/grizzly-httpspi/jaxws-grizzly-httpspi/css/maven-base.css -text
 www/grizzly-httpspi/jaxws-grizzly-httpspi/css/maven-theme.css -text
 www/grizzly-httpspi/jaxws-grizzly-httpspi/css/site.css -text
