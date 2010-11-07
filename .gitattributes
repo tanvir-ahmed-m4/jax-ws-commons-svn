@@ -560,6 +560,9 @@ virtualbox/src/site/site.xml -text
 virtualbox/src/test/java/Main.java -text
 virtualbox/src/wsdl/vboxweb.wsdl -text
 virtualbox/src/wsdl/vboxwebService.wsdl -text
+www/__modules/head.htmlx -text
+www/__modules/header.htmlx -text
+www/__modules/left_sidebar.htmlx -text
 www/alm-process/snippets/page.xml -text
 www/beans-generator/architecture.html -text
 www/beans-generator/beans-generator-1.0-SNAPSHOT.jar -text

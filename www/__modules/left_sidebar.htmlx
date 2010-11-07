@@ -1,0 +1,261 @@
+	  <div id="navcol">
+	    <dl id="projecttools" class="navgroup" style="text-align: left;">
+	      <dt id="current-zone" class="depth0">
+		<a href="https://glassfish.dev.java.net/">GlassFish Community</a>
+	      </dt>
+	      <dd class="depth0 parent parent" id="menubar">
+<!-- main menu bar -->
+<ul id="main-menubar">
+  <li>
+    <a href="http://forums.java.net/jive/forum.jspa?forumID=46&start=0">Discussion forums</a>
+  <li><a href="/servlets/ProjectMailingListList">Mailing lists</a>
+  <li><a href="/servlets/ProjectIssues">Issue tracker</a>
+  <li>
+    <form name="ProjectIssuesForm" method="get" action="/issues/show_bug.cgi" style="margin-left:2em">
+      <input type="submit" value="Go to" /> # <input name="id" size="3" />
+    </form>
+  <li><a href="/source/browse/jax-ws-commons/">Source code</a>
+</ul>
+
+
+<!-- menubar for spring sub-project -->
+<ul id="menubar-spring" style="display:none;">
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/spring/jaxws-spring/">Download</a>
+  <li><a href="/spring/reference.html">Reference</a>
+    <ul>
+      <li><a href="/spring/references/spring-jax-ws-core.xsd.html">Core</a>
+      <li><a href="/spring/references/spring-jax-ws-servlet.xsd.html">Servlet</a>
+      <li><a href="/spring/references/spring-jax-ws-local-transport.xsd.html">Local transport</a>
+    </ul>
+  </li>
+  <li><a href="#">How to configure...</a>
+    <ul>
+      <li><a href="/spring/handler.html">Handler</a>
+      <li><a href="/spring/local-transport.html">Local transport</a>
+      <li><a href="/spring/wsdl-first.html">WSDL first</a>
+    </ul>
+  </li>
+  <li><a href="#">Project Info</a>
+    <ul>
+      <li><a href="/source/browse/jax-ws-commons/trunk/spring/jaxws-spring">Subversion</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for in-vm transport -->
+<ul id="menubar-in-vm" style="display:none;">
+  <li><a href="/in-vm/">Overview</a>
+</ul>
+
+
+
+<!-- menubar for http-session-scope -->
+<ul id="menubar-http-session-scope" style="display:none;">
+  <li><a href="/http-session-scope/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/http-session-scope/">Download</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/http-session-scope/dependencies.html">Dependencies</a>
+      <li><a href="/http-session-scope/project-summary.html">Project Summary</a>
+      <li><a href="/http-session-scope/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for http-session-scope -->
+<ul id="menubar-thread-scope" style="display:none;">
+  <li><a href="/thread-scope/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/thread-scope/">Download</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/thread-scope/dependencies.html">Dependencies</a>
+      <li><a href="/thread-scope/project-summary.html">Project Summary</a>
+      <li><a href="/thread-scope/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+
+<!-- menubar for JSON -->
+<ul id="menubar-json" style="display:none;">
+  <li><a href="/json/">Introduction</a>
+  <li><a href="/json/spring.html">Configuration with Spring</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/json/">Download</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/json/dependencies.html">Dependencies</a>
+      <li><a href="/json/project-summary.html">Project Summary</a>
+      <li><a href="/json/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for DIME -->
+<ul id="menubar-dime" style="display:none;">
+  <li><a href="/dime/">Introduction</a>
+  <li><a href="#">Downloads</a>
+    <ul>
+      <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/dime/">Project code</a>
+      <li><a href="/dime/dime-client.doc">Sample client</a></li>
+      <li><a href="/dime/dime-server.war">Sample server</a></li>
+    </ul>
+  </li>
+  <li><a href="/nonav/dime/apidocs/index.html">API Docs</a></li>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/dime/dependencies.html">Dependencies</a>
+      <li><a href="/dime/license.html">Project License</a>
+      <li><a href="/dime/project-summary.html">Project Summary</a>
+      <li><a href="/dime/team-list.html">Project Team</a>
+      <li><a href="/dime/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for jaxws-maven-plugin -->
+<ul id="menubar-jaxws-maven-plugin" style="display:none;">
+  <li><a href="/jaxws-maven-plugin/">Introduction</a>
+  <li><a href="/jaxws-maven-plugin/plugin-info.html">Goal</a>
+  <li><a href="/jaxws-maven-plugin/usage.html">Usage</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/jaxws-maven-plugin/dependencies.html">Dependencies</a>
+      <li><a href="/jaxws-maven-plugin/project-summary.html">Project Summary</a>
+      <li><a href="/jaxws-maven-plugin/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+<!-- menubar for jaxws-smtp -->
+<ul id="menubar-smtp" style="display:none;">
+  <li><a href="/smtp/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/smtp/">Download</a>
+  <li><a href="/smtp/plugin-info.html">Goal</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/smtp/dependencies.html">Dependencies</a>
+      <li><a href="/smtp/project-summary.html">Project Summary</a>
+      <li><a href="/smtp/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for beans-generator -->
+<ul id="menubar-beans-generator" style="display:none;">
+  <li><a href="/beans-generator/">Introduction</a>
+  <li><a href="/beans-generator/configuration.html">Configuration   </a>
+  <li><a href="/beans-generator/beans-generator-1.0-SNAPSHOT.jar">Download</a>
+  <li><a href="#">Samples</a>
+    <ul>
+      <li><a href="/beans-generator/very-very-simple-example.html">Very, very simple example</a>
+      <li><a href="/beans-generator/usages.html">Usages</a>
+    </ul>
+  </li>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/beans-generator/dependencies.html">Dependencies</a>
+      <li><a href="/beans-generator/project-summary.html">Project Summary</a>
+      <li><a href="/beans-generator/source-repository.html">Source Repository</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for virtualbox -->
+<ul id="menubar-virtualbox" style="display:none;">
+  <li><a href="/virtualbox/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/virtualbox/">Download</a>
+  <li><a href="/nonav/virtualbox/apidocs/">Javadoc</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/virtualbox/dependencies.html">Dependencies</a>
+      <li><a href="/virtualbox/project-summary.html">Project Summary</a>
+      <li><a href="/virtualbox/source-repository.html">Source Repository</a>
+      <li><a href="/virtualbox/license.html">License</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for EC2 -->
+<ul id="menubar-ec2" style="display:none;">
+  <li><a href="/ec2/">Introduction</a>
+  <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/ec2/">Download</a>
+  <li><a href="/nonav/ec2/apidocs/">Javadoc</a>
+  <li><a href="#">Project Information</a>
+    <ul>
+      <li><a href="/ec2/dependencies.html">Dependencies</a>
+      <li><a href="/ec2/project-summary.html">Project Summary</a>
+      <li><a href="/ec2/source-repository.html">Source Repository</a>
+      <li><a href="/ec2/license.html">License</a>
+    </ul>
+  </li>
+</ul>
+
+
+<!-- menubar for grails integration -->
+<ul id="menubar-grails" style="display:none;">
+  <li><a href="/grails/">Overview</a>
+  <li><a href="/grails/sources.html">Sources</a>
+</ul>
+
+
+<!-- menubar for guice integration -->
+<ul id="menubar-guice" style="display:none;">
+  <li><a href="/guice/">Overview</a>
+  <li><a href="/guice/sources.html">Sources</a>
+</ul>
+
+
+<script>
+var info = {
+	title: "JAX-WS commons",
+	logo: "/images/javaxml-duke.gif"
+};
+
+// select the right menu
+(function() {
+  function entry2(id,prefix) {
+    var e = document.getElementById(id);
+    return { element: e, url: "https://jax-ws-commons.dev.java.net/"+prefix };
+  }
+  function entry(name) {
+    return entry2("menubar-"+name,name+"/");
+  }
+
+  var menus = [
+    entry2("menubar-main",""),
+    entry("spring"),
+    entry("in-vm"),
+    entry("http-session-scope"),
+    entry("thread-scope"),
+    entry("json"),
+    entry("dime"),
+    entry("jaxws-maven-plugin"),
+    entry("beans-generator"),
+    entry("virtualbox"),
+    entry("ec2"),
+    entry("guice"),
+    entry("grails"),
+    entry("smtp")
+  ];
+
+  var activeMenu = menus[0];
+  for( var i=1; i<menus.length; i++ ) {
+    if(window.location.href.indexOf(menus[i].url)==0)
+      activeMenu = menus[i];
+  }
+  
+  for( var i=0; i<menus.length; i++ ) {
+    menus[i].element.style.display = menus[i]==activeMenu ? "" : "none";
+  }
+})();
+</script>
+<script src="http://glassfish-theming.java.net/zone-ws.js"></script>
+<script src="http://glassfish-theming.java.net/theme.js"></script>
