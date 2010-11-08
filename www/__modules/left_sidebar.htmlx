@@ -8,8 +8,8 @@
 <ul id="main-menubar">
   <li>
     <a href="http://forums.java.net/jive/forum.jspa?forumID=46&start=0">Discussion forums</a>
-  <li><a href="/servlets/ProjectMailingListList">Mailing lists</a>
-  <li><a href="/servlets/ProjectIssues">Issue tracker</a>
+  <li><a href="http://java.net/projects/jax-ws-commons/lists">Mailing lists</a>
+  <li><a href="http://java.net/jira/browse/JAX_WS_COMMONS">Issue tracker</a>
   <li>
     <form name="ProjectIssuesForm" method="get" action="/issues/show_bug.cgi" style="margin-left:2em">
       <input type="submit" value="Go to" /> # <input name="id" size="3" />
