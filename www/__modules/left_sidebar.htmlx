@@ -216,7 +216,7 @@
 <script>
 var info = {
 	title: "JAX-WS commons",
-	logo: "/images/javaxml-duke.gif"
+	logo: "http://jax-ws.java.net/images/javaxml-duke.gif"
 };
 
 // select the right menu
