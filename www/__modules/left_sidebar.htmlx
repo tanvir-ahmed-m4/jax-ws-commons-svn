@@ -1,7 +1,7 @@
 	  <div id="navcol">
 	    <dl id="projecttools" class="navgroup" style="text-align: left;">
 	      <dt id="current-zone" class="depth0">
-		<a href="https://glassfish.dev.java.net/">GlassFish Community</a>
+		<a href="http://glassfish.java.net/">GlassFish Community</a>
 	      </dt>
 	      <dd class="depth0 parent parent" id="menubar">
 <!-- main menu bar -->
@@ -219,7 +219,7 @@ var info = {
 (function() {
   function entry2(id,prefix) {
     var e = document.getElementById(id);
-    return { element: e, url: "https://jax-ws-commons.dev.java.net/"+prefix };
+    return { element: e, url: "http://jax-ws-commons.java.net/"+prefix };
   }
   function entry(name) {
     return entry2("menubar-"+name,name+"/");
