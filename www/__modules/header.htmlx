@@ -74,9 +74,9 @@
 		  <div id="domainlinks">
 		    <div id="loginbox">
 		      <div>
-			    <a href="https://java.net/people/login">Login</a>
+			    <a href="http://java.net/people/login">Login</a>
 			    |
-			    <a href="https://java.net/people/new">Register</a>
+			    <a href="http://java.net/people/new">Register</a>
                             |
                             <a id="joinbutton1" href="http://java.net/projects/grizzly/watch">Join</a>
                             |

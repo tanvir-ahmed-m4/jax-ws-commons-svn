@@ -22,9 +22,9 @@
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+      <div class="xright">      <a href="http://jax-ws.java.net/">JAX-WS</a>
           |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+          <a href="http://glassfish.java.net/">Glassfish</a>
       </div>
     -->
     <div id="bodyColumn">
@@ -32,10 +32,10 @@
         <p>In-VM local transport allows TCP loop-back like SOAP communication between the client and the server in the same virtual machine. It is primarily designed to enable testing of web service endpoints without using a fully-fledged web container.</p>
 <p>To use this transport, you need to declare one more namespace URI:</p>
 <div class="source"><pre>&lt;beans ...
-  xmlns:wsl=&quot;http://jax-ws.dev.java.net/spring/local-transport&quot;
+  xmlns:wsl=&quot;http://jax-ws.java.net/spring/local-transport&quot;
   xsi:schemaLocation=&quot;
-    http://jax-ws.dev.java.net/spring/local-transport
-    http://jax-ws.dev.java.net/spring/local-transport.xsd&quot;&gt;</pre>
+    http://jax-ws.java.net/spring/local-transport
+    http://jax-ws.java.net/spring/local-transport.xsd&quot;&gt;</pre>
 </div>
 <p>Then you can export a bunch of services by using an ID of your choice:</p>
 <div class="source"><pre>&lt;wsl:bindings id=&quot;test-local-endpoint&quot;&gt;

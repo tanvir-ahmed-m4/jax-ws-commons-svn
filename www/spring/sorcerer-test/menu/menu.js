@@ -2379,7 +2379,7 @@ YAHOO.widget.MenuModuleItem.prototype = {
     * Constant representing the prefix path to use for securely served images
     * @type string
     */
-    IMG_ROOT_SSL: "https://a248.e.akamai.net/sec.yimg.com/i/",
+    IMG_ROOT_SSL: "http://a248.e.akamai.net/sec.yimg.com/i/",
 
     // Private member variables
 

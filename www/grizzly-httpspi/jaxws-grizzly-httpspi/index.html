@@ -22,9 +22,9 @@
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+      <div class="xright">      <a href="http://jax-ws.java.net/">JAX-WS</a>
           |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+          <a href="http://glassfish.java.net/">Glassfish</a>
       </div>
     -->
     <div id="leftColumn">
@@ -99,7 +99,7 @@
     <div id="bodyColumn">
       <div id="contentBox">
         <div class="section"><h2>What is this?</h2>
-<p>JAX-WS 2.2 has defined <a href="https://jax-ws.dev.java.net/nonav/jaxws-api/2.2/javax/xml/ws/spi/http/package-summary.html" class="externalLink">HTTP SPI</a> that allows to plugin a http transport with any JAX-WS runtime. This project implements the HTTP SPI using <a href="http://grizzly.dev.java.net" class="externalLink">Grizzly</a>. That means ANY JAX-WS 2.2 runtime can be used with this grizzly transport portably(zero dependency on RI code). The following example shows on how to use this transport to host endpoints:</p>
+<p>JAX-WS 2.2 has defined <a href="http://jax-ws.java.net/nonav/jaxws-api/2.2/javax/xml/ws/spi/http/package-summary.html" class="externalLink">HTTP SPI</a> that allows to plugin a http transport with any JAX-WS runtime. This project implements the HTTP SPI using <a href="http://grizzly.dev.java.net" class="externalLink">Grizzly</a>. That means ANY JAX-WS 2.2 runtime can be used with this grizzly transport portably(zero dependency on RI code). The following example shows on how to use this transport to host endpoints:</p>
 <div class="source"><pre>public void testApp() throws Exception {
     String contextPath = &quot;/ctxt&quot;;
     String path = &quot;/echo&quot;;

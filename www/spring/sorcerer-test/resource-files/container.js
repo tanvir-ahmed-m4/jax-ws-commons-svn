@@ -462,7 +462,7 @@ YAHOO.widget.Module.IMG_ROOT = "http://us.i1.yimg.com/us.yimg.com/i/";
 * Constant representing the prefix path to use for securely served images
 * @type string
 */
-YAHOO.widget.Module.IMG_ROOT_SSL = "https://a248.e.akamai.net/sec.yimg.com/i/";
+YAHOO.widget.Module.IMG_ROOT_SSL = "http://a248.e.akamai.net/sec.yimg.com/i/";
 
 /**
 * Constant for the default CSS class name that represents a Module
@@ -1276,7 +1276,7 @@ YAHOO.widget.Overlay.prototype.moveTo = function(x, y) {
 
 /**
 * Adds a special CSS class to the Overlay when Mac/Gecko is in use, to work around a Gecko bug where
-* scrollbars cannot be hidden. See https://bugzilla.mozilla.org/show_bug.cgi?id=187435
+* scrollbars cannot be hidden. See http://bugzilla.mozilla.org/show_bug.cgi?id=187435
 */
 YAHOO.widget.Overlay.prototype.hideMacGeckoScrollbars = function() {
 	YAHOO.util.Dom.removeClass(this.element, "show-scrollbars");
@@ -1285,7 +1285,7 @@ YAHOO.widget.Overlay.prototype.hideMacGeckoScrollbars = function() {
 
 /**
 * Removes a special CSS class from the Overlay when Mac/Gecko is in use, to work around a Gecko bug where
-* scrollbars cannot be hidden. See https://bugzilla.mozilla.org/show_bug.cgi?id=187435
+* scrollbars cannot be hidden. See http://bugzilla.mozilla.org/show_bug.cgi?id=187435
 */
 YAHOO.widget.Overlay.prototype.showMacGeckoScrollbars = function() {
 	YAHOO.util.Dom.removeClass(this.element, "hide-scrollbars");

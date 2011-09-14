@@ -22,9 +22,9 @@
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
+      <div class="xright">      <a href="http://jax-ws.java.net/">JAX-WS</a>
           |
-          <a href="http://glassfishi.dev.java.net/">Glassfish</a>
+          <a href="http://glassfish.java.net/">Glassfish</a>
       </div>
     -->
     <div id="bodyColumn">
@@ -44,13 +44,13 @@
 
     bp.close();
 }
-</pre></div><p>This configures SMTPFeature with SMTP(sending) and POP3(receiving) configuration. This feature is used to create proxy. Once the endpoint address is set, then proxy can be used to invoke web service.</p></div><div class="section"><h2>Server-side Configuration</h2><p>JAX-WS SMTP extension can be used with <a href="https://jax-ws-commons.dev.java.net/spring/">JAX-WS Spring extension</a> for more flexible configuration --- in particular to expose the same endpoint as both HTTP and SMTP. See <a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/transport/smtp/test-app/">the sample application</a> for the complete example of how to put this all together by using Maven.</p><div class="source"><pre>&lt;beans
- xmlns:ws =&quot;http://jax-ws.dev.java.net/spring/core&quot;
- xmlns:wsm=&quot;http://jax-ws.dev.java.net/spring/smtp&quot;
- xsi:schemaLocation=&quot;http://jax-ws.dev.java.net/spring/smtp
-                     http://jax-ws.dev.java.net/spring/smtp.xsd
-                     http://jax-ws.dev.java.net/spring/core
-                     http://jax-ws.dev.java.net/spring/core.xsd&quot;&gt;
+</pre></div><p>This configures SMTPFeature with SMTP(sending) and POP3(receiving) configuration. This feature is used to create proxy. Once the endpoint address is set, then proxy can be used to invoke web service.</p></div><div class="section"><h2>Server-side Configuration</h2><p>JAX-WS SMTP extension can be used with <a href="http://jax-ws-commons.java.net/spring/">JAX-WS Spring extension</a> for more flexible configuration --- in particular to expose the same endpoint as both HTTP and SMTP. See <a href="http://jax-ws-commons.java.net/source/browse/jax-ws-commons/trunk/transport/smtp/test-app/">the sample application</a> for the complete example of how to put this all together by using Maven.</p><div class="source"><pre>&lt;beans
+ xmlns:ws =&quot;http://jax-ws.java.net/spring/core&quot;
+ xmlns:wsm=&quot;http://jax-ws.java.net/spring/smtp&quot;
+ xsi:schemaLocation=&quot;http://jax-ws.java.net/spring/smtp
+                     http://jax-ws.java.net/spring/smtp.xsd
+                     http://jax-ws.java.net/spring/core
+                     http://jax-ws.java.net/spring/core.xsd&quot;&gt;
 
   &lt;wsm:smtp service=&quot;#myservice&quot; incoming=&quot;#in&quot; outgoing=&quot;#out&quot; /&gt;
   &lt;wsm:pop3 id=&quot;in&quot; host=&quot;pop3.Host&quot; uid=&quot;uid&quot; password=&quot;password&quot; /&gt;
@@ -62,7 +62,7 @@
     &lt;/ws:bean&gt;
   &lt;/ws:service&gt;
 &lt;/beans&gt;
-</pre></div><p>Alternatively, you can also configure the srever side programatically without Spring like <a href="https://jax-ws-commons.dev.java.net/source/browse/jax-ws-commons/trunk/transport/smtp/jaxws-smtp/src/test/java/pop3/SmtpTest.java?view=markup">this</a>.</p></div>
+</pre></div><p>Alternatively, you can also configure the srever side programatically without Spring like <a href="http://jax-ws-commons.java.net/source/browse/jax-ws-commons/trunk/transport/smtp/jaxws-smtp/src/test/java/pop3/SmtpTest.java?view=markup">this</a>.</p></div>
       </div>
     </div>
     <div class="clear">
