@@ -104,6 +104,7 @@ http-session-scope/target
 jaxws-maven-plugin/*.iml
 jaxws-maven-plugin/*.ipr
 jaxws-maven-plugin/*.iws
+jaxws-maven-plugin/src/it/wsgen/target
 jaxws-maven-plugin/src/it/wsimport/file/target
 jaxws-maven-plugin/src/it/wsimport/url/target
 jaxws-maven-plugin/target
