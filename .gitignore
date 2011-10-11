@@ -123,6 +123,7 @@ json/test-app/*.iml
 json/test-app/*.ipr
 json/test-app/*.iws
 json/test-app/target
+pom/target
 spring/*.iml
 spring/*.ipr
 spring/*.iws
