@@ -227,6 +227,10 @@ jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/foo/AddService.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-62/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/a.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/b/b.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/c.wsdl -text
 jaxws-maven-plugin/src/test/it/wsgen217/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/codehaus/mojo/jaxws/test/AddService.java -text
 jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/codehaus/mojo/jaxws/test/EchoService.java -text
