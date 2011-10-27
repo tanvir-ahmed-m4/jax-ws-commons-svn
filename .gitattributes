@@ -244,7 +244,14 @@ jaxws-maven-plugin/src/test/it/wsimport217/src/test-wsdl/xjc/b.xml -text
 jaxws-maven-plugin/src/test/it/wsimport217/src/test-wsdl/xjc/c.xml -text
 jaxws-maven-plugin/src/test/it/wsimport217/src/wsdl/HelloWs.wsdl -text
 jaxws-maven-plugin/src/test/it/wsimport217/src/wsdl/HelloWs_schema1.xsd -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsGenMojoITCase.java -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsImportMojoITCase.java -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsImportMojoTest.java -text
 jaxws-maven-plugin/src/test/resources/it-settings.xml -text
+jaxws-maven-plugin/src/test/resources/org/jvnet/jax_ws_commons/jaxws/proxy1.xml -text
+jaxws-maven-plugin/src/test/resources/org/jvnet/jax_ws_commons/jaxws/proxy2.xml -text
+jaxws-maven-plugin/src/test/resources/org/jvnet/jax_ws_commons/jaxws/proxy3.xml -text
+jaxws-maven-plugin/src/test/resources/org/jvnet/jax_ws_commons/jaxws/proxy4.xml -text
 jaxws-maven-plugin/src/test/script/setproxy.groovy -text
 jms-binding/jaxws-jms/pom.xml -text
 jms-binding/jaxws-jms/src/main/java/org/jvnet/jax_ws_commons/jms/JMSBindingID.java -text
