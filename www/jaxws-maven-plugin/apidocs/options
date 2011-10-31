@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Maven JAXWS 2.x Plugin 2.2-SNAPSHOT API'
+'Maven JAXWS 2.x Plugin 2.1 API'
 -linkoffline
 'http://download.oracle.com/javase/1.5.0/docs/api' 'D:/svn/jax-ws-commons~svn/trunk/jaxws-maven-plugin/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Maven JAXWS 2.x Plugin 2.2-SNAPSHOT API'
+'Maven JAXWS 2.x Plugin 2.1 API'

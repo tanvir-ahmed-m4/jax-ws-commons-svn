@@ -1250,8 +1250,6 @@ www/jaxws-maven-plugin/apidocs/packages -text
 www/jaxws-maven-plugin/apidocs/resources/inherit.gif -text
 www/jaxws-maven-plugin/apidocs/stylesheet.css -text
 www/jaxws-maven-plugin/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
-www/jaxws-maven-plugin/css/maven-base.css -text svneol=native#unset
-www/jaxws-maven-plugin/css/maven-theme.css -text svneol=native#unset
 www/jaxws-maven-plugin/css/site.css -text
 www/jaxws-maven-plugin/dependencies.html -text
 www/jaxws-maven-plugin/faq.html -text
