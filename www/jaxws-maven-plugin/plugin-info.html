@@ -29,7 +29,7 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Plugin Documentation</h2>
+        <a name="Plugin_Documentation"></a><div class="section"><h2>Plugin Documentation</h2>
 <p>Goals available for this plugin:</p>
 <table class="bodyTable"><tr class="a"><th>Goal</th>
 <th>Description</th>
@@ -42,7 +42,6 @@ all of the portable artifacts for a JAX-WS web service.</td>
 <td>Reads a JAX-WS service endpoint implementation class and generates
 all of the portable artifacts for a JAX-WS web service (into the
 generate test source directroy.) 
-
 <p>Due to <a
 href="http://jira.codehaus.org/browse/MNG-1508">MNG-1508</a>, this
 requires 2.0.5 or higher.</p></td>
@@ -51,25 +50,28 @@ requires 2.0.5 or higher.</p></td>
 <td>Parses wsdl and binding files and generates Java code needed to
 access it.</td>
 </tr>
-</table>
-</div>
-<div class="section"><h2>System Requirements</h2>
-<p>The following specifies the minimum requirements to run this Maven plugin:</p>
-<table class="bodyTable"><tr class="a"><td>Maven</td>
-<td>2.0</td>
+<tr class="a"><td><a href="wsimport-test-mojo.html">jaxws:wsimport-test</a></td>
+<td>Parses wsdl and binding files and generates Java code needed to
+access it (for tests.)</td>
 </tr>
-<tr class="b"><td>JDK</td>
+</table>
+<a name="System_Requirements"></a><div class="section"><h3>System Requirements</h3>
+<p>The following specifies the minimum requirements to run this Maven plugin:</p>
+<table class="bodyTable"><tr class="b"><td>Maven</td>
+<td>2.0.5</td>
+</tr>
+<tr class="a"><td>JDK</td>
 <td>1.5</td>
 </tr>
-<tr class="a"><td>Memory</td>
+<tr class="b"><td>Memory</td>
 <td>No minimum requirement.</td>
 </tr>
-<tr class="b"><td>Disk Space</td>
+<tr class="a"><td>Disk Space</td>
 <td>No minimum requirement.</td>
 </tr>
 </table>
 </div>
-<div class="section"><h2>Usage</h2>
+<a name="Usage"></a><div class="section"><h3>Usage</h3>
 <p>You should specify the version in your project's plugin configuration:</p>
 <div class="source"><pre>&lt;project&gt;
   ...
@@ -78,9 +80,9 @@ access it.</td>
     &lt;pluginManagement&gt;
       &lt;plugins&gt;
         &lt;plugin&gt;
-          &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+          &lt;groupId&gt;org.jvnet.jax-ws-commons&lt;/groupId&gt;
           &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
-          &lt;version&gt;1.12&lt;/version&gt;
+          &lt;version&gt;2.2-SNAPSHOT&lt;/version&gt;
         &lt;/plugin&gt;
         ...
       &lt;/plugins&gt;
@@ -88,9 +90,9 @@ access it.</td>
     &lt;!-- To use the plugin goals in your POM or parent POM --&gt;
     &lt;plugins&gt;
       &lt;plugin&gt;
-        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;groupId&gt;org.jvnet.jax-ws-commons&lt;/groupId&gt;
         &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.12&lt;/version&gt;
+        &lt;version&gt;2.2-SNAPSHOT&lt;/version&gt;
       &lt;/plugin&gt;
       ...
     &lt;/plugins&gt;
@@ -99,7 +101,8 @@ access it.</td>
 &lt;/project&gt;
 </pre>
 </div>
-<p>For more information, see <a href="http://maven.apache.org/guides/mini/guide-configuring-plugins.html" class="externalLink">&quot;Guide to Configuring Plug-ins&quot;</a></p>
+<p>For more information, see <a class="externalLink" href="http://maven.apache.org/guides/mini/guide-configuring-plugins.html">&quot;Guide to Configuring Plug-ins&quot;</a></p>
+</div>
 </div>
 
       </div>
@@ -109,15 +112,16 @@ access it.</td>
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2009
+          2006-2011
     
+          Oracle
           
   
 
   
   
-  &nbsp;| Last Published: 04/28/2009
-  &nbsp;| Version: 1.12
+  &nbsp;| Last Published: 10/31/2011
+  &nbsp;| Version: 2.2-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>

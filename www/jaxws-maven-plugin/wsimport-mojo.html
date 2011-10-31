@@ -31,11 +31,11 @@
       <div id="contentBox">
         <div class="section"><h2><a name="jaxws:wsimport"></a>jaxws:wsimport</h2>
 <p><strong>Full name</strong>:</p>
-<p>org.codehaus.mojo:jaxws-maven-plugin:1.12:wsimport</p>
+<p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2-SNAPSHOT:wsimport</p>
 <p><strong>Description</strong>:</p>
 <div>Parses wsdl and binding files and generates Java code needed to
 access it.</div><p><strong>Attributes</strong>:</p>
-<ul><li>Requires a Maven 2.0 project to be executed.</li>
+<ul><li>Requires a Maven project to be executed.</li>
 <li>Requires dependency resolution of artifacts in scope: <code>runtime</code>.</li>
 <li>Binds by default to the lifecycle phase: <code>generate-sources</code>.</li>
 </ul>
@@ -49,7 +49,6 @@ access it.</div><p><strong>Attributes</strong>:</p>
 <td><code>List</code></td>
 <td><code>-</code></td>
 <td>Specify optional wsimport commnd-line options. 
-
 <p>Multiple elements can be specified, and each token must be
 placed in its own list.</p>
 <br />
@@ -112,14 +111,14 @@ it off<br />
 <td><code>-</code></td>
 <td>Specify where to place generated source files, keep is turned on
 with this option.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/jaxws/wsimport/java</code>.</td>
+<strong>Default value is</strong>: <code>${project.build.directory}/generated-sources/wsimport</code>.</td>
 </tr>
 <tr class="b"><td><strong><a href="#staleFile">staleFile</a></strong></td>
 <td><code>File</code></td>
 <td><code>-</code></td>
-<td>The location of the flag file used to determine if the output is
+<td>The folder containing flag files used to determine if the output is
 stale.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/jaxws/stale/.staleFlag</code>.</td>
+<strong>Default value is</strong>: <code>${project.build.directory}/jaxws/stale</code>.</td>
 </tr>
 <tr class="a"><td><strong><a href="#target">target</a></strong></td>
 <td><code>String</code></td>
@@ -151,7 +150,35 @@ in the wsdlDirectory will be used.<br />
 <tr class="a"><td><strong><a href="#wsdlLocation">wsdlLocation</a></strong></td>
 <td><code>String</code></td>
 <td><code>-</code></td>
-<td>(no description)<br />
+<td>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
+<p>Can end with asterisk in which case relative path of the wsdl
+will be appended to the given <code>wsdlLocation</code>.</p>
+<p>Example:</p>
+<pre>
+ ...
+ &lt;configuration&gt;
+     &lt;wsdlDirectory&gt;src/mywsdls&lt;/wsdlDirectory&gt;
+     &lt;wsdlFiles&gt;
+         &lt;wsdlFile&gt;a.wsdl&lt;/wsdlFile&gt;
+         &lt;wsdlFile&gt;b/b.wsdl&lt;/wsdlFile&gt;
+         &lt;wsdlFile&gt;${basedir}/src/mywsdls/c.wsdl&lt;/wsdlFile&gt;
+     &lt;/wsdlFiles&gt;
+     &lt;wsdlLocation&gt;http://example.com/mywebservices/*&lt;/wsdlLocation&gt;
+ &lt;/configuration&gt;
+ ...
+</pre>
+
+wsdlLocation for <code>a.wsdl</code> will be
+http://example.com/mywebservices/a.wsdl<br />
+
+ wsdlLocation for <code>b/b.wsdl</code> will be
+http://example.com/mywebservices/b/b.wsdl wsdlLocation for
+<code>${basedir}/src/mywsdls/c.wsdl</code> will be
+file://absolute/path/to/c.wsdl <br />
+<br />
+<p>Note: External binding files cannot be used if asterisk notation
+is in place.</p>
+<br />
 </td>
 </tr>
 <tr class="b"><td><strong><a href="#wsdlUrls">wsdlUrls</a></strong></td>
@@ -184,7 +211,6 @@ method params.<br />
 <td><code>-</code></td>
 <td>Specify optional XJC-specific parameters that should simply be
 passed to xjc using -B option of WsImport command. 
-
 <p>Multiple elements can be specified, and each token must be
 placed in its own list.</p>
 <br />
@@ -198,12 +224,19 @@ follows spec and does not bind EndpointReferenceType to Java and
 uses the spec provided <code>W3CEndpointReference</code><br />
 <strong>Default value is</strong>: <code>false</code>.</td>
 </tr>
+<tr class="b"><td><strong><a href="#xnocompile">xnocompile</a></strong></td>
+<td><code>boolean</code></td>
+<td><code>-</code></td>
+<td>Turn off compilation after code generation and let generated
+sources be compiled by maven during compilation phase; keep is
+turned on with this option.<br />
+<strong>Default value is</strong>: <code>true</code>.</td>
+</tr>
 </table>
 </div>
 <div class="section"><h3><a name="Parameter_Details"></a>Parameter Details</h3>
 <p><strong><a name="args">args</a>:</strong></p>
 <div>Specify optional wsimport commnd-line options. 
-
 <p>Multiple elements can be specified, and each token must be
 placed in its own list.</p>
 </div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
@@ -262,14 +295,14 @@ it off</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
 <div>Specify where to place generated source files, keep is turned on
 with this option.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
 <li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/jaxws/wsimport/java</code></li>
+<li><strong>Default</strong>: <code>${project.build.directory}/generated-sources/wsimport</code></li>
 </ul>
 <hr />
 <p><strong><a name="staleFile">staleFile</a>:</strong></p>
-<div>The location of the flag file used to determine if the output is
+<div>The folder containing flag files used to determine if the output is
 stale.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
 <li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/jaxws/stale/.staleFlag</code></li>
+<li><strong>Default</strong>: <code>${project.build.directory}/jaxws/stale</code></li>
 </ul>
 <hr />
 <p><strong><a name="target">target</a>:</strong></p>
@@ -298,7 +331,35 @@ in the wsdlDirectory will be used.</div><ul><li><strong>Type</strong>: <code>jav
 </ul>
 <hr />
 <p><strong><a name="wsdlLocation">wsdlLocation</a>:</strong></p>
-<div>(no description)</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<div>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
+<p>Can end with asterisk in which case relative path of the wsdl
+will be appended to the given <code>wsdlLocation</code>.</p>
+<p>Example:</p>
+<pre>
+ ...
+ &lt;configuration&gt;
+     &lt;wsdlDirectory&gt;src/mywsdls&lt;/wsdlDirectory&gt;
+     &lt;wsdlFiles&gt;
+         &lt;wsdlFile&gt;a.wsdl&lt;/wsdlFile&gt;
+         &lt;wsdlFile&gt;b/b.wsdl&lt;/wsdlFile&gt;
+         &lt;wsdlFile&gt;${basedir}/src/mywsdls/c.wsdl&lt;/wsdlFile&gt;
+     &lt;/wsdlFiles&gt;
+     &lt;wsdlLocation&gt;http://example.com/mywebservices/*&lt;/wsdlLocation&gt;
+ &lt;/configuration&gt;
+ ...
+</pre>
+
+wsdlLocation for <code>a.wsdl</code> will be
+http://example.com/mywebservices/a.wsdl<br />
+
+ wsdlLocation for <code>b/b.wsdl</code> will be
+http://example.com/mywebservices/b/b.wsdl wsdlLocation for
+<code>${basedir}/src/mywsdls/c.wsdl</code> will be
+file://absolute/path/to/c.wsdl <br />
+<br />
+<p>Note: External binding files cannot be used if asterisk notation
+is in place.</p>
+</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
 <li><strong>Required</strong>: <code>No</code></li>
 </ul>
 <hr />
@@ -328,7 +389,6 @@ method params.</div><ul><li><strong>Type</strong>: <code>java.lang.Boolean</code
 <p><strong><a name="xjcArgs">xjcArgs</a>:</strong></p>
 <div>Specify optional XJC-specific parameters that should simply be
 passed to xjc using -B option of WsImport command. 
-
 <p>Multiple elements can be specified, and each token must be
 placed in its own list.</p>
 </div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
@@ -342,6 +402,14 @@ uses the spec provided <code>W3CEndpointReference</code></div><ul><li><strong>Ty
 <li><strong>Required</strong>: <code>No</code></li>
 <li><strong>Default</strong>: <code>false</code></li>
 </ul>
+<hr />
+<p><strong><a name="xnocompile">xnocompile</a>:</strong></p>
+<div>Turn off compilation after code generation and let generated
+sources be compiled by maven during compilation phase; keep is
+turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
+<li><strong>Required</strong>: <code>No</code></li>
+<li><strong>Default</strong>: <code>true</code></li>
+</ul>
 </div>
 </div>
 
@@ -352,15 +420,16 @@ uses the spec provided <code>W3CEndpointReference</code></div><ul><li><strong>Ty
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2009
+          2006-2011
     
+          Oracle
           
   
 
   
   
-  &nbsp;| Last Published: 04/28/2009
-  &nbsp;| Version: 1.12
+  &nbsp;| Last Published: 10/31/2011
+  &nbsp;| Version: 2.2-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>

@@ -31,16 +31,15 @@
       <div id="contentBox">
         <div class="section"><h2><a name="jaxws:wsgen-test"></a>jaxws:wsgen-test</h2>
 <p><strong>Full name</strong>:</p>
-<p>org.codehaus.mojo:jaxws-maven-plugin:1.12:wsgen-test</p>
+<p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2-SNAPSHOT:wsgen-test</p>
 <p><strong>Description</strong>:</p>
 <div>Reads a JAX-WS service endpoint implementation class and generates
 all of the portable artifacts for a JAX-WS web service (into the
 generate test source directroy.) 
-
-<p>Due to <a href="http://jira.codehaus.org/browse/MNG-1508" class="externalLink">MNG-1508</a>, this
+<p>Due to <a class="externalLink" href="http://jira.codehaus.org/browse/MNG-1508">MNG-1508</a>, this
 requires 2.0.5 or higher.</p>
 </div><p><strong>Attributes</strong>:</p>
-<ul><li>Requires a Maven 2.0 project to be executed.</li>
+<ul><li>Requires a Maven project to be executed.</li>
 <li>Requires dependency resolution of artifacts in scope: <code>runtime</code>.</li>
 <li>Binds by default to the lifecycle phase: <code>process-test-classes</code>.</li>
 </ul>
@@ -50,13 +49,7 @@ requires 2.0.5 or higher.</p>
 <th>Since</th>
 <th>Description</th>
 </tr>
-<tr class="b"><td><strong><a href="#pluginArtifacts">pluginArtifacts</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>(no description)<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#sei">sei</a></strong></td>
+<tr class="b"><td><strong><a href="#sei">sei</a></strong></td>
 <td><code>String</code></td>
 <td><code>-</code></td>
 <td>service endpoint implementation class name.<br />
@@ -65,35 +58,42 @@ requires 2.0.5 or higher.</p>
 </table>
 </div>
 <div class="section"><h3><a name="Optional_Parameters"></a>Optional Parameters</h3>
-<table class="bodyTable"><tr class="b"><th>Name</th>
+<table class="bodyTable"><tr class="a"><th>Name</th>
 <th>Type</th>
 <th>Since</th>
 <th>Description</th>
 </tr>
-<tr class="a"><td><strong><a href="#destDir">destDir</a></strong></td>
+<tr class="b"><td><strong><a href="#destDir">destDir</a></strong></td>
 <td><code>File</code></td>
 <td><code>-</code></td>
 <td>Specify where to place output generated classes Set to &quot;&quot; to turn
 it off<br />
 <strong>Default value is</strong>: <code>${project.build.testOutputDirectory}</code>.</td>
 </tr>
-<tr class="b"><td><strong><a href="#extension">extension</a></strong></td>
+<tr class="a"><td><strong><a href="#extension">extension</a></strong></td>
 <td><code>boolean</code></td>
 <td><code>-</code></td>
 <td>Allow to use the JAXWS Vendor Extensions.<br />
 <strong>Default value is</strong>: <code>false</code>.</td>
 </tr>
-<tr class="a"><td><strong><a href="#genWsdl">genWsdl</a></strong></td>
+<tr class="b"><td><strong><a href="#genWsdl">genWsdl</a></strong></td>
 <td><code>boolean</code></td>
 <td><code>-</code></td>
 <td>Specify that a WSDL file should be generated in ${resourceDestDir}<br />
 <strong>Default value is</strong>: <code>false</code>.</td>
 </tr>
-<tr class="b"><td><strong><a href="#keep">keep</a></strong></td>
+<tr class="a"><td><strong><a href="#keep">keep</a></strong></td>
 <td><code>boolean</code></td>
 <td><code>-</code></td>
 <td>Keep generated files.<br />
 <strong>Default value is</strong>: <code>false</code>.</td>
+</tr>
+<tr class="b"><td><strong><a href="#portname">portname</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>Specify the Port name to use in the generated WSDL. Used in
+conjunction with the -wsdl option.<br />
+</td>
 </tr>
 <tr class="a"><td><strong><a href="#protocol">protocol</a></strong></td>
 <td><code>String</code></td>
@@ -110,14 +110,21 @@ conjunction with the -extensions option<br />
 <td>Directory containing the generated wsdl files.<br />
 <strong>Default value is</strong>: <code>${project.build.directory}/jaxws/wsgen/wsdl</code>.</td>
 </tr>
-<tr class="a"><td><strong><a href="#sourceDestDir">sourceDestDir</a></strong></td>
+<tr class="a"><td><strong><a href="#servicename">servicename</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>Specify the Service name to use in the generated WSDL. Used in
+conjunction with the -wsdl option.<br />
+</td>
+</tr>
+<tr class="b"><td><strong><a href="#sourceDestDir">sourceDestDir</a></strong></td>
 <td><code>File</code></td>
 <td><code>-</code></td>
 <td>Specify where to place generated source files, keep is turned on
 with this option.<br />
 </td>
 </tr>
-<tr class="b"><td><strong><a href="#verbose">verbose</a></strong></td>
+<tr class="a"><td><strong><a href="#verbose">verbose</a></strong></td>
 <td><code>boolean</code></td>
 <td><code>-</code></td>
 <td>Output messages about what the tool is doing<br />
@@ -151,10 +158,10 @@ it off</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
 <li><strong>Default</strong>: <code>false</code></li>
 </ul>
 <hr />
-<p><strong><a name="pluginArtifacts">pluginArtifacts</a>:</strong></p>
-<div>(no description)</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>Yes</code></li>
-<li><strong>Expression</strong>: <code>${plugin.artifacts}</code></li>
+<p><strong><a name="portname">portname</a>:</strong></p>
+<div>Specify the Port name to use in the generated WSDL. Used in
+conjunction with the -wsdl option.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>No</code></li>
 </ul>
 <hr />
 <p><strong><a name="protocol">protocol</a>:</strong></p>
@@ -174,6 +181,12 @@ conjunction with the -extensions option</div><ul><li><strong>Type</strong>: <cod
 <p><strong><a name="sei">sei</a>:</strong></p>
 <div>service endpoint implementation class name.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
 <li><strong>Required</strong>: <code>Yes</code></li>
+</ul>
+<hr />
+<p><strong><a name="servicename">servicename</a>:</strong></p>
+<div>Specify the Service name to use in the generated WSDL. Used in
+conjunction with the -wsdl option.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>No</code></li>
 </ul>
 <hr />
 <p><strong><a name="sourceDestDir">sourceDestDir</a>:</strong></p>
@@ -197,15 +210,16 @@ with this option.</div><ul><li><strong>Type</strong>: <code>java.io.File</code><
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2009
+          2006-2011
     
+          Oracle
           
   
 
   
   
-  &nbsp;| Last Published: 04/28/2009
-  &nbsp;| Version: 1.12
+  &nbsp;| Last Published: 10/31/2011
+  &nbsp;| Version: 2.2-SNAPSHOT
 </div>
       <div class="clear">
         <hr/>
