@@ -232,9 +232,6 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/a.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/b/b.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/c.wsdl -text
 jaxws-maven-plugin/src/test/it/wsgen217/pom.xml -text
-jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/codehaus/mojo/jaxws/test/AddService.java -text
-jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/codehaus/mojo/jaxws/test/EchoService.java -text
-jaxws-maven-plugin/src/test/it/wsgen217/src/test/java/org/codehaus/mojo/jaxws/test/TService.java -text
 jaxws-maven-plugin/src/test/it/wsimport217/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsimport217/src/jaxws/bindings-default.xjc -text
 jaxws-maven-plugin/src/test/it/wsimport217/src/remote-xjc/bindings.xjc -text
