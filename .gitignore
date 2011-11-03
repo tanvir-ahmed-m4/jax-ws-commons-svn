@@ -111,6 +111,7 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-49/src
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/target
 jaxws-maven-plugin/src/test/it/wsgen217/target
 jaxws-maven-plugin/src/test/it/wsimport217/target
+jaxws-maven-plugin/src/test/it/wsimport22/target
 jaxws-maven-plugin/target
 json/*.iml
 json/*.ipr
