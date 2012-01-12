@@ -228,6 +228,11 @@ jaxws-maven-plugin/src/site/apt/examples/using-wsdlLocation.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-43/invoker.properties -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-43/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-43/src/main/java/tests/jaxwscommons43/WsImplA.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-43/src/main/java/tests/jaxwscommons43/WsImplB.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-43/src/main/java/tests/jaxwscommons43/WsIntf.java -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/foo/AddService.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/pom.xml -text
