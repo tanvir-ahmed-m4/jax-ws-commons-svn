@@ -228,6 +228,7 @@ jaxws-maven-plugin/src/site/apt/examples/using-wsdlLocation.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/fml/faq.fml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-4/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-43/invoker.properties -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-43/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-43/src/main/java/tests/jaxwscommons43/WsImplA.java -text
@@ -241,6 +242,11 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/b/b.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/c.wsdl -text
 jaxws-maven-plugin/src/test/it/parent/invoker.properties -text
 jaxws-maven-plugin/src/test/it/parent/pom.xml -text
+jaxws-maven-plugin/src/test/it/wsdl-lib/pom.xml -text
+jaxws-maven-plugin/src/test/it/wsdl-lib/src/main/resources/META-INF/wsdl/po2.wsdl -text
+jaxws-maven-plugin/src/test/it/wsdl-lib/src/main/resources/ProcessOrder.wsdl -text
+jaxws-maven-plugin/src/test/it/wsdl-lib/src/main/resources/ProcessOrder.xsd -text
+jaxws-maven-plugin/src/test/it/wsdl-lib/src/main/resources/custom/custom.wsdl -text
 jaxws-maven-plugin/src/test/it/wsgen217/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/AddService.java -text
 jaxws-maven-plugin/src/test/it/wsgen217/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/EchoService.java -text
