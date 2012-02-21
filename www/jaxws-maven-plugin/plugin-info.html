@@ -41,10 +41,9 @@ all of the portable artifacts for a JAX-WS web service.</td>
 <tr class="a"><td><a href="wsgen-test-mojo.html">jaxws:wsgen-test</a></td>
 <td>Reads a JAX-WS service endpoint implementation class and generates
 all of the portable artifacts for a JAX-WS web service (into the
-generate test source directroy.) 
-<p>Due to <a
-href="http://jira.codehaus.org/browse/MNG-1508">MNG-1508</a>, this
-requires 2.0.5 or higher.</p></td>
+generate test source directory). 
+<p><code>${maven.test.skip}</code> property is honored. If it is
+set, code generation is skipped.</p></td>
 </tr>
 <tr class="b"><td><a href="wsimport-mojo.html">jaxws:wsimport</a></td>
 <td>Parses wsdl and binding files and generates Java code needed to
@@ -52,7 +51,9 @@ access it.</td>
 </tr>
 <tr class="a"><td><a href="wsimport-test-mojo.html">jaxws:wsimport-test</a></td>
 <td>Parses wsdl and binding files and generates Java code needed to
-access it (for tests.)</td>
+access it (for tests). 
+<p><code>${maven.test.skip}</code> property is honored. If it is
+set, code generation is skipped.</p></td>
 </tr>
 </table>
 <a name="System_Requirements"></a><div class="section"><h3>System Requirements</h3>
@@ -61,7 +62,7 @@ access it (for tests.)</td>
 <td>2.0.5</td>
 </tr>
 <tr class="a"><td>JDK</td>
-<td>1.5</td>
+<td>1.6</td>
 </tr>
 <tr class="b"><td>Memory</td>
 <td>No minimum requirement.</td>
@@ -82,7 +83,7 @@ access it (for tests.)</td>
         &lt;plugin&gt;
           &lt;groupId&gt;org.jvnet.jax-ws-commons&lt;/groupId&gt;
           &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
-          &lt;version&gt;2.1&lt;/version&gt;
+          &lt;version&gt;2.2&lt;/version&gt;
         &lt;/plugin&gt;
         ...
       &lt;/plugins&gt;
@@ -92,7 +93,7 @@ access it (for tests.)</td>
       &lt;plugin&gt;
         &lt;groupId&gt;org.jvnet.jax-ws-commons&lt;/groupId&gt;
         &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;2.1&lt;/version&gt;
+        &lt;version&gt;2.2&lt;/version&gt;
       &lt;/plugin&gt;
       ...
     &lt;/plugins&gt;
@@ -112,7 +113,7 @@ access it (for tests.)</td>
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2006-2011
+          2006-2012
     
           Oracle
           
@@ -120,8 +121,8 @@ access it (for tests.)</td>
 
   
   
-  &nbsp;| Last Published: 10/31/2011
-  &nbsp;| Version: 2.1
+  &nbsp;| Last Published: 02/21/2012
+  &nbsp;| Version: 2.2
 </div>
       <div class="clear">
         <hr/>

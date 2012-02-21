@@ -1287,6 +1287,10 @@ www/jaxws-maven-plugin/apidocs/stylesheet.css -text
 www/jaxws-maven-plugin/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
 www/jaxws-maven-plugin/css/site.css -text
 www/jaxws-maven-plugin/dependencies.html -text
+www/jaxws-maven-plugin/examples/using-binding-files.html -text
+www/jaxws-maven-plugin/examples/using-jaxb-plugins.html -text
+www/jaxws-maven-plugin/examples/using-jaxws22-on-jdk6.html -text
+www/jaxws-maven-plugin/examples/using-wsdlLocation.html -text
 www/jaxws-maven-plugin/faq.html -text
 www/jaxws-maven-plugin/images/close.gif -text svneol=unset#unset
 www/jaxws-maven-plugin/images/collapsed.gif -text
