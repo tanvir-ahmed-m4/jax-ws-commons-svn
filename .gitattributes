@@ -1308,6 +1308,8 @@ www/jaxws-maven-plugin/plugins.html -text
 www/jaxws-maven-plugin/project-info.html -text
 www/jaxws-maven-plugin/project-reports.html -text
 www/jaxws-maven-plugin/project-summary.html -text
+www/jaxws-maven-plugin/release-notes-21.html -text
+www/jaxws-maven-plugin/release-notes-22.html -text
 www/jaxws-maven-plugin/source-repository.html -text
 www/jaxws-maven-plugin/team-list.html -text
 www/jaxws-maven-plugin/testapidocs/allclasses-frame.html -text
