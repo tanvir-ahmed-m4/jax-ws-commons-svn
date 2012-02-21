@@ -107,8 +107,10 @@ jaxws-maven-plugin/*.iws
 jaxws-maven-plugin/src/it/wsgen/target
 jaxws-maven-plugin/src/it/wsimport/file/target
 jaxws-maven-plugin/src/it/wsimport/url/target
+jaxws-maven-plugin/src/test/it/jaxwscommons-4/target
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/src
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/target
+jaxws-maven-plugin/src/test/it/wsdl-lib/target
 jaxws-maven-plugin/src/test/it/wsgen217/target
 jaxws-maven-plugin/src/test/it/wsgen22/target
 jaxws-maven-plugin/src/test/it/wsimport217/target
