@@ -281,6 +281,7 @@ jaxws-maven-plugin/src/test/it/wsimport22/src/test-wsdl/xjc/b.xml -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/test-wsdl/xjc/c.xml -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs.wsdl -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs_schema1.xsd -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/RepositoryITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsGenMojoITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsImportMojoITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsImportMojoTest.java -text
