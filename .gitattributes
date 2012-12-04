@@ -228,7 +228,6 @@ jaxws-maven-plugin/src/site/apt/examples/using-jaxws22-on-jdk6.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-wsdlLocation.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
-jaxws-maven-plugin/src/site/fml/faq.fml -text
 jaxws-maven-plugin/src/site/resources/release-notes-21.html -text
 jaxws-maven-plugin/src/site/resources/release-notes-22.html -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-3/pom.xml -text
