@@ -254,6 +254,10 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/bindings/echo-hand
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/WSClientHandler.java -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/wsdl/echo.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-95/invoker.properties -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-95/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-95/src/main/java/org/jvnet/jax_ws_commons/jaxws/Client.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-95/src/wsdl/AddService.wsdl -text
 jaxws-maven-plugin/src/test/it/parent/invoker.properties -text
 jaxws-maven-plugin/src/test/it/parent/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsdl-lib/invoker.properties -text
