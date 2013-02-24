@@ -249,6 +249,11 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-62/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/a.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/b/b.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/c.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/bindings/echo-handlers.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/WSClientHandler.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/wsdl/echo.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-87/pom.xml -text
 jaxws-maven-plugin/src/test/it/parent/invoker.properties -text
 jaxws-maven-plugin/src/test/it/parent/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsdl-lib/invoker.properties -text
