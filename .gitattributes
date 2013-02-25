@@ -225,6 +225,7 @@ http-session-scope/src/site/apt/index.apt -text
 jaxws-maven-plugin/copyright-exclude -text
 jaxws-maven-plugin/copyright.txt -text
 jaxws-maven-plugin/exclude.xml -text
+jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/Invoker.java -text
 jaxws-maven-plugin/src/site/apt/examples/using-binding-files.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-jaxb-plugins.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-jaxws22-on-jdk6.apt -text
@@ -254,6 +255,9 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/bindings/echo-hand
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/WSClientHandler.java -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/wsdl/echo.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-91/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-91/src/main/java/com/mycompany/mavenproject2/CustomEx.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-91/src/main/java/com/mycompany/mavenproject2/NewWebService.java -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-95/invoker.properties -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-95/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-95/src/main/java/org/jvnet/jax_ws_commons/jaxws/Client.java -text
