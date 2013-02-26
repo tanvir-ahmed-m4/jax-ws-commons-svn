@@ -250,6 +250,18 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-62/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/a.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/b/b.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-62/src/mywsdls/c.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/pom.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/jaxws/bindings-default.xjc -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/AddService.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/EchoService.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/remote-xjc/bindings.xjc -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/test-wsdl/AddService.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/test-wsdl/xjc/a.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/test-wsdl/xjc/b.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/test-wsdl/xjc/c.xml -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/test/java/org/jvnet/jax_ws_commons/jaxws/test/TService.java -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/wsdl/HelloWs.wsdl -text
+jaxws-maven-plugin/src/test/it/jaxwscommons-81/src/wsdl/HelloWs_schema1.xsd -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/bindings/echo-handlers.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-87/child/src/main/java/org/jvnet/jax_ws_commons/jaxws/test/WSClientHandler.java -text
@@ -297,6 +309,7 @@ jaxws-maven-plugin/src/test/it/wsimport22/src/test-wsdl/xjc/c.xml -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs.wsdl -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs_schema1.xsd -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/Assertions.java -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/MixedITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/RepositoryITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsGenMojoITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsImportMojoITCase.java -text
