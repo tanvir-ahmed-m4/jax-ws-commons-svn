@@ -11,14 +11,15 @@
 
 <html>
   <head>
-    <title>JAX-WS Maven plugin - jaxws:wsimport-test</title>
+    <title>
+    jaxws:wsimport-test</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
@@ -29,183 +30,210 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2><a name="jaxws:wsimport-test"></a>jaxws:wsimport-test</h2>
-<p><strong>Full name</strong>:</p>
-<p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2:wsimport-test</p>
-<p><strong>Description</strong>:</p>
-<div>Parses wsdl and binding files and generates Java code needed to
+        
+  
+    <div class="section"><h2>jaxws:wsimport-test<a name="jaxws:wsimport-test"></a></h2>
+      <p><b>Full name</b>:</p>
+      <p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2.1:wsimport-test</p>
+      <p><b>Description</b>:</p>
+      <div>Parses wsdl and binding files and generates Java code needed to
 access it (for tests). 
-<p><code>${maven.test.skip}</code> property is honored. If it is
-set, code generation is skipped.</p>
-</div><p><strong>Attributes</strong>:</p>
-<ul><li>Requires a Maven project to be executed.</li>
-<li>Requires dependency resolution of artifacts in scope: <code>runtime</code>.</li>
-<li>Binds by default to the lifecycle phase: <code>generate-test-sources</code>.</li>
-</ul>
-<div class="section"><h3><a name="Optional_Parameters"></a>Optional Parameters</h3>
-<table class="bodyTable"><tr class="a"><th>Name</th>
-<th>Type</th>
-<th>Since</th>
-<th>Description</th>
-</tr>
-<tr class="b"><td><strong><a href="#args">args</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>Specify optional command-line options. 
+<p><tt>${maven.test.skip}</tt> property is honored. If it is
+set, code generation is skipped.</p></div>
+      <p><b>Attributes</b>:</p>
+      <ul>
+        <li>Requires a Maven project to be executed.</li>
+        <li>Requires dependency resolution of artifacts in scope: <tt>test</tt>.</li>
+        <li>Binds by default to the <a class="externalLink" href="http://maven.apache.org/ref/current/maven-core/lifecycles.html">lifecycle phase</a>: <tt>generate-test-sources</tt>.</li>
+      </ul>
+      <div class="section"><h3>Optional Parameters<a name="Optional_Parameters"></a></h3>
+        <table class="bodyTable" border="0">
+          <tr class="a">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Since</th>
+            <th>Description</th>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#args">args</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify optional command-line options. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#bindingDirectory">bindingDirectory</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Directory containing binding files.<br />
-<strong>Default value is</strong>: <code>${basedir}/src/jaxws</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#bindingFiles">bindingFiles</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>List of files to use for bindings. If not specified, all
-<code>.xml</code> files in the <code>bindingDirectory</code> will
-be used.<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#catalog">catalog</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Catalog file to resolve external entity references support TR9401,
-XCatalog, and OASIS XML Catalog format.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#destDir">destDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify where to place output generated classes. Use
-<code>xnocompile</code> to turn this off.<br />
-<strong>Default value is</strong>: <code>${project.build.testOutputDirectory}</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#encoding">encoding</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Specify character encoding used by source files.<br />
-<strong>Default value is</strong>: <code>${project.build.sourceEncoding}</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#extension">extension</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Allow to use the JAXWS Vendor Extensions.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#genJWS">genJWS</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Generate stubbed JWS implementation file.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#httpproxy">httpproxy</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Set HTTP/HTTPS proxy. Format is
-<code>[user[:password]@]proxyHost[:proxyPort]</code>.<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#implDestDir">implDestDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify where to generate JWS implementation file.<br />
-<strong>Default value is</strong>: <code>${project.build.testSourceDirectory}</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#implPortName">implPortName</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Local portion of port name for generated JWS implementation.
-Implies <code>genJWS=true</code>. Note: It is a QName string,
-formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#implServiceName">implServiceName</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Local portion of service name for generated JWS implementation.
-Implies <code>genJWS=true</code>. Note: It is a QName string,
-formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#keep">keep</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Keep generated files.<br />
-<strong>Default value is</strong>: <code>true</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#packageName">packageName</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>The package in which the source files will be generated.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#quiet">quiet</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Suppress wsimport output.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#skip">skip</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Set this to &quot;true&quot; to bypass code generation.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#sourceDestDir">sourceDestDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify where to place generated source files, keep is turned on
-with this option.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/generated-sources/test-wsimport</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#staleFile">staleFile</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>The folder containing flag files used to determine if the output is
-stale.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/jaxws/stale</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#target">target</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Generate code as per the given JAXWS specification version. Setting
+placed in its own list.</p><br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#bindingDirectory">bindingDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Directory containing binding files.<br /><b>Default value is</b>: <tt>${basedir}/src/jaxws</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#bindingFiles">bindingFiles</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>List of files to use for bindings. If not specified, all
+<tt>.xml</tt> files in the <tt>bindingDirectory</tt> will
+be used.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#catalog">catalog</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Catalog file to resolve external entity references support TR9401,
+XCatalog, and OASIS XML Catalog format.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#destDir">destDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify where to place output generated classes. Use
+<tt>xnocompile</tt> to turn this off.<br /><b>Default value is</b>: <tt>${project.build.testOutputDirectory}</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#encoding">encoding</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify character encoding used by source files.<br /><b>User property is</b>: <tt>project.build.sourceEncoding</tt>.</td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#executable">executable</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>2.3</tt></td>
+            <td>Path to the executable. Should be either wsgen or wsimport but
+basically any script which will understand passed in arguments will
+work.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#extension">extension</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Allow to use the JAXWS Vendor Extensions.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#genJWS">genJWS</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Generate stubbed JWS implementation file.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#httpproxy">httpproxy</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Set HTTP/HTTPS proxy. Format is
+<tt>[user[:password]@]proxyHost[:proxyPort]</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#implDestDir">implDestDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify where to generate JWS implementation file.<br /><b>Default value is</b>: <tt>${project.build.testSourceDirectory}</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#implPortName">implPortName</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Local portion of port name for generated JWS implementation.
+Implies <tt>genJWS=true</tt>. Note: It is a QName string,
+formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#implServiceName">implServiceName</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Local portion of service name for generated JWS implementation.
+Implies <tt>genJWS=true</tt>. Note: It is a QName string,
+formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#keep">keep</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Keep generated files.<br /><b>Default value is</b>: <tt>true</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#packageName">packageName</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>The package in which the source files will be generated.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#quiet">quiet</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Suppress wsimport output.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#remoteRepositories">remoteRepositories</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>2.3</tt></td>
+            <td>The remote plugin repositories declared in the POM.<br /><b>Default value is</b>: <tt>${project.pluginArtifactRepositories}</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#skip">skip</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Set this to &quot;true&quot; to bypass code generation.<br /><b>User property is</b>: <tt>maven.test.skip</tt>.</td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#sourceDestDir">sourceDestDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify where to place generated source files, keep is turned on
+with this option.<br /><b>Default value is</b>: <tt>${project.build.directory}/generated-sources/test-wsimport</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#staleFile">staleFile</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>The folder containing flag files used to determine if the output is
+stale.<br /><b>Default value is</b>: <tt>${project.build.directory}/jaxws/stale</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#target">target</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Generate code as per the given JAXWS specification version. Setting
 &quot;2.0&quot; will cause JAX-WS to generate artifacts that run with JAX-WS
-2.0 runtime.<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#verbose">verbose</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Output messages about what the tool is doing.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#wsdlDirectory">wsdlDirectory</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Directory containing WSDL files.<br />
-<strong>Default value is</strong>: <code>${basedir}/src/wsdl</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#wsdlFiles">wsdlFiles</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>List of files to use for WSDLs. If not specified, all
-<code>.wsdl</code> files in the <code>wsdlDirectory</code> will be
-used.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#wsdlLocation">wsdlLocation</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
+2.0 runtime.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#verbose">verbose</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Output messages about what the tool is doing.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#vmArgs">vmArgs</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify optional JVM options. 
+<p>Multiple elements can be specified, and each token must be
+placed in its own list.</p><br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#wsdlDirectory">wsdlDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Directory containing WSDL files.<br /><b>Default value is</b>: <tt>${basedir}/src/wsdl</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#wsdlFiles">wsdlFiles</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>List of files to use for WSDLs. If not specified, all
+<tt>.wsdl</tt> files in the <tt>wsdlDirectory</tt> will be
+used.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#wsdlLocation">wsdlLocation</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
 <p>Can end with asterisk in which case relative path of the WSDL
-will be appended to the given <code>wsdlLocation</code>.</p>
+will be appended to the given <tt>wsdlLocation</tt>.</p>
 <p>Example:</p>
-<pre>
+<div><pre>
  ...
  &lt;configuration&gt;
      &lt;wsdlDirectory&gt;src/mywsdls&lt;/wsdlDirectory&gt;
@@ -217,243 +245,260 @@ will be appended to the given <code>wsdlLocation</code>.</p>
      &lt;wsdlLocation&gt;http://example.com/mywebservices/*&lt;/wsdlLocation&gt;
  &lt;/configuration&gt;
  ...
-</pre>
+</pre></div>
 
-wsdlLocation for <code>a.wsdl</code> will be
+wsdlLocation for <tt>a.wsdl</tt> will be
 http://example.com/mywebservices/a.wsdl<br />
-
-wsdlLocation for <code>b/b.wsdl</code> will be
+wsdlLocation for <tt>b/b.wsdl</tt> will be
 http://example.com/mywebservices/b/b.wsdl<br />
-
-wsdlLocation for <code>${basedir}/src/mywsdls/c.wsdl</code> will be
+wsdlLocation for <tt>${basedir}/src/mywsdls/c.wsdl</tt> will be
 file://absolute/path/to/c.wsdl <br />
 <br />
+ 
 <p>Note: External binding files cannot be used if asterisk notation
-is in place.</p>
-<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#wsdlUrls">wsdlUrls</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>List of external WSDL URLs to be compiled.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#xadditionalHeaders">xadditionalHeaders</a></strong></td>
-<td><code>Boolean</code></td>
-<td><code>-</code></td>
-<td>Maps headers not bound to the request or response messages to Java
-method parameters.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#xauthFile">xauthFile</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify the location of authorization file.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#xdebug">xdebug</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Turn on debug message.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#xdisableAuthenticator">xdisableAuthenticator</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Disable Authenticator used by JAX-WS RI, <code>xauthfile</code>
-will be ignored if set.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#xdisableSSLHostnameVerification">xdisableSSLHostnameVerification</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Disable the SSL Hostname verification while fetching WSDL(s).<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#xjcArgs">xjcArgs</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>Specify optional XJC-specific parameters that should simply be
-passed to <code>xjc</code> using <code>-B</code> option of WsImport
+is in place.</p><br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#wsdlUrls">wsdlUrls</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>List of external WSDL URLs to be compiled.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xadditionalHeaders">xadditionalHeaders</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Maps headers not bound to the request or response messages to Java
+method parameters.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#xauthFile">xauthFile</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify the location of authorization file.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xdebug">xdebug</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Turn on debug message.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#xdisableAuthenticator">xdisableAuthenticator</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Disable Authenticator used by JAX-WS RI, <tt>xauthfile</tt>
+will be ignored if set.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xdisableSSLHostnameVerification">xdisableSSLHostnameVerification</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Disable the SSL Hostname verification while fetching WSDL(s).<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#xjcArgs">xjcArgs</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify optional XJC-specific parameters that should simply be
+passed to <tt>xjc</tt> using <tt>-B</tt> option of WsImport
 command. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#xnoAddressingDataBinding">xnoAddressingDataBinding</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Binding W3C EndpointReferenceType to Java. By default WsImport
+placed in its own list.</p><br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xnoAddressingDataBinding">xnoAddressingDataBinding</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Binding W3C EndpointReferenceType to Java. By default WsImport
 follows spec and does not bind EndpointReferenceType to Java and
-uses the spec provided <code>W3CEndpointReference</code><br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#xnocompile">xnocompile</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Turn off compilation after code generation and let generated
+uses the spec provided <tt>W3CEndpointReference</tt><br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#xnocompile">xnocompile</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Turn off compilation after code generation and let generated
 sources be compiled by maven during compilation phase; keep is
-turned on with this option.<br />
-<strong>Default value is</strong>: <code>true</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#xuseBaseResourceAndURLToLoadWSDL">xuseBaseResourceAndURLToLoadWSDL</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>(no description)<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-</table>
-</div>
-<div class="section"><h3><a name="Parameter_Details"></a>Parameter Details</h3>
-<p><strong><a name="args">args</a>:</strong></p>
-<div>Specify optional command-line options. 
+turned on with this option.<br /><b>Default value is</b>: <tt>true</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xuseBaseResourceAndURLToLoadWSDL">xuseBaseResourceAndURLToLoadWSDL</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>(no description)<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="section"><h3>Parameter Details<a name="Parameter_Details"></a></h3>
+        <p><b><a name="args">args</a>:</b></p>
+        <div>Specify optional command-line options. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="bindingDirectory">bindingDirectory</a>:</strong></p>
-<div>Directory containing binding files.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${basedir}/src/jaxws</code></li>
-</ul>
-<hr />
-<p><strong><a name="bindingFiles">bindingFiles</a>:</strong></p>
-<div>List of files to use for bindings. If not specified, all
-<code>.xml</code> files in the <code>bindingDirectory</code> will
-be used.</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="catalog">catalog</a>:</strong></p>
-<div>Catalog file to resolve external entity references support TR9401,
-XCatalog, and OASIS XML Catalog format.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="destDir">destDir</a>:</strong></p>
-<div>Specify where to place output generated classes. Use
-<code>xnocompile</code> to turn this off.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.testOutputDirectory}</code></li>
-</ul>
-<hr />
-<p><strong><a name="encoding">encoding</a>:</strong></p>
-<div>Specify character encoding used by source files.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.sourceEncoding}</code></li>
-</ul>
-<hr />
-<p><strong><a name="extension">extension</a>:</strong></p>
-<div>Allow to use the JAXWS Vendor Extensions.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="genJWS">genJWS</a>:</strong></p>
-<div>Generate stubbed JWS implementation file.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="httpproxy">httpproxy</a>:</strong></p>
-<div>Set HTTP/HTTPS proxy. Format is
-<code>[user[:password]@]proxyHost[:proxyPort]</code>.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="implDestDir">implDestDir</a>:</strong></p>
-<div>Specify where to generate JWS implementation file.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.testSourceDirectory}</code></li>
-</ul>
-<hr />
-<p><strong><a name="implPortName">implPortName</a>:</strong></p>
-<div>Local portion of port name for generated JWS implementation.
-Implies <code>genJWS=true</code>. Note: It is a QName string,
-formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="implServiceName">implServiceName</a>:</strong></p>
-<div>Local portion of service name for generated JWS implementation.
-Implies <code>genJWS=true</code>. Note: It is a QName string,
-formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="keep">keep</a>:</strong></p>
-<div>Keep generated files.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>true</code></li>
-</ul>
-<hr />
-<p><strong><a name="packageName">packageName</a>:</strong></p>
-<div>The package in which the source files will be generated.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="quiet">quiet</a>:</strong></p>
-<div>Suppress wsimport output.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="skip">skip</a>:</strong></p>
-<div>Set this to &quot;true&quot; to bypass code generation.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Expression</strong>: <code>${maven.test.skip}</code></li>
-</ul>
-<hr />
-<p><strong><a name="sourceDestDir">sourceDestDir</a>:</strong></p>
-<div>Specify where to place generated source files, keep is turned on
-with this option.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/generated-sources/test-wsimport</code></li>
-</ul>
-<hr />
-<p><strong><a name="staleFile">staleFile</a>:</strong></p>
-<div>The folder containing flag files used to determine if the output is
-stale.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/jaxws/stale</code></li>
-</ul>
-<hr />
-<p><strong><a name="target">target</a>:</strong></p>
-<div>Generate code as per the given JAXWS specification version. Setting
+placed in its own list.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="bindingDirectory">bindingDirectory</a>:</b></p>
+        <div>Directory containing binding files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${basedir}/src/jaxws</tt></li>
+        </ul><hr /><p><b><a name="bindingFiles">bindingFiles</a>:</b></p>
+        <div>List of files to use for bindings. If not specified, all
+<tt>.xml</tt> files in the <tt>bindingDirectory</tt> will
+be used.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="catalog">catalog</a>:</b></p>
+        <div>Catalog file to resolve external entity references support TR9401,
+XCatalog, and OASIS XML Catalog format.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="destDir">destDir</a>:</b></p>
+        <div>Specify where to place output generated classes. Use
+<tt>xnocompile</tt> to turn this off.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.testOutputDirectory}</tt></li>
+        </ul><hr /><p><b><a name="encoding">encoding</a>:</b></p>
+        <div>Specify character encoding used by source files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>User Property</b>: <tt>project.build.sourceEncoding</tt></li>
+        </ul><hr /><p><b><a name="executable">executable</a>:</b></p>
+        <div>Path to the executable. Should be either wsgen or wsimport but
+basically any script which will understand passed in arguments will
+work.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Since</b>: <tt>2.3</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="extension">extension</a>:</b></p>
+        <div>Allow to use the JAXWS Vendor Extensions.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="genJWS">genJWS</a>:</b></p>
+        <div>Generate stubbed JWS implementation file.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="httpproxy">httpproxy</a>:</b></p>
+        <div>Set HTTP/HTTPS proxy. Format is
+<tt>[user[:password]@]proxyHost[:proxyPort]</tt>.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="implDestDir">implDestDir</a>:</b></p>
+        <div>Specify where to generate JWS implementation file.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.testSourceDirectory}</tt></li>
+        </ul><hr /><p><b><a name="implPortName">implPortName</a>:</b></p>
+        <div>Local portion of port name for generated JWS implementation.
+Implies <tt>genJWS=true</tt>. Note: It is a QName string,
+formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="implServiceName">implServiceName</a>:</b></p>
+        <div>Local portion of service name for generated JWS implementation.
+Implies <tt>genJWS=true</tt>. Note: It is a QName string,
+formatted as: &quot;{&quot; + Namespace URI + &quot;}&quot; + local part</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="keep">keep</a>:</b></p>
+        <div>Keep generated files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>true</tt></li>
+        </ul><hr /><p><b><a name="packageName">packageName</a>:</b></p>
+        <div>The package in which the source files will be generated.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="quiet">quiet</a>:</b></p>
+        <div>Suppress wsimport output.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="remoteRepositories">remoteRepositories</a>:</b></p>
+        <div>The remote plugin repositories declared in the POM.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Since</b>: <tt>2.3</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.pluginArtifactRepositories}</tt></li>
+        </ul><hr /><p><b><a name="skip">skip</a>:</b></p>
+        <div>Set this to &quot;true&quot; to bypass code generation.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>User Property</b>: <tt>maven.test.skip</tt></li>
+        </ul><hr /><p><b><a name="sourceDestDir">sourceDestDir</a>:</b></p>
+        <div>Specify where to place generated source files, keep is turned on
+with this option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.directory}/generated-sources/test-wsimport</tt></li>
+        </ul><hr /><p><b><a name="staleFile">staleFile</a>:</b></p>
+        <div>The folder containing flag files used to determine if the output is
+stale.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.directory}/jaxws/stale</tt></li>
+        </ul><hr /><p><b><a name="target">target</a>:</b></p>
+        <div>Generate code as per the given JAXWS specification version. Setting
 &quot;2.0&quot; will cause JAX-WS to generate artifacts that run with JAX-WS
-2.0 runtime.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="verbose">verbose</a>:</strong></p>
-<div>Output messages about what the tool is doing.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="wsdlDirectory">wsdlDirectory</a>:</strong></p>
-<div>Directory containing WSDL files.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${basedir}/src/wsdl</code></li>
-</ul>
-<hr />
-<p><strong><a name="wsdlFiles">wsdlFiles</a>:</strong></p>
-<div>List of files to use for WSDLs. If not specified, all
-<code>.wsdl</code> files in the <code>wsdlDirectory</code> will be
-used.</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="wsdlLocation">wsdlLocation</a>:</strong></p>
-<div>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
+2.0 runtime.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="verbose">verbose</a>:</b></p>
+        <div>Output messages about what the tool is doing.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="vmArgs">vmArgs</a>:</b></p>
+        <div>Specify optional JVM options. 
+<p>Multiple elements can be specified, and each token must be
+placed in its own list.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="wsdlDirectory">wsdlDirectory</a>:</b></p>
+        <div>Directory containing WSDL files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${basedir}/src/wsdl</tt></li>
+        </ul><hr /><p><b><a name="wsdlFiles">wsdlFiles</a>:</b></p>
+        <div>List of files to use for WSDLs. If not specified, all
+<tt>.wsdl</tt> files in the <tt>wsdlDirectory</tt> will be
+used.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="wsdlLocation">wsdlLocation</a>:</b></p>
+        <div>@WebService.wsdlLocation and @WebServiceClient.wsdlLocation value. 
 <p>Can end with asterisk in which case relative path of the WSDL
-will be appended to the given <code>wsdlLocation</code>.</p>
+will be appended to the given <tt>wsdlLocation</tt>.</p>
 <p>Example:</p>
-<pre>
+<div><pre>
  ...
  &lt;configuration&gt;
      &lt;wsdlDirectory&gt;src/mywsdls&lt;/wsdlDirectory&gt;
@@ -465,92 +510,92 @@ will be appended to the given <code>wsdlLocation</code>.</p>
      &lt;wsdlLocation&gt;http://example.com/mywebservices/*&lt;/wsdlLocation&gt;
  &lt;/configuration&gt;
  ...
-</pre>
+</pre></div>
 
-wsdlLocation for <code>a.wsdl</code> will be
+wsdlLocation for <tt>a.wsdl</tt> will be
 http://example.com/mywebservices/a.wsdl<br />
-
-wsdlLocation for <code>b/b.wsdl</code> will be
+wsdlLocation for <tt>b/b.wsdl</tt> will be
 http://example.com/mywebservices/b/b.wsdl<br />
-
-wsdlLocation for <code>${basedir}/src/mywsdls/c.wsdl</code> will be
+wsdlLocation for <tt>${basedir}/src/mywsdls/c.wsdl</tt> will be
 file://absolute/path/to/c.wsdl <br />
 <br />
+ 
 <p>Note: External binding files cannot be used if asterisk notation
-is in place.</p>
-</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="wsdlUrls">wsdlUrls</a>:</strong></p>
-<div>List of external WSDL URLs to be compiled.</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="xadditionalHeaders">xadditionalHeaders</a>:</strong></p>
-<div>Maps headers not bound to the request or response messages to Java
-method parameters.</div><ul><li><strong>Type</strong>: <code>java.lang.Boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xauthFile">xauthFile</a>:</strong></p>
-<div>Specify the location of authorization file.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="xdebug">xdebug</a>:</strong></p>
-<div>Turn on debug message.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xdisableAuthenticator">xdisableAuthenticator</a>:</strong></p>
-<div>Disable Authenticator used by JAX-WS RI, <code>xauthfile</code>
-will be ignored if set.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xdisableSSLHostnameVerification">xdisableSSLHostnameVerification</a>:</strong></p>
-<div>Disable the SSL Hostname verification while fetching WSDL(s).</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xjcArgs">xjcArgs</a>:</strong></p>
-<div>Specify optional XJC-specific parameters that should simply be
-passed to <code>xjc</code> using <code>-B</code> option of WsImport
+is in place.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="wsdlUrls">wsdlUrls</a>:</b></p>
+        <div>List of external WSDL URLs to be compiled.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="xadditionalHeaders">xadditionalHeaders</a>:</b></p>
+        <div>Maps headers not bound to the request or response messages to Java
+method parameters.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xauthFile">xauthFile</a>:</b></p>
+        <div>Specify the location of authorization file.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="xdebug">xdebug</a>:</b></p>
+        <div>Turn on debug message.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xdisableAuthenticator">xdisableAuthenticator</a>:</b></p>
+        <div>Disable Authenticator used by JAX-WS RI, <tt>xauthfile</tt>
+will be ignored if set.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xdisableSSLHostnameVerification">xdisableSSLHostnameVerification</a>:</b></p>
+        <div>Disable the SSL Hostname verification while fetching WSDL(s).</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xjcArgs">xjcArgs</a>:</b></p>
+        <div>Specify optional XJC-specific parameters that should simply be
+passed to <tt>xjc</tt> using <tt>-B</tt> option of WsImport
 command. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="xnoAddressingDataBinding">xnoAddressingDataBinding</a>:</strong></p>
-<div>Binding W3C EndpointReferenceType to Java. By default WsImport
+placed in its own list.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="xnoAddressingDataBinding">xnoAddressingDataBinding</a>:</b></p>
+        <div>Binding W3C EndpointReferenceType to Java. By default WsImport
 follows spec and does not bind EndpointReferenceType to Java and
-uses the spec provided <code>W3CEndpointReference</code></div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xnocompile">xnocompile</a>:</strong></p>
-<div>Turn off compilation after code generation and let generated
+uses the spec provided <tt>W3CEndpointReference</tt></div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xnocompile">xnocompile</a>:</b></p>
+        <div>Turn off compilation after code generation and let generated
 sources be compiled by maven during compilation phase; keep is
-turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>true</code></li>
-</ul>
-<hr />
-<p><strong><a name="xuseBaseResourceAndURLToLoadWSDL">xuseBaseResourceAndURLToLoadWSDL</a>:</strong></p>
-<div>(no description)</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-</div>
-</div>
+turned on with this option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>true</tt></li>
+        </ul><hr /><p><b><a name="xuseBaseResourceAndURLToLoadWSDL">xuseBaseResourceAndURLToLoadWSDL</a>:</b></p>
+        <div>(no description)</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul>
+      </div>
+    </div>
+  
 
       </div>
     </div>
@@ -559,7 +604,7 @@ turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</c
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2006-2012
+          2006-2013
     
           Oracle
           
@@ -567,8 +612,8 @@ turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</c
 
   
   
-  &nbsp;| Last Published: 02/21/2012
-  &nbsp;| Version: 2.2
+  &nbsp;| Last Published: 05/14/2013
+  &nbsp;| Version: 2.2.1
 </div>
       <div class="clear">
         <hr/>

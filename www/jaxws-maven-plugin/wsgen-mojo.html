@@ -11,14 +11,15 @@
 
 <html>
   <head>
-    <title>JAX-WS Maven plugin - jaxws:wsgen</title>
+    <title>
+    jaxws:wsgen</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
@@ -29,245 +30,296 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2><a name="jaxws:wsgen"></a>jaxws:wsgen</h2>
-<p><strong>Full name</strong>:</p>
-<p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2:wsgen</p>
-<p><strong>Description</strong>:</p>
-<div>Reads a JAX-WS service endpoint implementation class and generates
-all of the portable artifacts for a JAX-WS web service.</div><p><strong>Attributes</strong>:</p>
-<ul><li>Requires a Maven project to be executed.</li>
-<li>Requires dependency resolution of artifacts in scope: <code>runtime</code>.</li>
-<li>Binds by default to the lifecycle phase: <code>process-classes</code>.</li>
-</ul>
-<div class="section"><h3><a name="Optional_Parameters"></a>Optional Parameters</h3>
-<table class="bodyTable"><tr class="a"><th>Name</th>
-<th>Type</th>
-<th>Since</th>
-<th>Description</th>
-</tr>
-<tr class="b"><td><strong><a href="#args">args</a></strong></td>
-<td><code>List</code></td>
-<td><code>-</code></td>
-<td>Specify optional command-line options. 
+        
+  
+    <div class="section"><h2>jaxws:wsgen<a name="jaxws:wsgen"></a></h2>
+      <p><b>Full name</b>:</p>
+      <p>org.jvnet.jax-ws-commons:jaxws-maven-plugin:2.2.1:wsgen</p>
+      <p><b>Description</b>:</p>
+      <div>Reads a JAX-WS service endpoint implementation class and generates
+all of the portable artifacts for a JAX-WS web service.</div>
+      <p><b>Attributes</b>:</p>
+      <ul>
+        <li>Requires a Maven project to be executed.</li>
+        <li>Requires dependency resolution of artifacts in scope: <tt>runtime</tt>.</li>
+        <li>Binds by default to the <a class="externalLink" href="http://maven.apache.org/ref/current/maven-core/lifecycles.html">lifecycle phase</a>: <tt>process-classes</tt>.</li>
+      </ul>
+      <div class="section"><h3>Optional Parameters<a name="Optional_Parameters"></a></h3>
+        <table class="bodyTable" border="0">
+          <tr class="a">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Since</th>
+            <th>Description</th>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#args">args</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify optional command-line options. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#destDir">destDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify where to place output generated classes. Use
-<code>xnocompile</code> to turn this off.<br />
-<strong>Default value is</strong>: <code>${project.build.outputDirectory}</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#encoding">encoding</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Specify character encoding used by source files.<br />
-<strong>Default value is</strong>: <code>${project.build.sourceEncoding}</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#extension">extension</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Allow to use the JAXWS Vendor Extensions.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#genWsdl">genWsdl</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Specify that a WSDL file should be generated in
-<code>${resourceDestDir}</code>.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#inlineSchemas">inlineSchemas</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Inline schemas in the generated WSDL. Used in conjunction with the
-<code>genWsdl</code> option.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#keep">keep</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Keep generated files.<br />
-<strong>Default value is</strong>: <code>true</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#portname">portname</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Specify the Port name to use in the generated WSDL. Used in
-conjunction with the <code>genWsdl</code> option.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#protocol">protocol</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Used in conjunction with <code>genWsdl</code> to specify the
-protocol to use in the <code>wsdl:binding</code>. Valid values are
-&quot;<code>soap1.1</code>&quot; or &quot;<code>Xsoap1.2</code>&quot;, default is
-&quot;<code>soap1.1</code>&quot;. &quot;<code>Xsoap1.2</code>&quot; is not standard and
-can only be used in conjunction with the <code>extension</code>
-option.<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#resourceDestDir">resourceDestDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Directory containing the generated wsdl files.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/generated-sources/wsdl</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#sei">sei</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Service endpoint implementation class name.<br />
-</td>
-</tr>
-<tr class="a"><td><strong><a href="#servicename">servicename</a></strong></td>
-<td><code>String</code></td>
-<td><code>-</code></td>
-<td>Specify the Service name to use in the generated WSDL. Used in
-conjunction with the <code>genWsdl</code> option.<br />
-</td>
-</tr>
-<tr class="b"><td><strong><a href="#sourceDestDir">sourceDestDir</a></strong></td>
-<td><code>File</code></td>
-<td><code>-</code></td>
-<td>Specify where to place generated source files, keep is turned on
-with this option.<br />
-<strong>Default value is</strong>: <code>${project.build.directory}/generated-sources/wsgen</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#verbose">verbose</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Output messages about what the tool is doing.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="b"><td><strong><a href="#xdonotoverwrite">xdonotoverwrite</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>(no description)<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-<tr class="a"><td><strong><a href="#xnocompile">xnocompile</a></strong></td>
-<td><code>boolean</code></td>
-<td><code>-</code></td>
-<td>Turn off compilation after code generation and let generated
-sources be compiled by maven during compilation phase; keep is
-turned on with this option.<br />
-<strong>Default value is</strong>: <code>false</code>.</td>
-</tr>
-</table>
-</div>
-<div class="section"><h3><a name="Parameter_Details"></a>Parameter Details</h3>
-<p><strong><a name="args">args</a>:</strong></p>
-<div>Specify optional command-line options. 
+placed in its own list.</p><br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#destDir">destDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify where to place output generated classes. Use
+<tt>xnocompile</tt> to turn this off.<br /><b>Default value is</b>: <tt>${project.build.outputDirectory}</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#encoding">encoding</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify character encoding used by source files.<br /><b>User property is</b>: <tt>project.build.sourceEncoding</tt>.</td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#executable">executable</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>2.3</tt></td>
+            <td>Path to the executable. Should be either wsgen or wsimport but
+basically any script which will understand passed in arguments will
+work.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#extension">extension</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Allow to use the JAXWS Vendor Extensions.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#genWsdl">genWsdl</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify that a WSDL file should be generated in
+<tt>${resourceDestDir}</tt>.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#inlineSchemas">inlineSchemas</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Inline schemas in the generated WSDL. Used in conjunction with the
+<tt>genWsdl</tt> option.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#keep">keep</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Keep generated files.<br /><b>Default value is</b>: <tt>true</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#portname">portname</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify the Port name to use in the generated WSDL. Used in
+conjunction with the <tt>genWsdl</tt> option.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#protocol">protocol</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Used in conjunction with <tt>genWsdl</tt> to specify the
+protocol to use in the <tt>wsdl:binding</tt>. Valid values are
+&quot;<tt>soap1.1</tt>&quot; or &quot;<tt>Xsoap1.2</tt>&quot;, default is
+&quot;<tt>soap1.1</tt>&quot;. &quot;<tt>Xsoap1.2</tt>&quot; is not standard and
+can only be used in conjunction with the <tt>extension</tt>
+option.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#remoteRepositories">remoteRepositories</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>2.3</tt></td>
+            <td>The remote plugin repositories declared in the POM.<br /><b>Default value is</b>: <tt>${project.pluginArtifactRepositories}</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#resourceDestDir">resourceDestDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Directory containing the generated wsdl files.<br /><b>Default value is</b>: <tt>${project.build.directory}/generated-sources/wsdl</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#sei">sei</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Service endpoint implementation class name.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#servicename">servicename</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify the Service name to use in the generated WSDL. Used in
+conjunction with the <tt>genWsdl</tt> option.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#sourceDestDir">sourceDestDir</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify where to place generated source files, keep is turned on
+with this option.<br /><b>Default value is</b>: <tt>${project.build.directory}/generated-sources/wsgen</tt>.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#verbose">verbose</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Output messages about what the tool is doing.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#vmArgs">vmArgs</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>Specify optional JVM options. 
 <p>Multiple elements can be specified, and each token must be
-placed in its own list.</p>
-</div><ul><li><strong>Type</strong>: <code>java.util.List</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="destDir">destDir</a>:</strong></p>
-<div>Specify where to place output generated classes. Use
-<code>xnocompile</code> to turn this off.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.outputDirectory}</code></li>
-</ul>
-<hr />
-<p><strong><a name="encoding">encoding</a>:</strong></p>
-<div>Specify character encoding used by source files.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.sourceEncoding}</code></li>
-</ul>
-<hr />
-<p><strong><a name="extension">extension</a>:</strong></p>
-<div>Allow to use the JAXWS Vendor Extensions.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="genWsdl">genWsdl</a>:</strong></p>
-<div>Specify that a WSDL file should be generated in
-<code>${resourceDestDir}</code>.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="inlineSchemas">inlineSchemas</a>:</strong></p>
-<div>Inline schemas in the generated WSDL. Used in conjunction with the
-<code>genWsdl</code> option.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="keep">keep</a>:</strong></p>
-<div>Keep generated files.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>true</code></li>
-</ul>
-<hr />
-<p><strong><a name="portname">portname</a>:</strong></p>
-<div>Specify the Port name to use in the generated WSDL. Used in
-conjunction with the <code>genWsdl</code> option.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="protocol">protocol</a>:</strong></p>
-<div>Used in conjunction with <code>genWsdl</code> to specify the
-protocol to use in the <code>wsdl:binding</code>. Valid values are
-&quot;<code>soap1.1</code>&quot; or &quot;<code>Xsoap1.2</code>&quot;, default is
-&quot;<code>soap1.1</code>&quot;. &quot;<code>Xsoap1.2</code>&quot; is not standard and
-can only be used in conjunction with the <code>extension</code>
-option.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="resourceDestDir">resourceDestDir</a>:</strong></p>
-<div>Directory containing the generated wsdl files.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/generated-sources/wsdl</code></li>
-</ul>
-<hr />
-<p><strong><a name="sei">sei</a>:</strong></p>
-<div>Service endpoint implementation class name.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="servicename">servicename</a>:</strong></p>
-<div>Specify the Service name to use in the generated WSDL. Used in
-conjunction with the <code>genWsdl</code> option.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-</ul>
-<hr />
-<p><strong><a name="sourceDestDir">sourceDestDir</a>:</strong></p>
-<div>Specify where to place generated source files, keep is turned on
-with this option.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>${project.build.directory}/generated-sources/wsgen</code></li>
-</ul>
-<hr />
-<p><strong><a name="verbose">verbose</a>:</strong></p>
-<div>Output messages about what the tool is doing.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xdonotoverwrite">xdonotoverwrite</a>:</strong></p>
-<div>(no description)</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-<hr />
-<p><strong><a name="xnocompile">xnocompile</a>:</strong></p>
-<div>Turn off compilation after code generation and let generated
+placed in its own list.</p><br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#xdonotoverwrite">xdonotoverwrite</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>(no description)<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#xnocompile">xnocompile</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Turn off compilation after code generation and let generated
 sources be compiled by maven during compilation phase; keep is
-turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</code></li>
-<li><strong>Required</strong>: <code>No</code></li>
-<li><strong>Default</strong>: <code>false</code></li>
-</ul>
-</div>
-</div>
+turned on with this option.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="section"><h3>Parameter Details<a name="Parameter_Details"></a></h3>
+        <p><b><a name="args">args</a>:</b></p>
+        <div>Specify optional command-line options. 
+<p>Multiple elements can be specified, and each token must be
+placed in its own list.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="destDir">destDir</a>:</b></p>
+        <div>Specify where to place output generated classes. Use
+<tt>xnocompile</tt> to turn this off.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.outputDirectory}</tt></li>
+        </ul><hr /><p><b><a name="encoding">encoding</a>:</b></p>
+        <div>Specify character encoding used by source files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>User Property</b>: <tt>project.build.sourceEncoding</tt></li>
+        </ul><hr /><p><b><a name="executable">executable</a>:</b></p>
+        <div>Path to the executable. Should be either wsgen or wsimport but
+basically any script which will understand passed in arguments will
+work.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Since</b>: <tt>2.3</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="extension">extension</a>:</b></p>
+        <div>Allow to use the JAXWS Vendor Extensions.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="genWsdl">genWsdl</a>:</b></p>
+        <div>Specify that a WSDL file should be generated in
+<tt>${resourceDestDir}</tt>.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="inlineSchemas">inlineSchemas</a>:</b></p>
+        <div>Inline schemas in the generated WSDL. Used in conjunction with the
+<tt>genWsdl</tt> option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="keep">keep</a>:</b></p>
+        <div>Keep generated files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>true</tt></li>
+        </ul><hr /><p><b><a name="portname">portname</a>:</b></p>
+        <div>Specify the Port name to use in the generated WSDL. Used in
+conjunction with the <tt>genWsdl</tt> option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="protocol">protocol</a>:</b></p>
+        <div>Used in conjunction with <tt>genWsdl</tt> to specify the
+protocol to use in the <tt>wsdl:binding</tt>. Valid values are
+&quot;<tt>soap1.1</tt>&quot; or &quot;<tt>Xsoap1.2</tt>&quot;, default is
+&quot;<tt>soap1.1</tt>&quot;. &quot;<tt>Xsoap1.2</tt>&quot; is not standard and
+can only be used in conjunction with the <tt>extension</tt>
+option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="remoteRepositories">remoteRepositories</a>:</b></p>
+        <div>The remote plugin repositories declared in the POM.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Since</b>: <tt>2.3</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.pluginArtifactRepositories}</tt></li>
+        </ul><hr /><p><b><a name="resourceDestDir">resourceDestDir</a>:</b></p>
+        <div>Directory containing the generated wsdl files.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.directory}/generated-sources/wsdl</tt></li>
+        </ul><hr /><p><b><a name="sei">sei</a>:</b></p>
+        <div>Service endpoint implementation class name.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="servicename">servicename</a>:</b></p>
+        <div>Specify the Service name to use in the generated WSDL. Used in
+conjunction with the <tt>genWsdl</tt> option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="sourceDestDir">sourceDestDir</a>:</b></p>
+        <div>Specify where to place generated source files, keep is turned on
+with this option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>${project.build.directory}/generated-sources/wsgen</tt></li>
+        </ul><hr /><p><b><a name="verbose">verbose</a>:</b></p>
+        <div>Output messages about what the tool is doing.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="vmArgs">vmArgs</a>:</b></p>
+        <div>Specify optional JVM options. 
+<p>Multiple elements can be specified, and each token must be
+placed in its own list.</p></div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="xdonotoverwrite">xdonotoverwrite</a>:</b></p>
+        <div>(no description)</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="xnocompile">xnocompile</a>:</b></p>
+        <div>Turn off compilation after code generation and let generated
+sources be compiled by maven during compilation phase; keep is
+turned on with this option.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul>
+      </div>
+    </div>
+  
 
       </div>
     </div>
@@ -276,7 +328,7 @@ turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</c
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2006-2012
+          2006-2013
     
           Oracle
           
@@ -284,8 +336,8 @@ turned on with this option.</div><ul><li><strong>Type</strong>: <code>boolean</c
 
   
   
-  &nbsp;| Last Published: 02/21/2012
-  &nbsp;| Version: 2.2
+  &nbsp;| Last Published: 05/14/2013
+  &nbsp;| Version: 2.2.1
 </div>
       <div class="clear">
         <hr/>
