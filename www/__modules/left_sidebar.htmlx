@@ -4,13 +4,6 @@
 		<a href="https://glassfish.java.net/">GlassFish Community</a>
 	      </dt>
 	      <dd class="depth0 parent parent" id="menubar">
-<!-- main menu bar -->
-<ul id="main-menubar">
-  <li><a href="https://www.java.net/forums/glassfish/metro-and-jaxb">Discussion forums</a>
-  <li><a href="https://java.net/projects/jax-ws-commons/lists">Mailing lists</a>
-  <li><a href="https://java.net/jira/browse/JAX_WS_COMMONS">Issue tracker</a>
-  <li><a href="https://java.net/projects/jax-ws-commons/sources/svn/show">Source code</a>
-</ul>
 
 <!-- menubar for jaxws-maven-plugin -->
 <ul id="menubar-jaxws-maven-plugin" style="display:none;">
@@ -202,6 +195,13 @@
   <li><a href="https://jax-ws-commons.java.net/guice/sources.html">Sources</a>
 </ul>
 
+<!-- main menu bar -->
+<ul id="main-menubar">
+  <li><a href="https://www.java.net/forums/glassfish/metro-and-jaxb">Discussion forums</a>
+  <li><a href="https://java.net/projects/jax-ws-commons/lists">Mailing lists</a>
+  <li><a href="https://java.net/jira/browse/JAX_WS_COMMONS">Issue tracker</a>
+  <li><a href="https://java.net/projects/jax-ws-commons/sources/svn/show">Source code</a>
+</ul>
 
 <script>
 var info = {
@@ -236,8 +236,8 @@ var info = {
     entry2("menubar-main","")
   ];
 
-  var activeMenu = menus[0];
-  for( var i=1; i<menus.length; i++ ) {
+  var activeMenu = menus[menus.length-1];
+  for( var i=0; i<menus.length-1; i++ ) {
     if(window.location.href.indexOf(menus[i].url) === 0) {
       activeMenu = menus[i];
     }
