@@ -245,12 +245,14 @@ var info = {
 
   var activeMenu = menus[0];
   for( var i=1; i<menus.length; i++ ) {
-    if(window.location.href.indexOf(menus[i].url)==0)
+    if(window.location.href.indexOf(menus[i].url)===0)
       activeMenu = menus[i];
   }
   
   for( var i=0; i<menus.length; i++ ) {
-    menus[i].element.style.display = menus[i]==activeMenu ? "" : "none";
+    if (menus[i].element !== null) {
+        menus[i].element.style.display = menus[i] === activeMenu ? "" : "none";
+    }
   }
 })();
 </script>
