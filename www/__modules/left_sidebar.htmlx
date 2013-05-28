@@ -8,7 +8,7 @@
 <!-- menubar for jaxws-maven-plugin -->
 <ul id="menubar-jaxws-maven-plugin" style="display:none;">
   <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/">Introduction</a>
-  <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/plugin-info.html">Goal</a>
+  <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/plugin-info.html">Goals</a>
   <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/usage.html">Usage</a>
   <li><a href="#">Project Information</a>
     <ul>
@@ -43,7 +43,7 @@
   </li>
   <li><a href="#">Project Info</a>
     <ul>
-      <li><a href="https://jax-ws-commons.java.net/source/browse/jax-ws-commons/trunk/spring/jaxws-spring">Subversion</a>
+      <li><a href="https://java.net/projects/jax-ws-commons/sources/svn/show/trunk/spring">Subversion</a>
     </ul>
   </li>
 </ul>
@@ -118,7 +118,6 @@
 <ul id="menubar-smtp" style="display:none;">
   <li><a href="https://jax-ws-commons.java.net/smtp/">Introduction</a>
   <li><a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/repository/org/jvnet/jax-ws-commons/smtp/">Download</a>
-  <li><a href="https://jax-ws-commons.java.net/smtp/plugin-info.html">Goal</a>
   <li><a href="#">Project Information</a>
     <ul>
       <li><a href="https://jax-ws-commons.java.net/smtp/dependencies.html">Dependencies</a>

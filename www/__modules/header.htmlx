@@ -116,7 +116,7 @@ if(window.location.href.indexOf("https://glassfish.java.net/ja/")==0) {
 // prepare the Join link
 //
 if (window.location.href.indexOf("://java.net/projects/") > 3) {
-    var vbkpatt1=/projects\/[^/]+/di;
+    var vbkpatt1=/projects\/[^/]+/i;
     try {
         document.getElementById("joinbutton1").setAttribute("href", "/"+
             window.location.href.match(vbkpatt1)+"/watch");
