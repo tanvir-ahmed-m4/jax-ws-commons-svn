@@ -171,3 +171,4 @@ virtualbox/target
 virtualbox/virtualbox.iml
 virtualbox/virtualbox.ipr
 virtualbox/virtualbox.iws
+www/in-vm/invm-sample/target

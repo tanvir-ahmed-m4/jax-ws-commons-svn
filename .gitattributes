@@ -1303,6 +1303,10 @@ www/http-session-scope/source-repository.html -text
 www/http-session-scope/team-list.html -text
 www/in-vm/build.xml -text
 www/in-vm/index.html -text
+www/in-vm/invm-sample/pom.xml -text
+www/in-vm/invm-sample/src/main/java/server/HelloWorld.java -text
+www/in-vm/invm-sample/src/test/java/client/HelloWorldTest.java -text
+www/in-vm/invm-sample/src/test/resources/WEB-INF/sun-jaxws.xml -text
 www/in-vm/invm-transport.jar -text svneol=unset#unset
 www/in-vm/invmsample.zip -text
 www/index.html svneol=native#text/html
