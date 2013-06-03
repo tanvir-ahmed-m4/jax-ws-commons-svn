@@ -231,11 +231,13 @@ jaxws-maven-plugin/src/site/apt/examples/using-jaxb-plugins.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-jaxws22-on-jdk6.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-metro.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-wsdlLocation.apt -text
+jaxws-maven-plugin/src/site/apt/examples/using-wstools-from-jdk.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
 jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/resources/release-notes-21.html -text
 jaxws-maven-plugin/src/site/resources/release-notes-22.html -text
 jaxws-maven-plugin/src/site/resources/release-notes-221.html -text
+jaxws-maven-plugin/src/site/resources/release-notes-23.html -text
 jaxws-maven-plugin/src/test/it/help/invoker.properties -text
 jaxws-maven-plugin/src/test/it/help/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-103/lib/pom.xml -text
