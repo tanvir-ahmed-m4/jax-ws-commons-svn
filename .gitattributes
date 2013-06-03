@@ -236,6 +236,8 @@ jaxws-maven-plugin/src/site/apt/usage.apt -text
 jaxws-maven-plugin/src/site/resources/release-notes-21.html -text
 jaxws-maven-plugin/src/site/resources/release-notes-22.html -text
 jaxws-maven-plugin/src/site/resources/release-notes-221.html -text
+jaxws-maven-plugin/src/test/it/help/invoker.properties -text
+jaxws-maven-plugin/src/test/it/help/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-103/lib/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-103/lib/src/main/java/mojo/it/jaxwscommons103/lib/EchoImpl.java -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-103/pom.xml -text
@@ -320,6 +322,7 @@ jaxws-maven-plugin/src/test/it/wsimport22/src/test-wsdl/xjc/c.xml -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs.wsdl -text
 jaxws-maven-plugin/src/test/it/wsimport22/src/wsdl/HelloWs_schema1.xsd -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/Assertions.java -text
+jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/HelpMojoITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/MixedITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/RepositoryITCase.java -text
 jaxws-maven-plugin/src/test/java/org/jvnet/jax_ws_commons/jaxws/WsGenMojoITCase.java -text
