@@ -112,6 +112,7 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-4/target
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/src
 jaxws-maven-plugin/src/test/it/jaxwscommons-49/target
 jaxws-maven-plugin/src/test/it/jaxwscommons-81/target
+jaxws-maven-plugin/src/test/it/metro/target
 jaxws-maven-plugin/src/test/it/wsdl-lib/target
 jaxws-maven-plugin/src/test/it/wsgen217/target
 jaxws-maven-plugin/src/test/it/wsgen22/target
