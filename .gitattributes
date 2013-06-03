@@ -284,6 +284,7 @@ jaxws-maven-plugin/src/test/it/jaxwscommons-95/src/wsdl/AddService.wsdl -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-98/invoker.properties -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-98/pom.xml -text
 jaxws-maven-plugin/src/test/it/jaxwscommons-98/src/main/wsdls/README -text
+jaxws-maven-plugin/src/test/it/metro/pom.xml -text
 jaxws-maven-plugin/src/test/it/parent/invoker.properties -text
 jaxws-maven-plugin/src/test/it/parent/pom.xml -text
 jaxws-maven-plugin/src/test/it/wsdl-lib/invoker.properties -text
