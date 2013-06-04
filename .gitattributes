@@ -230,6 +230,7 @@ jaxws-maven-plugin/src/site/apt/examples/using-binding-files.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-jaxb-plugins.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-jaxws22-on-jdk6.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-metro.apt -text
+jaxws-maven-plugin/src/site/apt/examples/using-snapshots.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-wsdlLocation.apt -text
 jaxws-maven-plugin/src/site/apt/examples/using-wstools-from-jdk.apt -text
 jaxws-maven-plugin/src/site/apt/index.apt -text
