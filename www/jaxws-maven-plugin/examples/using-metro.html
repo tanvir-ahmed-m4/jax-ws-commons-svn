@@ -29,18 +29,49 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <!--  --><!-- Copyright 2011-2013 Oracle --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Using JAX-WS 2.2.x on JDK 6<a name="Using_JAX-WS_2.2.x_on_JDK_6"></a></h2><div class="source"><pre>&lt;project&gt;
+        <!--  --><!-- Copyright 2013 Oracle --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Using <a class="externalLink" href="http://metro.java.net">Metro</a> binaries<a name="Using_Metro_binaries"></a></h2><div class="source"><pre>&lt;project&gt;
   ...
   &lt;dependencies&gt;
       ...
     &lt;dependency&gt;
-      &lt;groupId&gt;com.sun.xml.ws&lt;/groupId&gt;
-      &lt;artifactId&gt;jaxws-rt&lt;/artifactId&gt;
-      &lt;version&gt;2.2.8&lt;/version&gt;
+      &lt;groupId&gt;org.glassfish.metro&lt;/groupId&gt;
+      &lt;artifactId&gt;webservices-rt&lt;/artifactId&gt;
+      &lt;version&gt;2.3&lt;/version&gt;
     &lt;/dependency&gt;
     ...
   &lt;/dependencies&gt;
   ...
+  &lt;build&gt;
+    ...
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.jvnet.jax-ws-commons&lt;/groupId&gt;
+        &lt;artifactId&gt;jaxws-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.3&lt;/version&gt;
+        &lt;dependencies&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.metro&lt;/groupId&gt;
+            &lt;artifactId&gt;webservices-tools&lt;/artifactId&gt;
+            &lt;version&gt;2.3&lt;/version&gt;
+          &lt;/dependency&gt;
+          &lt;!-- see https://java.net/jira/browse/WSIT-1672 --&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.metro&lt;/groupId&gt;
+            &lt;artifactId&gt;webservices-rt&lt;/artifactId&gt;
+            &lt;version&gt;2.3&lt;/version&gt;
+          &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+        &lt;executions&gt;
+          ...
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+      ...
+    &lt;/plugins&gt;
+    ...
+  &lt;build&gt;
+  ...
+
+  &lt;!-- compilation on JDK 6 --&gt;
   &lt;profiles&gt;
     ...
     &lt;profile&gt;
@@ -67,21 +98,14 @@
                 &lt;configuration&gt;
                   &lt;outputDirectory&gt;${endorsed.dir}&lt;/outputDirectory&gt;
                   &lt;silent&gt;true&lt;/silent&gt;
-                  &lt;!-- need JAXB API and JAX-WS API in an endorsed dir--&gt;
+                  &lt;!-- need new APIs in an endorsed dir --&gt;
                   &lt;artifactItems&gt;
                     &lt;artifactItem&gt;
-                      &lt;groupId&gt;javax.xml.bind&lt;/groupId&gt;
-                      &lt;artifactId&gt;jaxb-api&lt;/artifactId&gt;
-                      &lt;version&gt;2.2.7&lt;/version&gt;
+                      &lt;groupId&gt;org.glassfish.metro&lt;/groupId&gt;
+                      &lt;artifactId&gt;webservices-api&lt;/artifactId&gt;
+                      &lt;version&gt;2.3&lt;/version&gt;
                       &lt;type&gt;jar&lt;/type&gt;
                     &lt;/artifactItem&gt;
-                    &lt;artifactItem&gt;
-                      &lt;groupId&gt;javax.xml.ws&lt;/groupId&gt;
-                      &lt;artifactId&gt;jaxws-api&lt;/artifactId&gt;
-                      &lt;version&gt;2.2.9&lt;/version&gt;
-                      &lt;type&gt;jar&lt;/type&gt;
-                    &lt;/artifactItem&gt;
-                  &lt;/artifactItems&gt;
                 &lt;/configuration&gt;
               &lt;/execution&gt;
             &lt;/executions&gt;
@@ -104,7 +128,6 @@
     &lt;/profile&gt;
     ...
   &lt;/profiles&gt;
-  ...
 &lt;/project&gt;</pre></div></div>
       </div>
     </div>
