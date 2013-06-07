@@ -10,10 +10,21 @@
   <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/">Introduction</a>
   <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/plugin-info.html">Goals</a>
   <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/usage.html">Usage</a>
+  <li><a href="#">Examples</a>
+    <ul>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-metro.html">Using Metro</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-binding-files.html">Using binding files</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-jaxb-plugins.html">Using xjc plugins</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-wsdlLocation.html">Using wsdlLocation</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-wstools-from-jdk.html">Using JDK tools</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-snapshots.html">Using SNAPSHOTs</a>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/examples/using-jaxws22-on-jdk6.html">Running on JDK6</a>
+    </ul>
+  </li>
   <li><a href="#">Project Information</a>
     <ul>
+      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/license.html">License</a>
       <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/dependencies.html">Dependencies</a>
-      <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/project-summary.html">Project Summary</a>
       <li><a href="https://jax-ws-commons.java.net/jaxws-maven-plugin/source-repository.html">Source Repository</a>
     </ul>
   </li>
