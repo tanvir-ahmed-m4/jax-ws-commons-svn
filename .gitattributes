@@ -222,6 +222,7 @@ guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManaged.java -tex
 guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedFeature.java -text
 guice/src/main/java/org/jvnet/jax_ws_commons/guicemanaged/GuiceManagedInstanceResolver.java -text
 http-session-scope/src/site/apt/index.apt -text
+jaxws-maven-plugin/LICENCE.txt -text
 jaxws-maven-plugin/copyright-exclude -text
 jaxws-maven-plugin/copyright.txt -text
 jaxws-maven-plugin/exclude.xml -text
