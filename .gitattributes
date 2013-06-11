@@ -1318,6 +1318,7 @@ www/in-vm/invm-sample/src/test/resources/WEB-INF/sun-jaxws.xml -text
 www/in-vm/invmsample.zip -text
 www/index.html svneol=native#text/html
 www/jaxws-maven-plugin/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text svneol=unset#unset
+www/jaxws-maven-plugin/css/print.css -text
 www/jaxws-maven-plugin/css/site.css -text
 www/jaxws-maven-plugin/dependencies.html -text
 www/jaxws-maven-plugin/examples/using-binding-files.html -text
@@ -1331,6 +1332,7 @@ www/jaxws-maven-plugin/help-mojo.html -text
 www/jaxws-maven-plugin/images/close.gif -text
 www/jaxws-maven-plugin/images/collapsed.gif -text
 www/jaxws-maven-plugin/images/expanded.gif -text
+www/jaxws-maven-plugin/images/external.png -text
 www/jaxws-maven-plugin/index.html -text
 www/jaxws-maven-plugin/license.html -text
 www/jaxws-maven-plugin/plugin-info.html -text
