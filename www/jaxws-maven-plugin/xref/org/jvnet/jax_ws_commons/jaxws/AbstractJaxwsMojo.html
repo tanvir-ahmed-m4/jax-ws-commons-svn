@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
 </head>
 <body>
-<div id="overview"><a href="../../../../../apidocs/org/jvnet/jax_ws_commons/jaxws/AbstractJaxwsMojo.html">View Javadoc</a></div><pre>
+<pre>
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
 <a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.</em>
@@ -372,146 +372,165 @@
 <a class="jxr_linenumber" name="362" href="#362">362</a>                 cmd.createArg().setValue(classpath[2]);
 <a class="jxr_linenumber" name="363" href="#363">363</a>                 cmd.createArg().setLine(<span class="jxr_string">"org.jvnet.jax_ws_commons.jaxws.Invoker"</span>);
 <a class="jxr_linenumber" name="364" href="#364">364</a>                 cmd.createArg().setLine(getMain());
-<a class="jxr_linenumber" name="365" href="#365">365</a>                 File pathFile = createPathFile(
-<a class="jxr_linenumber" name="366" href="#366">366</a>                         (getExtraClasspath() != <strong class="jxr_keyword">null</strong> ? getExtraClasspath() + File.pathSeparator : <span class="jxr_string">""</span>)
-<a class="jxr_linenumber" name="367" href="#367">367</a>                         + classpath[1]);
-<a class="jxr_linenumber" name="368" href="#368">368</a>                 cmd.createArg().setLine(<span class="jxr_string">"-pathfile "</span> + pathFile.getAbsolutePath());
-<a class="jxr_linenumber" name="369" href="#369">369</a>                 <strong class="jxr_keyword">if</strong> (getExtraClasspath() != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="370" href="#370">370</a>                     cmd.createArg().setLine(<span class="jxr_string">"-cp "</span> + getExtraClasspath());
-<a class="jxr_linenumber" name="371" href="#371">371</a>                 }
-<a class="jxr_linenumber" name="372" href="#372">372</a>             }
-<a class="jxr_linenumber" name="373" href="#373">373</a>             cmd.setWorkingDirectory(project.getBasedir());
-<a class="jxr_linenumber" name="374" href="#374">374</a>             <strong class="jxr_keyword">for</strong> (String arg : args) {
-<a class="jxr_linenumber" name="375" href="#375">375</a>                 cmd.createArg().setLine(arg);
-<a class="jxr_linenumber" name="376" href="#376">376</a>             }
-<a class="jxr_linenumber" name="377" href="#377">377</a>             getLog().debug(cmd.toString());
-<a class="jxr_linenumber" name="378" href="#378">378</a>             <strong class="jxr_keyword">if</strong> (CommandLineUtils.executeCommandLine(cmd, sc, sc) != 0) {
-<a class="jxr_linenumber" name="379" href="#379">379</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Mojo failed - check output"</span>);
-<a class="jxr_linenumber" name="380" href="#380">380</a>             }
-<a class="jxr_linenumber" name="381" href="#381">381</a>         } <strong class="jxr_keyword">catch</strong> (ArtifactNotFoundException t) {
-<a class="jxr_linenumber" name="382" href="#382">382</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
-<a class="jxr_linenumber" name="383" href="#383">383</a>         } <strong class="jxr_keyword">catch</strong> (ArtifactResolutionException t) {
-<a class="jxr_linenumber" name="384" href="#384">384</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
-<a class="jxr_linenumber" name="385" href="#385">385</a>         } <strong class="jxr_keyword">catch</strong> (CommandLineException t) {
-<a class="jxr_linenumber" name="386" href="#386">386</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
-<a class="jxr_linenumber" name="387" href="#387">387</a>         }
-<a class="jxr_linenumber" name="388" href="#388">388</a>     }
-<a class="jxr_linenumber" name="389" href="#389">389</a> 
-<a class="jxr_linenumber" name="390" href="#390">390</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> maybeUnsupportedOption(String option, String value, List&lt;String&gt; args) {
-<a class="jxr_linenumber" name="391" href="#391">391</a>         <strong class="jxr_keyword">if</strong> (executable == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="392" href="#392">392</a>             args.add(option);
-<a class="jxr_linenumber" name="393" href="#393">393</a>             <strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="394" href="#394">394</a>                 args.add(value);
-<a class="jxr_linenumber" name="395" href="#395">395</a>             }
-<a class="jxr_linenumber" name="396" href="#396">396</a>         } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="397" href="#397">397</a>             getLog().warn(option + <span class="jxr_string">" may not supported on older JDKs.\n"</span>
-<a class="jxr_linenumber" name="398" href="#398">398</a>                     + <span class="jxr_string">"Use &lt;args&gt; to bypass this warning if you really want to use it."</span>);
-<a class="jxr_linenumber" name="399" href="#399">399</a>         }
-<a class="jxr_linenumber" name="400" href="#400">400</a>     }
-<a class="jxr_linenumber" name="401" href="#401">401</a> 
-<a class="jxr_linenumber" name="402" href="#402">402</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
-<a class="jxr_linenumber" name="403" href="#403">403</a>     <strong class="jxr_keyword">private</strong> String[] getCP() <strong class="jxr_keyword">throws</strong> ArtifactResolutionException, ArtifactNotFoundException {
-<a class="jxr_linenumber" name="404" href="#404">404</a>         Set&lt;Artifact&gt; cp = <strong class="jxr_keyword">new</strong> HashSet&lt;Artifact&gt;();
-<a class="jxr_linenumber" name="405" href="#405">405</a>         Artifact originatingArtifact = artifactFactory.createBuildArtifact(<span class="jxr_string">"dummy"</span>, <span class="jxr_string">"dummy"</span>, <span class="jxr_string">"1.0"</span>, <span class="jxr_string">"jar"</span>);
-<a class="jxr_linenumber" name="406" href="#406">406</a>         List&lt;Plugin&gt; plugins = project.getBuildPlugins();
-<a class="jxr_linenumber" name="407" href="#407">407</a>         <strong class="jxr_keyword">for</strong> (Plugin p : plugins) {
-<a class="jxr_linenumber" name="408" href="#408">408</a>             <strong class="jxr_keyword">if</strong> (<span class="jxr_string">"jaxws-maven-plugin"</span>.equals(p.getArtifactId()) &amp;&amp; <span class="jxr_string">"org.jvnet.jax-ws-commons"</span>.equals(p.getGroupId())) {
-<a class="jxr_linenumber" name="409" href="#409">409</a>                 <strong class="jxr_keyword">boolean</strong> toolsAdded = false;
-<a class="jxr_linenumber" name="410" href="#410">410</a>                 <strong class="jxr_keyword">for</strong> (Dependency d : p.getDependencies()) {
-<a class="jxr_linenumber" name="411" href="#411">411</a>                     Set&lt;Artifact&gt; toInclude = <strong class="jxr_keyword">new</strong> HashSet&lt;Artifact&gt;();
-<a class="jxr_linenumber" name="412" href="#412">412</a>                     List&lt;String&gt; toExclude = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
-<a class="jxr_linenumber" name="413" href="#413">413</a>                     <strong class="jxr_keyword">for</strong> (Exclusion e : d.getExclusions()) {
-<a class="jxr_linenumber" name="414" href="#414">414</a>                         toExclude.add(e.getGroupId() + <span class="jxr_string">":"</span> + e.getArtifactId());
-<a class="jxr_linenumber" name="415" href="#415">415</a>                         getLog().debug(<span class="jxr_string">"excluding: "</span> + e.getGroupId() + <span class="jxr_string">":"</span> + e.getArtifactId());
-<a class="jxr_linenumber" name="416" href="#416">416</a>                     }
-<a class="jxr_linenumber" name="417" href="#417">417</a>                     <strong class="jxr_keyword">if</strong> ((<span class="jxr_string">"jaxws-tools"</span>.equals(d.getArtifactId()) &amp;&amp; <span class="jxr_string">"com.sun.xml.ws"</span>.equals(d.getGroupId()))
-<a class="jxr_linenumber" name="418" href="#418">418</a>                             || (<span class="jxr_string">"webservices-tools"</span>.equals(d.getArtifactId())) &amp;&amp; <span class="jxr_string">"org.glassfish.metro"</span>.equals(d.getGroupId())) {
-<a class="jxr_linenumber" name="419" href="#419">419</a>                         toolsAdded = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="420" href="#420">420</a>                     }
-<a class="jxr_linenumber" name="421" href="#421">421</a>                     toInclude.add(pluginArtifactMap.get(d.getGroupId() + <span class="jxr_string">":"</span> + d.getArtifactId()));
-<a class="jxr_linenumber" name="422" href="#422">422</a>                     ArtifactFilter filter = <strong class="jxr_keyword">new</strong> ExcludesArtifactFilter(toExclude);
-<a class="jxr_linenumber" name="423" href="#423">423</a>                     getLog().debug(<span class="jxr_string">"resolving: "</span> + d.getGroupId() + <span class="jxr_string">":"</span> + d.getArtifactId());
-<a class="jxr_linenumber" name="424" href="#424">424</a>                     ArtifactResolutionResult res = artifactResolver.resolveTransitively(
-<a class="jxr_linenumber" name="425" href="#425">425</a>                             toInclude,
-<a class="jxr_linenumber" name="426" href="#426">426</a>                             originatingArtifact, localRepository, remoteRepositories,
-<a class="jxr_linenumber" name="427" href="#427">427</a>                             metadataSource, filter);
-<a class="jxr_linenumber" name="428" href="#428">428</a>                     cp.addAll(res.getArtifacts());
-<a class="jxr_linenumber" name="429" href="#429">429</a>                 }
-<a class="jxr_linenumber" name="430" href="#430">430</a>                 <strong class="jxr_keyword">if</strong> (!toolsAdded) {
-<a class="jxr_linenumber" name="431" href="#431">431</a>                     ArtifactResolutionResult res = artifactResolver.resolveTransitively(
-<a class="jxr_linenumber" name="432" href="#432">432</a>                             Collections.singleton(pluginArtifactMap.get(<span class="jxr_string">"com.sun.xml.ws:jaxws-tools"</span>)),
-<a class="jxr_linenumber" name="433" href="#433">433</a>                             originatingArtifact, remoteRepositories, localRepository, metadataSource);
-<a class="jxr_linenumber" name="434" href="#434">434</a>                     cp.addAll(res.getArtifacts());
-<a class="jxr_linenumber" name="435" href="#435">435</a>                 }
-<a class="jxr_linenumber" name="436" href="#436">436</a>                 <strong class="jxr_keyword">break</strong>;
-<a class="jxr_linenumber" name="437" href="#437">437</a>             }
-<a class="jxr_linenumber" name="438" href="#438">438</a>         }
-<a class="jxr_linenumber" name="439" href="#439">439</a>         StringBuilder sb = <strong class="jxr_keyword">new</strong> StringBuilder();
-<a class="jxr_linenumber" name="440" href="#440">440</a>         StringBuilder esb = <strong class="jxr_keyword">new</strong> StringBuilder();
-<a class="jxr_linenumber" name="441" href="#441">441</a>         <strong class="jxr_keyword">for</strong> (Artifact a : cp) {
-<a class="jxr_linenumber" name="442" href="#442">442</a>             <strong class="jxr_keyword">if</strong> (<span class="jxr_string">"jaxws-api"</span>.equals(a.getArtifactId()) || <span class="jxr_string">"jaxb-api"</span>.equals(a.getArtifactId())
-<a class="jxr_linenumber" name="443" href="#443">443</a>                     || <span class="jxr_string">"saaj-api"</span>.equals(a.getArtifactId()) || <span class="jxr_string">"jsr181-api"</span>.equals(a.getArtifactId())
-<a class="jxr_linenumber" name="444" href="#444">444</a>                     || <span class="jxr_string">"javax.annotation"</span>.equals(a.getArtifactId())
-<a class="jxr_linenumber" name="445" href="#445">445</a>                     || <span class="jxr_string">"javax.annotation-api"</span>.equals(a.getArtifactId())
-<a class="jxr_linenumber" name="446" href="#446">446</a>                     || <span class="jxr_string">"webservices-api"</span>.equals(a.getArtifactId())) {
-<a class="jxr_linenumber" name="447" href="#447">447</a>                 esb.append(a.getFile().getAbsolutePath());
-<a class="jxr_linenumber" name="448" href="#448">448</a>                 esb.append(File.pathSeparator);
-<a class="jxr_linenumber" name="449" href="#449">449</a>             } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="450" href="#450">450</a>                 sb.append(a.getFile().getAbsolutePath());
-<a class="jxr_linenumber" name="451" href="#451">451</a>                 sb.append(File.pathSeparator);
-<a class="jxr_linenumber" name="452" href="#452">452</a>             }
-<a class="jxr_linenumber" name="453" href="#453">453</a>         }
-<a class="jxr_linenumber" name="454" href="#454">454</a>         <em class="jxr_comment">//add custom invoker</em>
-<a class="jxr_linenumber" name="455" href="#455">455</a>         String invokerPath = AbstractJaxwsMojo.<strong class="jxr_keyword">class</strong>.getProtectionDomain().getCodeSource().getLocation().toExternalForm();
-<a class="jxr_linenumber" name="456" href="#456">456</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="457" href="#457">457</a>             invokerPath = <strong class="jxr_keyword">new</strong> URI(invokerPath.substring(5)).getPath();
-<a class="jxr_linenumber" name="458" href="#458">458</a>             sb.append(invokerPath);
-<a class="jxr_linenumber" name="459" href="#459">459</a>         } <strong class="jxr_keyword">catch</strong> (URISyntaxException ex) {
-<a class="jxr_linenumber" name="460" href="#460">460</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> RuntimeException(ex);
-<a class="jxr_linenumber" name="461" href="#461">461</a>         }
-<a class="jxr_linenumber" name="462" href="#462">462</a>         sb.append(File.pathSeparator);
-<a class="jxr_linenumber" name="463" href="#463">463</a>         <em class="jxr_comment">//don't forget tools.jar</em>
-<a class="jxr_linenumber" name="464" href="#464">464</a>         File toolsJar = <strong class="jxr_keyword">new</strong> File(System.getProperty(<span class="jxr_string">"java.home"</span>), <span class="jxr_string">"../lib/tools.jar"</span>);
-<a class="jxr_linenumber" name="465" href="#465">465</a>         <strong class="jxr_keyword">if</strong> (!toolsJar.exists()) {
-<a class="jxr_linenumber" name="466" href="#466">466</a>             toolsJar = <strong class="jxr_keyword">new</strong> File(System.getProperty(<span class="jxr_string">"java.home"</span>), <span class="jxr_string">"lib/tools.jar"</span>);
+<a class="jxr_linenumber" name="365" href="#365">365</a>                 String cp = getExtraClasspath() != <strong class="jxr_keyword">null</strong> ? getExtraClasspath() + File.pathSeparator : <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="366" href="#366">366</a>                 cp += classpath[1];
+<a class="jxr_linenumber" name="367" href="#367">367</a>                 <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="368" href="#368">368</a>                     File pathFile = createPathFile(cp);
+<a class="jxr_linenumber" name="369" href="#369">369</a>                     cmd.createArg().setLine(<span class="jxr_string">"-pathfile "</span> + pathFile.getAbsolutePath());
+<a class="jxr_linenumber" name="370" href="#370">370</a>                     <strong class="jxr_keyword">if</strong> (getExtraClasspath() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="371" href="#371">371</a>                         cmd.createArg().setValue(<span class="jxr_string">"-cp"</span>);
+<a class="jxr_linenumber" name="372" href="#372">372</a>                         cmd.createArg().setValue(getExtraClasspath());
+<a class="jxr_linenumber" name="373" href="#373">373</a>                     }
+<a class="jxr_linenumber" name="374" href="#374">374</a>                 } <strong class="jxr_keyword">catch</strong> (IOException ioe) {
+<a class="jxr_linenumber" name="375" href="#375">375</a>                     <em class="jxr_comment">//creation of temporary file can fail, in such case just put everything on cp</em>
+<a class="jxr_linenumber" name="376" href="#376">376</a>                     cmd.createArg().setValue(<span class="jxr_string">"-cp"</span>);
+<a class="jxr_linenumber" name="377" href="#377">377</a>                     cmd.createArg().setValue(cp);
+<a class="jxr_linenumber" name="378" href="#378">378</a>                 }
+<a class="jxr_linenumber" name="379" href="#379">379</a>             }
+<a class="jxr_linenumber" name="380" href="#380">380</a>             cmd.setWorkingDirectory(project.getBasedir());
+<a class="jxr_linenumber" name="381" href="#381">381</a>             <strong class="jxr_keyword">for</strong> (String arg : args) {
+<a class="jxr_linenumber" name="382" href="#382">382</a>                 cmd.createArg().setLine(arg);
+<a class="jxr_linenumber" name="383" href="#383">383</a>             }
+<a class="jxr_linenumber" name="384" href="#384">384</a>             String fullCommand = cmd.toString();
+<a class="jxr_linenumber" name="385" href="#385">385</a>             <strong class="jxr_keyword">if</strong> (isWindows() &amp;&amp; 8191 &lt;= fullCommand.length()) {
+<a class="jxr_linenumber" name="386" href="#386">386</a>                 getLog().warn(<span class="jxr_string">"Length of the command is limitted to 8191 characters but it has "</span>
+<a class="jxr_linenumber" name="387" href="#387">387</a>                         + fullCommand.length() + <span class="jxr_string">" characters."</span>);
+<a class="jxr_linenumber" name="388" href="#388">388</a>                 getLog().warn(fullCommand);
+<a class="jxr_linenumber" name="389" href="#389">389</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="390" href="#390">390</a>                 getLog().debug(fullCommand);
+<a class="jxr_linenumber" name="391" href="#391">391</a>             }
+<a class="jxr_linenumber" name="392" href="#392">392</a>             <strong class="jxr_keyword">if</strong> (CommandLineUtils.executeCommandLine(cmd, sc, sc) != 0) {
+<a class="jxr_linenumber" name="393" href="#393">393</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Mojo failed - check output"</span>);
+<a class="jxr_linenumber" name="394" href="#394">394</a>             }
+<a class="jxr_linenumber" name="395" href="#395">395</a>         } <strong class="jxr_keyword">catch</strong> (ArtifactNotFoundException t) {
+<a class="jxr_linenumber" name="396" href="#396">396</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
+<a class="jxr_linenumber" name="397" href="#397">397</a>         } <strong class="jxr_keyword">catch</strong> (ArtifactResolutionException t) {
+<a class="jxr_linenumber" name="398" href="#398">398</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
+<a class="jxr_linenumber" name="399" href="#399">399</a>         } <strong class="jxr_keyword">catch</strong> (CommandLineException t) {
+<a class="jxr_linenumber" name="400" href="#400">400</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(t.getMessage(), t);
+<a class="jxr_linenumber" name="401" href="#401">401</a>         }
+<a class="jxr_linenumber" name="402" href="#402">402</a>     }
+<a class="jxr_linenumber" name="403" href="#403">403</a> 
+<a class="jxr_linenumber" name="404" href="#404">404</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> maybeUnsupportedOption(String option, String value, List&lt;String&gt; args) {
+<a class="jxr_linenumber" name="405" href="#405">405</a>         <strong class="jxr_keyword">if</strong> (executable == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="406" href="#406">406</a>             args.add(option);
+<a class="jxr_linenumber" name="407" href="#407">407</a>             <strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="408" href="#408">408</a>                 args.add(value);
+<a class="jxr_linenumber" name="409" href="#409">409</a>             }
+<a class="jxr_linenumber" name="410" href="#410">410</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="411" href="#411">411</a>             getLog().warn(option + <span class="jxr_string">" may not supported on older JDKs.\n"</span>
+<a class="jxr_linenumber" name="412" href="#412">412</a>                     + <span class="jxr_string">"Use &lt;args&gt; to bypass this warning if you really want to use it."</span>);
+<a class="jxr_linenumber" name="413" href="#413">413</a>         }
+<a class="jxr_linenumber" name="414" href="#414">414</a>     }
+<a class="jxr_linenumber" name="415" href="#415">415</a> 
+<a class="jxr_linenumber" name="416" href="#416">416</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="417" href="#417">417</a>     <strong class="jxr_keyword">private</strong> String[] getCP() <strong class="jxr_keyword">throws</strong> ArtifactResolutionException, ArtifactNotFoundException {
+<a class="jxr_linenumber" name="418" href="#418">418</a>         Set&lt;Artifact&gt; cp = <strong class="jxr_keyword">new</strong> HashSet&lt;Artifact&gt;();
+<a class="jxr_linenumber" name="419" href="#419">419</a>         Artifact originatingArtifact = artifactFactory.createBuildArtifact(<span class="jxr_string">"dummy"</span>, <span class="jxr_string">"dummy"</span>, <span class="jxr_string">"1.0"</span>, <span class="jxr_string">"jar"</span>);
+<a class="jxr_linenumber" name="420" href="#420">420</a>         List&lt;Plugin&gt; plugins = project.getBuildPlugins();
+<a class="jxr_linenumber" name="421" href="#421">421</a>         <strong class="jxr_keyword">for</strong> (Plugin p : plugins) {
+<a class="jxr_linenumber" name="422" href="#422">422</a>             <strong class="jxr_keyword">if</strong> (<span class="jxr_string">"jaxws-maven-plugin"</span>.equals(p.getArtifactId()) &amp;&amp; <span class="jxr_string">"org.jvnet.jax-ws-commons"</span>.equals(p.getGroupId())) {
+<a class="jxr_linenumber" name="423" href="#423">423</a>                 <strong class="jxr_keyword">boolean</strong> toolsAdded = false;
+<a class="jxr_linenumber" name="424" href="#424">424</a>                 <strong class="jxr_keyword">for</strong> (Dependency d : p.getDependencies()) {
+<a class="jxr_linenumber" name="425" href="#425">425</a>                     Set&lt;Artifact&gt; toInclude = <strong class="jxr_keyword">new</strong> HashSet&lt;Artifact&gt;();
+<a class="jxr_linenumber" name="426" href="#426">426</a>                     List&lt;String&gt; toExclude = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
+<a class="jxr_linenumber" name="427" href="#427">427</a>                     <strong class="jxr_keyword">for</strong> (Exclusion e : d.getExclusions()) {
+<a class="jxr_linenumber" name="428" href="#428">428</a>                         toExclude.add(e.getGroupId() + <span class="jxr_string">":"</span> + e.getArtifactId());
+<a class="jxr_linenumber" name="429" href="#429">429</a>                         getLog().debug(<span class="jxr_string">"excluding: "</span> + e.getGroupId() + <span class="jxr_string">":"</span> + e.getArtifactId());
+<a class="jxr_linenumber" name="430" href="#430">430</a>                     }
+<a class="jxr_linenumber" name="431" href="#431">431</a>                     <strong class="jxr_keyword">if</strong> ((<span class="jxr_string">"jaxws-tools"</span>.equals(d.getArtifactId()) &amp;&amp; <span class="jxr_string">"com.sun.xml.ws"</span>.equals(d.getGroupId()))
+<a class="jxr_linenumber" name="432" href="#432">432</a>                             || (<span class="jxr_string">"webservices-tools"</span>.equals(d.getArtifactId())) &amp;&amp; <span class="jxr_string">"org.glassfish.metro"</span>.equals(d.getGroupId())) {
+<a class="jxr_linenumber" name="433" href="#433">433</a>                         toolsAdded = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="434" href="#434">434</a>                     }
+<a class="jxr_linenumber" name="435" href="#435">435</a>                     toInclude.add(pluginArtifactMap.get(d.getGroupId() + <span class="jxr_string">":"</span> + d.getArtifactId()));
+<a class="jxr_linenumber" name="436" href="#436">436</a>                     ArtifactFilter filter = <strong class="jxr_keyword">new</strong> ExcludesArtifactFilter(toExclude);
+<a class="jxr_linenumber" name="437" href="#437">437</a>                     getLog().debug(<span class="jxr_string">"resolving: "</span> + d.getGroupId() + <span class="jxr_string">":"</span> + d.getArtifactId());
+<a class="jxr_linenumber" name="438" href="#438">438</a>                     ArtifactResolutionResult res = artifactResolver.resolveTransitively(
+<a class="jxr_linenumber" name="439" href="#439">439</a>                             toInclude,
+<a class="jxr_linenumber" name="440" href="#440">440</a>                             originatingArtifact, localRepository, remoteRepositories,
+<a class="jxr_linenumber" name="441" href="#441">441</a>                             metadataSource, filter);
+<a class="jxr_linenumber" name="442" href="#442">442</a>                     cp.addAll(res.getArtifacts());
+<a class="jxr_linenumber" name="443" href="#443">443</a>                 }
+<a class="jxr_linenumber" name="444" href="#444">444</a>                 <strong class="jxr_keyword">if</strong> (!toolsAdded) {
+<a class="jxr_linenumber" name="445" href="#445">445</a>                     ArtifactResolutionResult res = artifactResolver.resolveTransitively(
+<a class="jxr_linenumber" name="446" href="#446">446</a>                             Collections.singleton(pluginArtifactMap.get(<span class="jxr_string">"com.sun.xml.ws:jaxws-tools"</span>)),
+<a class="jxr_linenumber" name="447" href="#447">447</a>                             originatingArtifact, remoteRepositories, localRepository, metadataSource);
+<a class="jxr_linenumber" name="448" href="#448">448</a>                     cp.addAll(res.getArtifacts());
+<a class="jxr_linenumber" name="449" href="#449">449</a>                 }
+<a class="jxr_linenumber" name="450" href="#450">450</a>                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="451" href="#451">451</a>             }
+<a class="jxr_linenumber" name="452" href="#452">452</a>         }
+<a class="jxr_linenumber" name="453" href="#453">453</a>         StringBuilder sb = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="454" href="#454">454</a>         StringBuilder esb = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="455" href="#455">455</a>         <strong class="jxr_keyword">for</strong> (Artifact a : cp) {
+<a class="jxr_linenumber" name="456" href="#456">456</a>             <strong class="jxr_keyword">if</strong> (<span class="jxr_string">"jaxws-api"</span>.equals(a.getArtifactId()) || <span class="jxr_string">"jaxb-api"</span>.equals(a.getArtifactId())
+<a class="jxr_linenumber" name="457" href="#457">457</a>                     || <span class="jxr_string">"saaj-api"</span>.equals(a.getArtifactId()) || <span class="jxr_string">"jsr181-api"</span>.equals(a.getArtifactId())
+<a class="jxr_linenumber" name="458" href="#458">458</a>                     || <span class="jxr_string">"javax.annotation"</span>.equals(a.getArtifactId())
+<a class="jxr_linenumber" name="459" href="#459">459</a>                     || <span class="jxr_string">"javax.annotation-api"</span>.equals(a.getArtifactId())
+<a class="jxr_linenumber" name="460" href="#460">460</a>                     || <span class="jxr_string">"webservices-api"</span>.equals(a.getArtifactId())) {
+<a class="jxr_linenumber" name="461" href="#461">461</a>                 esb.append(a.getFile().getAbsolutePath());
+<a class="jxr_linenumber" name="462" href="#462">462</a>                 esb.append(File.pathSeparator);
+<a class="jxr_linenumber" name="463" href="#463">463</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="464" href="#464">464</a>                 sb.append(a.getFile().getAbsolutePath());
+<a class="jxr_linenumber" name="465" href="#465">465</a>                 sb.append(File.pathSeparator);
+<a class="jxr_linenumber" name="466" href="#466">466</a>             }
 <a class="jxr_linenumber" name="467" href="#467">467</a>         }
-<a class="jxr_linenumber" name="468" href="#468">468</a>         sb.append(toolsJar.getAbsolutePath());
-<a class="jxr_linenumber" name="469" href="#469">469</a>         sb.append(File.pathSeparator);
-<a class="jxr_linenumber" name="470" href="#470">470</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> String[]{esb.substring(0, esb.length() - 1), sb.substring(0, sb.length() - 1), invokerPath};
-<a class="jxr_linenumber" name="471" href="#471">471</a>     }
-<a class="jxr_linenumber" name="472" href="#472">472</a> 
-<a class="jxr_linenumber" name="473" href="#473">473</a>     <strong class="jxr_keyword">private</strong> String getJavaExec() {
-<a class="jxr_linenumber" name="474" href="#474">474</a>         <strong class="jxr_keyword">return</strong> Os.isFamily(Os.FAMILY_WINDOWS) ? <span class="jxr_string">"java.exe"</span> : <span class="jxr_string">"java"</span>;
-<a class="jxr_linenumber" name="475" href="#475">475</a>     }
-<a class="jxr_linenumber" name="476" href="#476">476</a> 
-<a class="jxr_linenumber" name="477" href="#477">477</a>     <strong class="jxr_keyword">private</strong> File createPathFile(String cp) {
-<a class="jxr_linenumber" name="478" href="#478">478</a>         File f = <strong class="jxr_keyword">new</strong> File(System.getProperty(<span class="jxr_string">"java.io.tmpdir"</span>), <span class="jxr_string">"jax-ws-mvn-plugin-cp.txt"</span>);
-<a class="jxr_linenumber" name="479" href="#479">479</a>         <strong class="jxr_keyword">if</strong> (f.exists() &amp;&amp; f.isFile()) {
-<a class="jxr_linenumber" name="480" href="#480">480</a>             <strong class="jxr_keyword">if</strong> (!f.delete()) {
-<a class="jxr_linenumber" name="481" href="#481">481</a>                 getLog().warn(<span class="jxr_string">"cannot remove obsolete classpath setting file: "</span> + f.getAbsolutePath());
-<a class="jxr_linenumber" name="482" href="#482">482</a>             }
-<a class="jxr_linenumber" name="483" href="#483">483</a>         }
-<a class="jxr_linenumber" name="484" href="#484">484</a>         Properties p = <strong class="jxr_keyword">new</strong> Properties();
-<a class="jxr_linenumber" name="485" href="#485">485</a>         p.put(<span class="jxr_string">"cp"</span>, cp.replace(File.separatorChar, '/'));
-<a class="jxr_linenumber" name="486" href="#486">486</a>         getLog().debug(<span class="jxr_string">"stored classpath: "</span> + cp.replace(File.separatorChar, '/'));
-<a class="jxr_linenumber" name="487" href="#487">487</a>         FileOutputStream fos = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="488" href="#488">488</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="489" href="#489">489</a>             fos = <strong class="jxr_keyword">new</strong> FileOutputStream(f);
-<a class="jxr_linenumber" name="490" href="#490">490</a>             p.store(fos, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="491" href="#491">491</a>         } <strong class="jxr_keyword">catch</strong> (IOException ex) {
-<a class="jxr_linenumber" name="492" href="#492">492</a>             logger.log(Level.SEVERE, <strong class="jxr_keyword">null</strong>, ex);
-<a class="jxr_linenumber" name="493" href="#493">493</a>         } <strong class="jxr_keyword">finally</strong> {
-<a class="jxr_linenumber" name="494" href="#494">494</a>             <strong class="jxr_keyword">if</strong> (fos != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="495" href="#495">495</a>                 <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="496" href="#496">496</a>                     fos.close();
-<a class="jxr_linenumber" name="497" href="#497">497</a>                 } <strong class="jxr_keyword">catch</strong> (IOException ex) {
-<a class="jxr_linenumber" name="498" href="#498">498</a>                     logger.log(Level.SEVERE, <strong class="jxr_keyword">null</strong>, ex);
-<a class="jxr_linenumber" name="499" href="#499">499</a>                 }
-<a class="jxr_linenumber" name="500" href="#500">500</a>             }
-<a class="jxr_linenumber" name="501" href="#501">501</a>         }
-<a class="jxr_linenumber" name="502" href="#502">502</a>         <strong class="jxr_keyword">return</strong> f;
-<a class="jxr_linenumber" name="503" href="#503">503</a>     }
-<a class="jxr_linenumber" name="504" href="#504">504</a> }
+<a class="jxr_linenumber" name="468" href="#468">468</a>         <em class="jxr_comment">//add custom invoker</em>
+<a class="jxr_linenumber" name="469" href="#469">469</a>         String invokerPath = AbstractJaxwsMojo.<strong class="jxr_keyword">class</strong>.getProtectionDomain().getCodeSource().getLocation().toExternalForm();
+<a class="jxr_linenumber" name="470" href="#470">470</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="471" href="#471">471</a>             invokerPath = <strong class="jxr_keyword">new</strong> URI(invokerPath.substring(5)).getPath();
+<a class="jxr_linenumber" name="472" href="#472">472</a>             sb.append(invokerPath);
+<a class="jxr_linenumber" name="473" href="#473">473</a>         } <strong class="jxr_keyword">catch</strong> (URISyntaxException ex) {
+<a class="jxr_linenumber" name="474" href="#474">474</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> RuntimeException(ex);
+<a class="jxr_linenumber" name="475" href="#475">475</a>         }
+<a class="jxr_linenumber" name="476" href="#476">476</a>         sb.append(File.pathSeparator);
+<a class="jxr_linenumber" name="477" href="#477">477</a>         <em class="jxr_comment">//don't forget tools.jar</em>
+<a class="jxr_linenumber" name="478" href="#478">478</a>         File toolsJar = <strong class="jxr_keyword">new</strong> File(System.getProperty(<span class="jxr_string">"java.home"</span>), <span class="jxr_string">"../lib/tools.jar"</span>);
+<a class="jxr_linenumber" name="479" href="#479">479</a>         <strong class="jxr_keyword">if</strong> (!toolsJar.exists()) {
+<a class="jxr_linenumber" name="480" href="#480">480</a>             toolsJar = <strong class="jxr_keyword">new</strong> File(System.getProperty(<span class="jxr_string">"java.home"</span>), <span class="jxr_string">"lib/tools.jar"</span>);
+<a class="jxr_linenumber" name="481" href="#481">481</a>         }
+<a class="jxr_linenumber" name="482" href="#482">482</a>         sb.append(toolsJar.getAbsolutePath());
+<a class="jxr_linenumber" name="483" href="#483">483</a>         sb.append(File.pathSeparator);
+<a class="jxr_linenumber" name="484" href="#484">484</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> String[]{esb.substring(0, esb.length() - 1), sb.substring(0, sb.length() - 1), invokerPath};
+<a class="jxr_linenumber" name="485" href="#485">485</a>     }
+<a class="jxr_linenumber" name="486" href="#486">486</a> 
+<a class="jxr_linenumber" name="487" href="#487">487</a>     <strong class="jxr_keyword">private</strong> String getJavaExec() {
+<a class="jxr_linenumber" name="488" href="#488">488</a>         <strong class="jxr_keyword">return</strong> isWindows() ? <span class="jxr_string">"java.exe"</span> : <span class="jxr_string">"java"</span>;
+<a class="jxr_linenumber" name="489" href="#489">489</a>     }
+<a class="jxr_linenumber" name="490" href="#490">490</a> 
+<a class="jxr_linenumber" name="491" href="#491">491</a>     <strong class="jxr_keyword">private</strong> File createPathFile(String cp) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="492" href="#492">492</a>         File f = File.createTempFile(<span class="jxr_string">"jax-ws-mvn-plugin-cp"</span>, <span class="jxr_string">".txt"</span>);
+<a class="jxr_linenumber" name="493" href="#493">493</a>         <strong class="jxr_keyword">if</strong> (f.exists() &amp;&amp; f.isFile()) {
+<a class="jxr_linenumber" name="494" href="#494">494</a>             <strong class="jxr_keyword">if</strong> (!f.delete()) {
+<a class="jxr_linenumber" name="495" href="#495">495</a>                 <em class="jxr_comment">//this should not happen</em>
+<a class="jxr_linenumber" name="496" href="#496">496</a>                 getLog().warn(<span class="jxr_string">"cannot remove obsolete classpath setting file: "</span> + f.getAbsolutePath());
+<a class="jxr_linenumber" name="497" href="#497">497</a>             }
+<a class="jxr_linenumber" name="498" href="#498">498</a>         }
+<a class="jxr_linenumber" name="499" href="#499">499</a>         Properties p = <strong class="jxr_keyword">new</strong> Properties();
+<a class="jxr_linenumber" name="500" href="#500">500</a>         p.put(<span class="jxr_string">"cp"</span>, cp.replace(File.separatorChar, '/'));
+<a class="jxr_linenumber" name="501" href="#501">501</a>         getLog().debug(<span class="jxr_string">"stored classpath: "</span> + cp.replace(File.separatorChar, '/'));
+<a class="jxr_linenumber" name="502" href="#502">502</a>         FileOutputStream fos = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="503" href="#503">503</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="504" href="#504">504</a>             fos = <strong class="jxr_keyword">new</strong> FileOutputStream(f);
+<a class="jxr_linenumber" name="505" href="#505">505</a>             p.store(fos, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="506" href="#506">506</a>         } <strong class="jxr_keyword">catch</strong> (IOException ex) {
+<a class="jxr_linenumber" name="507" href="#507">507</a>             logger.log(Level.SEVERE, <strong class="jxr_keyword">null</strong>, ex);
+<a class="jxr_linenumber" name="508" href="#508">508</a>         } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="509" href="#509">509</a>             <strong class="jxr_keyword">if</strong> (fos != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="510" href="#510">510</a>                 <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="511" href="#511">511</a>                     fos.close();
+<a class="jxr_linenumber" name="512" href="#512">512</a>                 } <strong class="jxr_keyword">catch</strong> (IOException ex) {
+<a class="jxr_linenumber" name="513" href="#513">513</a>                     logger.log(Level.SEVERE, <strong class="jxr_keyword">null</strong>, ex);
+<a class="jxr_linenumber" name="514" href="#514">514</a>                 }
+<a class="jxr_linenumber" name="515" href="#515">515</a>             }
+<a class="jxr_linenumber" name="516" href="#516">516</a>         }
+<a class="jxr_linenumber" name="517" href="#517">517</a>         <strong class="jxr_keyword">return</strong> f;
+<a class="jxr_linenumber" name="518" href="#518">518</a>     }
+<a class="jxr_linenumber" name="519" href="#519">519</a> 
+<a class="jxr_linenumber" name="520" href="#520">520</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> isWindows() {
+<a class="jxr_linenumber" name="521" href="#521">521</a>         <strong class="jxr_keyword">return</strong> Os.isFamily(Os.FAMILY_WINDOWS);
+<a class="jxr_linenumber" name="522" href="#522">522</a>     }
+<a class="jxr_linenumber" name="523" href="#523">523</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
