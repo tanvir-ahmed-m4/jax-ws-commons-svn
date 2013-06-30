@@ -18,11 +18,11 @@
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">      <a href="http://jax-ws.java.net/">JAX-WS</a>
+      <div class="xright">      <a href="http://jax-ws.dev.java.net/">JAX-WS</a>
           |
           <a href="http://glassfish.java.net/">Glassfish</a>
       </div>
@@ -31,24 +31,23 @@
       <div id="contentBox">
         <p>In-VM local transport allows TCP loop-back like SOAP communication between the client and the server in the same virtual machine. It is primarily designed to enable testing of web service endpoints without using a fully-fledged web container.</p>
 <p>To use this transport, you need to declare one more namespace URI:</p>
-<div class="source"><pre>&lt;beans ...
-  xmlns:wsl=&quot;http://jax-ws.java.net/spring/local-transport&quot;
+<div>
+<pre>&lt;beans ...
+  xmlns:wsl=&quot;http://jax-ws.dev.java.net/spring/local-transport&quot;
   xsi:schemaLocation=&quot;
-    http://jax-ws.java.net/spring/local-transport
-    http://jax-ws.java.net/spring/local-transport.xsd&quot;&gt;</pre>
-</div>
+    http://jax-ws.dev.java.net/spring/local-transport
+    http://jax-ws.dev.java.net/spring/local-transport.xsd&quot;&gt;
+</pre></div>
 <p>Then you can export a bunch of services by using an ID of your choice:</p>
-<div class="source"><pre>&lt;wsl:bindings id=&quot;test-local-endpoint&quot;&gt;
+<div>
+<pre>&lt;wsl:bindings id=&quot;test-local-endpoint&quot;&gt;
   &lt;wsl:endpoints&gt;
     &lt;ws:service ... /&gt;       &lt;!-- either define a service inline --&gt;
     &lt;ref bean=&quot;myService&quot; /&gt; &lt;!-- or refer to another bean --&gt;
   &lt;/wsl:endpoints&gt;
-&lt;/wsl:bindings&gt;</pre>
-</div>
-<p>These services can be accessed by setting the endpoint address URI as <tt>in-vm://test-local-endpoint/</tt>
- (the spring bean ID becomes a part of the URI.) If multiple endpoints are deployed in a single local transport server, you can distinguish them by using the local name of the port QName as the query parameter, like <tt>?port1</tt>
-</p>
-
+&lt;/wsl:bindings&gt;
+</pre></div>
+<p>These services can be accessed by setting the endpoint address URI as <tt>in-vm://test-local-endpoint/</tt> (the Spring bean ID becomes a part of the URI.) If multiple endpoints are deployed in a single local transport server, you can distinguish them by using the local name of the port QName as the query parameter, like <tt>?port1</tt></p>
       </div>
     </div>
     <div class="clear">
@@ -56,15 +55,16 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2008
+          2006-2013
     
+          Oracle
           
   
 
   
   
-  &nbsp;| Last Published: 01/24/2008
-  &nbsp;| Version: 1.9-SNAPSHOT
+  &nbsp;| Last Published: 2013-06-30
+  &nbsp;| Version: 1.9
 </div>
       <div class="clear">
         <hr/>

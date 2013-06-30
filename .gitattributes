@@ -1416,9 +1416,8 @@ www/spring/apidocs/org/jvnet/jax_ws_commons/spring/SpringMTOMFeature.html -text
 www/spring/apidocs/org/jvnet/jax_ws_commons/spring/SpringService.html -text
 www/spring/apidocs/package-list -text
 www/spring/apidocs/resources/inherit.gif -text
+www/spring/changes-report.html -text
 www/spring/com/sun/enterprise/glassfish/maven_skin/ProjectToolsReport.class -text
-www/spring/css/maven-base.css -text svneol=native#unset
-www/spring/css/maven-theme.css -text svneol=native#unset
 www/spring/css/print.css -text svneol=native#unset
 www/spring/css/site.css -text
 www/spring/dependencies.html -text

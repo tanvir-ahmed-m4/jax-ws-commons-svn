@@ -18,7 +18,7 @@
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       </head>
   <body class="composite">
     <!-- TODO: move this into JavaScript to patch the skin
@@ -29,22 +29,17 @@
     -->
     <div id="bodyColumn">
       <div id="contentBox">
-        <p>When you'd like to deploy an endpoint with existing WSDL, you need to tell the JAX-WS runtime the association between the WSDL and your service. This is done by adding a few more attributes/elements to the <tt>ws:service</tt>
- element like this:</p>
-<div class="source"><pre>&lt;ws:service bean=&quot;#myService&quot; serviceName=&quot;tns:fooService&quot;
+        <p>When you'd like to deploy an endpoint with existing WSDL, you need to tell the JAX-WS runtime the association between the WSDL and your service. This is done by adding a few more attributes/elements to the <tt>ws:service</tt> element like this:</p>
+<div>
+<pre>&lt;ws:service bean=&quot;#myService&quot; serviceName=&quot;tns:fooService&quot;
   portName=&quot;tns:foo&quot; xmlns:tns=&quot;http://my/service/nsURI&quot;&gt;
   &lt;ws:primaryWsdl&gt;
     &lt;value&gt;/WEB-INF/wsdl/&lt;/value&gt;
   &lt;/ws:primaryWsdl&gt;
-&lt;/ws:service&gt;</pre>
-</div>
-<p>The portName attribute works like <tt>@WebService(portName=...)</tt>
- (except that it's a real QName), and the primaryWsdl element works like <tt>@WebService(wsdlLocation=...)</tt>
- (except that it can take forms other than String.) If the primary WSDL is omitted, the runtime will search for WSDL in <tt>/WEB-INF/wsdl/</tt>
- and find one that matches the specified port and service name.</p>
-<p>See <a class="externalLink" href="http://www.nabble.com/forum/ViewPost.jtp?post=12115930&amp;framed=y">a complete example</a>
- contirbuted by Andreas for more details (although this does things slightly differently.)</p>
-
+&lt;/ws:service&gt;
+</pre></div>
+<p>The portName attribute works like <tt>@WebService(portName=...)</tt> (except that it's a real QName), and the primaryWsdl element works like <tt>@WebService(wsdlLocation=...)</tt> (except that it can take forms other than String.) If the primary WSDL is omitted, the runtime will search for WSDL in <tt>/WEB-INF/wsdl/</tt> and find one that matches the specified port and service name.</p>
+<p>See <a class="externalLink" href="http://www.nabble.com/forum/ViewPost.jtp?post=12115930&amp;framed=y">a complete example</a> contirbuted by Andreas for more details (although this does things slightly differently.)</p>
       </div>
     </div>
     <div class="clear">
@@ -52,15 +47,16 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2008
+          2006-2013
     
+          Oracle
           
   
 
   
   
-  &nbsp;| Last Published: 01/24/2008
-  &nbsp;| Version: 1.9-SNAPSHOT
+  &nbsp;| Last Published: 2013-06-30
+  &nbsp;| Version: 1.9
 </div>
       <div class="clear">
         <hr/>
