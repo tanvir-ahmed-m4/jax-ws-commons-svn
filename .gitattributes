@@ -537,6 +537,7 @@ json/json-jmaki-demo/web/resources/yahoo/tree/images/yahoo-tree.jpg -text svneol
 json/json-jmaki-demo/web/resources/yahoo/tree/widget.json -text
 spring/CDDL+GPLv2.txt -text
 spring/spring-core/publish-schemas.sh -text
+spring/spring-core/src/changes/changes.xml svneol=native#text/xml
 spring/spring-core/src/main/resources/META-INF/spring.handlers -text
 spring/spring-core/src/main/resources/META-INF/spring.schemas -text
 spring/spring-core/src/site/apt/aop.apt -text
