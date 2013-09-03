@@ -226,8 +226,8 @@ jaxws-maven-plugin/LICENCE.txt -text
 jaxws-maven-plugin/copyright-exclude -text
 jaxws-maven-plugin/copyright.txt -text
 jaxws-maven-plugin/exclude.xml -text
-jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/ClassPathNodeListGenerator.java -text
 jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/DependencyResolver.java -text
+jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/EndorsedFilter.java -text
 jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/ExclusionFilter.java -text
 jaxws-maven-plugin/src/main/java/org/jvnet/jax_ws_commons/jaxws/Invoker.java -text
 jaxws-maven-plugin/src/site/apt/examples/using-binding-files.apt -text
